@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 110;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F16516FE30952308002E36C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16516FD30952308002E36C4 /* AppDelegate.swift */; };
+		F165170230952308002E36C4 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = F165170030952308002E36C4 /* Main.html */; };
+		F165170430952308002E36C4 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F165170330952308002E36C4 /* Icon.png */; };
+		F165170630952308002E36C4 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = F165170530952308002E36C4 /* Style.css */; };
+		F165170830952308002E36C4 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = F165170730952308002E36C4 /* Script.js */; };
+		F165170A30952308002E36C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F165170930952308002E36C4 /* ViewController.swift */; };
+		F165170D30952308002E36C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F165170B30952308002E36C4 /* Main.storyboard */; };
+		F165170F30952308002E36C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F165170E30952308002E36C4 /* Assets.xcassets */; };
+		F165171630952309002E36C4 /* ReelsBlocker Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F165171530952309002E36C4 /* ReelsBlocker Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F165171B30952309002E36C4 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F165171A30952309002E36C4 /* SafariWebExtensionHandler.swift */; };
+		F165172A30952309002E36C4 /* content.css in Resources */ = {isa = PBXBuildFile; fileRef = F165172730952309002E36C4 /* content.css */; };
+		F165172B30952309002E36C4 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = F165172830952309002E36C4 /* manifest.json */; };
+		F165172C30952309002E36C4 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = F165172930952309002E36C4 /* content.js */; };
+		AB1200000000000000000002 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = AB1200000000000000000001; };
+		AB1200000000000000000012 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = AB1200000000000000000011; };
+		AB1200000000000000000022 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = AB1200000000000000000021; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F165171730952309002E36C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F16516F230952308002E36C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F165171430952309002E36C4;
+			remoteInfo = "ReelsBlocker Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F165172230952309002E36C4 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = "";
+			dstSubfolder = PlugIns;
+			files = (
+				F165171630952309002E36C4 /* ReelsBlocker Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F16516FA30952308002E36C4 /* ReelsBlocker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReelsBlocker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F16516FD30952308002E36C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F165170130952308002E36C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = Base.lproj/Main.html; sourceTree = "<group>"; };
+		F165170330952308002E36C4 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		F165170530952308002E36C4 /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		F165170730952308002E36C4 /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		F165170930952308002E36C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F165170C30952308002E36C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F165170E30952308002E36C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F165171030952308002E36C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F165171530952309002E36C4 /* ReelsBlocker Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ReelsBlocker Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F165171A30952309002E36C4 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		F165171C30952309002E36C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F165172730952309002E36C4 /* content.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = content.css; path = ../../../extension/content.css; sourceTree = "<group>"; };
+		F165172830952309002E36C4 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = ../../../extension/manifest.json; sourceTree = "<group>"; };
+		F165172930952309002E36C4 /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = content.js; path = ../../../extension/content.js; sourceTree = "<group>"; };
+		AB1200000000000000000001 /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = popup.html; path = ../../../extension/popup.html; sourceTree = "<group>"; };
+		AB1200000000000000000011 /* popup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = popup.css; path = ../../../extension/popup.css; sourceTree = "<group>"; };
+		AB1200000000000000000021 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = popup.js; path = ../../../extension/popup.js; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F16516F730952308002E36C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		F165171230952309002E36C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F16516F130952308002E36C4 = {
+			isa = PBXGroup;
+			children = (
+				F16516FC30952308002E36C4 /* ReelsBlocker */,
+				F165171930952309002E36C4 /* ReelsBlocker Extension */,
+				F16516FB30952308002E36C4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F16516FB30952308002E36C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F16516FA30952308002E36C4 /* ReelsBlocker.app */,
+				F165171530952309002E36C4 /* ReelsBlocker Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F16516FC30952308002E36C4 /* ReelsBlocker */ = {
+			isa = PBXGroup;
+			children = (
+				F16516FD30952308002E36C4 /* AppDelegate.swift */,
+				F165170930952308002E36C4 /* ViewController.swift */,
+				F165170B30952308002E36C4 /* Main.storyboard */,
+				F165170E30952308002E36C4 /* Assets.xcassets */,
+				F165171030952308002E36C4 /* Info.plist */,
+				F16516FF30952308002E36C4 /* Resources */,
+			);
+			path = ReelsBlocker;
+			sourceTree = "<group>";
+		};
+		F16516FF30952308002E36C4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F165170030952308002E36C4 /* Main.html */,
+				F165170330952308002E36C4 /* Icon.png */,
+				F165170530952308002E36C4 /* Style.css */,
+				F165170730952308002E36C4 /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F165171930952309002E36C4 /* ReelsBlocker Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F165172630952309002E36C4 /* Resources */,
+				F165171A30952309002E36C4 /* SafariWebExtensionHandler.swift */,
+				F165171C30952309002E36C4 /* Info.plist */,
+			);
+			path = "ReelsBlocker Extension";
+			sourceTree = "<group>";
+		};
+		F165172630952309002E36C4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F165172730952309002E36C4 /* content.css */,
+				AB1200000000000000000021 /* popup.js */,
+				AB1200000000000000000011 /* popup.css */,
+				AB1200000000000000000001 /* popup.html */,
+				F165172830952309002E36C4 /* manifest.json */,
+				F165172930952309002E36C4 /* content.js */,
+			);
+			name = Resources;
+			path = "ReelsBlocker Extension";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F16516F930952308002E36C4 /* ReelsBlocker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F165172330952309002E36C4 /* Build configuration list for PBXNativeTarget "ReelsBlocker" */;
+			buildPhases = (
+				F16516F630952308002E36C4 /* Sources */,
+				F16516F730952308002E36C4 /* Frameworks */,
+				F16516F830952308002E36C4 /* Resources */,
+				F165172230952309002E36C4 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F165171830952309002E36C4 /* PBXTargetDependency */,
+			);
+			name = ReelsBlocker;
+			productName = ReelsBlocker;
+			productReference = F16516FA30952308002E36C4 /* ReelsBlocker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F165171430952309002E36C4 /* ReelsBlocker Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F165171F30952309002E36C4 /* Build configuration list for PBXNativeTarget "ReelsBlocker Extension" */;
+			buildPhases = (
+				F165171130952309002E36C4 /* Sources */,
+				F165171230952309002E36C4 /* Frameworks */,
+				F165171330952309002E36C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			name = "ReelsBlocker Extension";
+			productName = "ReelsBlocker Extension";
+			productReference = F165171530952309002E36C4 /* ReelsBlocker Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F16516F230952308002E36C4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2710;
+				LastUpgradeCheck = 2710;
+				TargetAttributes = {
+					F16516F930952308002E36C4 = {
+						CreatedOnToolsVersion = 27.1;
+					};
+					F165171430952309002E36C4 = {
+						CreatedOnToolsVersion = 27.1;
+					};
+				};
+			};
+			buildConfigurationList = F16516F530952308002E36C4 /* Build configuration list for PBXProject "ReelsBlocker" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F16516F130952308002E36C4;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = F16516FB30952308002E36C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F16516F930952308002E36C4 /* ReelsBlocker */,
+				F165171430952309002E36C4 /* ReelsBlocker Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F16516F830952308002E36C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+				F165170430952308002E36C4 /* Icon.png in Resources */,
+				F165170D30952308002E36C4 /* Main.storyboard in Resources */,
+				F165170830952308002E36C4 /* Script.js in Resources */,
+				F165170230952308002E36C4 /* Main.html in Resources */,
+				F165170F30952308002E36C4 /* Assets.xcassets in Resources */,
+				F165170630952308002E36C4 /* Style.css in Resources */,
+			);
+		};
+		F165171330952309002E36C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+				F165172C30952309002E36C4 /* content.js in Resources */,
+				F165172B30952309002E36C4 /* manifest.json in Resources */,
+				F165172A30952309002E36C4 /* content.css in Resources */,
+				AB1200000000000000000022 /* popup.js in Resources */,
+				AB1200000000000000000012 /* popup.css in Resources */,
+				AB1200000000000000000002 /* popup.html in Resources */,
+			);
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F16516F630952308002E36C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+				F165170A30952308002E36C4 /* ViewController.swift in Sources */,
+				F16516FE30952308002E36C4 /* AppDelegate.swift in Sources */,
+			);
+		};
+		F165171130952309002E36C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+				F165171B30952309002E36C4 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F165171830952309002E36C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F165171430952309002E36C4 /* ReelsBlocker Extension */;
+			targetProxy = F165171730952309002E36C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F165170030952308002E36C4 /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F165170130952308002E36C4 /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		F165170B30952308002E36C4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F165170C30952308002E36C4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F165171D30952309002E36C4 /* Debug configuration for PBXProject "ReelsBlocker" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F165171E30952309002E36C4 /* Release configuration for PBXProject "ReelsBlocker" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		F165172030952309002E36C4 /* Debug configuration for PBXNativeTarget "ReelsBlocker Extension" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ReelsBlocker Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "ReelsBlocker Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.2.1;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = local.reelsblocker.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F165172130952309002E36C4 /* Release configuration for PBXNativeTarget "ReelsBlocker Extension" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ReelsBlocker Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "ReelsBlocker Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.2.1;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = local.reelsblocker.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F165172430952309002E36C4 /* Debug configuration for PBXNativeTarget "ReelsBlocker" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 4;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ReelsBlocker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ReelsBlocker;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_KEY_NSViewGestureRecognizerIsExclusive = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.2.1;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = local.reelsblocker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F165172530952309002E36C4 /* Release configuration for PBXNativeTarget "ReelsBlocker" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 4;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ReelsBlocker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ReelsBlocker;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_KEY_NSViewGestureRecognizerIsExclusive = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.2.1;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = local.reelsblocker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F16516F530952308002E36C4 /* Build configuration list for PBXProject "ReelsBlocker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F165171D30952309002E36C4 /* Debug configuration for PBXProject "ReelsBlocker" */,
+				F165171E30952309002E36C4 /* Release configuration for PBXProject "ReelsBlocker" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		F165171F30952309002E36C4 /* Build configuration list for PBXNativeTarget "ReelsBlocker Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F165172030952309002E36C4 /* Debug configuration for PBXNativeTarget "ReelsBlocker Extension" */,
+				F165172130952309002E36C4 /* Release configuration for PBXNativeTarget "ReelsBlocker Extension" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		F165172330952309002E36C4 /* Build configuration list for PBXNativeTarget "ReelsBlocker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F165172430952309002E36C4 /* Debug configuration for PBXNativeTarget "ReelsBlocker" */,
+				F165172530952309002E36C4 /* Release configuration for PBXNativeTarget "ReelsBlocker" */,
+			);
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F16516F230952308002E36C4 /* Project object */;
+	validationLevel = 1;
+}

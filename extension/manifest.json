@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Reels Blocker for Facebook",
+  "version": "1.2.1",
+  "description": "Hide videos and images in your Facebook feed. Two independent settings, no data collection.",
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_title": "Facebook blocking settings",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.facebook.com/*",
+        "https://facebook.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_start"
+    }
+  ]
+}
