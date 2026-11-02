@@ -10,7 +10,11 @@ else
 fi
 xcodebuild -project "$TASK_ROOT/Safari/ReelsBlocker/ReelsBlocker.xcodeproj" \
   -scheme ReelsBlocker -configuration Debug -derivedDataPath "$TASK_DERIVED_DATA" \
-  CODE_SIGN_IDENTITY=- CODE_SIGN_STYLE=Manual DEVELOPMENT_TEAM= build
-mkdir -p "$TASK_ROOT/dist"
-ditto "$TASK_DERIVED_DATA/Build/Products/Debug/ReelsBlocker.app" "$TASK_ROOT/dist/ReelsBlocker.app"
+  CONFIGURATION_BUILD_DIR="$TASK_ROOT/dist" \
+  CODE_SIGN_IDENTITY="${REELSBLOCKER_SIGNING_IDENTITY:--}" CODE_SIGN_STYLE=Manual \
+  DEVELOPMENT_TEAM="${REELSBLOCKER_DEVELOPMENT_TEAM:-}" build
+# Keep one build product: copying a registered app from DerivedData can leave
+# Safari looking up a different containing app with the same bundle identifier.
+TASK_LSREGISTER=/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister
+"$TASK_LSREGISTER" -f -R -trusted "$TASK_ROOT/dist/ReelsBlocker.app"
 echo "App: $TASK_ROOT/dist/ReelsBlocker.app"

@@ -17,12 +17,15 @@ html {
 body {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
 
     gap: var(--spacing);
     margin: 0 calc(var(--spacing) * 2);
     height: 100%;
+    box-sizing: border-box;
+    padding: 24px 0;
+    overflow-y: auto;
 
     font: -apple-system-short-body;
     text-align: center;
@@ -42,4 +45,18 @@ body.state-off :is(.state-on, .state-unknown) {
 
 button {
     font-size: 1em;
+    padding: 8px 14px;
 }
+
+p { margin: 0; }
+img { flex-shrink: 0; }
+.feedback:empty { display: none; }
+.feedback, details { max-width: 480px; }
+.feedback.error { color: #a32320; }
+@media (prefers-color-scheme: dark) {
+    .feedback.error { color: #ffb4ab; }
+}
+details { text-align: left; }
+summary { cursor: pointer; }
+li { margin-bottom: 8px; }
+details p { margin-top: 12px; }

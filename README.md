@@ -35,6 +35,12 @@ The Xcode project is `Safari/ReelsBlocker/ReelsBlocker.xcodeproj`. It references
 
 The build script creates an ad-hoc signed Debug app. It uses a centralized DerivedData directory under `~/Library/Developer/Xcode/DerivedData/Codex/`, with a stable path for each checkout. If the local Codex path helper is installed, the script uses it to manage cache ownership.
 
+To sign with your own Apple Development certificate instead, set `REELSBLOCKER_SIGNING_IDENTITY` to its name and `REELSBLOCKER_DEVELOPMENT_TEAM` to its matching team ID when running the script. Ad-hoc signing requires Safari's **Allow unsigned extensions** option; Safari otherwise ignores the extension and the settings API returns “extension not found”.
+
+Xcode writes the final app directly to `dist`, while intermediates and caches stay in the centralized DerivedData directory. The script registers that app with Launch Services. Avoid keeping another installed copy with the same bundle identifier: conflicting containing-app registrations can cause `SFErrorDomain 1` even when the extension appears in Safari's list.
+
+If that error persists, check old Xcode build locations and the Trash for other copies before reinstalling. During local validation, removing stale Launch Services registrations for those copies restored both extension-state lookup and the settings button across repeated app launches.
+
 ## Enable in Safari
 
 1. Open `dist/ReelsBlocker.app` at least once to register the extension.
@@ -44,6 +50,8 @@ The build script creates an ad-hoc signed Debug app. It uses a centralized Deriv
 5. Reload your open Facebook and YouTube tabs.
 
 Unsigned extensions may need to be allowed again after restarting Safari. This local build is not notarized or published in the App Store. Distribution requires appropriate Apple Developer signing.
+
+The app's **Open Safari Extension Settings…** button launches Safari explicitly and opens this extension's settings. The app stays open so you can retry if Safari reports an error; returning to the app refreshes the enabled status. If the extension is missing, expand **Extension missing from Safari?** for setup instructions. Keep one installed copy in Applications and launch that copy. Safari discovers the extension from its containing app; dragging the app icon into Safari's Extensions list is not an installation method.
 
 See Apple's guides to [enabling developer features](https://developer.apple.com/documentation/safari-developer-tools/enabling-developer-features) and [running a Safari Web Extension](https://developer.apple.com/documentation/safariservices/running-your-safari-web-extension).
 
