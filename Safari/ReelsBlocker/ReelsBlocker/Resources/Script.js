@@ -1,91 +1,73 @@
 let extensionEnabled = null;
-let guideRequested = false;
 let openingPreferences = false;
+let checkingForCompletion = false;
+let step = 1;
 
-function setStep(step) {
-    const changed = document.body.dataset.step !== String(step);
+function post(message) { webkit.messageHandlers.controller.postMessage(message); }
+function feedback(message = '') { document.querySelector('.feedback').textContent = message; }
+
+function setStep(next) {
+    step = next;
     document.body.dataset.step = String(step);
     document.querySelectorAll('.screen').forEach((screen, index) => { screen.hidden = index + 1 !== step; });
-    document.querySelectorAll('.progress li').forEach((item, index) => {
-        if (index + 1 === step) item.setAttribute('aria-current', 'step');
-        else item.removeAttribute('aria-current');
-        item.classList.toggle('complete', index + 1 < step);
-    });
-    document.querySelector('details').hidden = step === 3;
-    if (changed) document.querySelector(`#step-${step} h1`).focus();
+    document.querySelector('.back').hidden = step === 1;
+    const count = document.querySelector('.step-count');
+    count.textContent = `${step} / 4`;
+    count.setAttribute('aria-label', `Шаг ${step} из 4`);
+    feedback();
+    document.querySelector(`#step-${step} h1`).focus();
+    post(`setup-step-${step}`);
 }
 
 function show(enabled) {
     extensionEnabled = typeof enabled === 'boolean' ? enabled : null;
-    const waiting = document.querySelector('.waiting');
-    waiting.textContent = enabled === false ? 'Not enabled yet. Tick the checkbox in Safari, then come back here.'
-        : 'We couldn’t confirm the status. Check Safari, then try again.';
-    document.querySelector('.check-state').disabled = false;
-    if (extensionEnabled === true && !guideRequested) {
-        setStep(3);
-        document.querySelector('.feedback').textContent = '';
-    } else if (document.body.dataset.step === '3' && extensionEnabled !== true) {
-        setStep(2);
-    }
+    if (!checkingForCompletion) return;
+    checkingForCompletion = false;
+    const button = document.querySelector('.check-state');
+    button.disabled = false;
+    button.textContent = 'Чек на месте. Давай дальше';
+    if (extensionEnabled === true) setStep(4);
+    else feedback(extensionEnabled === false ? 'Галочки пока нет. Включи расширение в Safari.' : 'Не удалось проверить галочку. Попробуй ещё раз.');
 }
 
 function setOpeningPreferences(opening) {
     openingPreferences = opening;
-    document.querySelectorAll('.open-preferences').forEach(button => {
-        button.disabled = opening;
-        button.textContent = opening ? 'Opening Safari…' : button.dataset.label;
-    });
-    document.querySelector('.feedback').textContent = '';
+    const button = document.querySelector('.open-preferences');
+    button.disabled = opening;
+    button.textContent = opening ? 'Открываю Safari…' : 'Открыть настройки';
+    if (opening) feedback();
 }
 
 function finishOpeningPreferences(message, failed) {
     setOpeningPreferences(false);
-    const feedback = document.querySelector('.feedback');
-    // Activation can be confirmed while an earlier Settings request is pending.
-    // A late navigation error must not undo that verified success.
-    if (extensionEnabled === true && !guideRequested) {
-        feedback.textContent = '';
-        document.querySelector('details').open = false;
-        setStep(3);
-        return;
-    }
-    feedback.textContent = failed ? message : '';
-    feedback.classList.toggle('error', failed);
-    document.querySelector('details').open = failed;
-    if (!failed && extensionEnabled === true && !guideRequested) setStep(3);
+    if (step !== 2) return;
+    if (failed) feedback(message);
+    else setStep(3);
 }
+function showWebsiteError(message) { feedback(message); }
 
-function post(message) { webkit.messageHandlers.controller.postMessage(message); }
-
-function showWebsiteError(message) {
-    const feedback = document.querySelector('.feedback');
-    feedback.textContent = message;
-    feedback.classList.add('error');
-}
-
-document.querySelectorAll('.open-preferences').forEach(button => {
-    button.dataset.label = button.textContent;
-    button.addEventListener('click', () => {
-        if (openingPreferences) return;
-        guideRequested = false;
-        setStep(2);
-        document.querySelector('.waiting').textContent = 'Waiting for Safari to confirm it’s enabled…';
-        setOpeningPreferences(true);
-        post('open-preferences');
-    });
+document.querySelector('.start').addEventListener('click', () => setStep(2));
+document.querySelector('.back').addEventListener('click', () => {
+    if (openingPreferences || checkingForCompletion) return;
+    setStep(Math.max(1, step - 1));
+});
+document.querySelector('.open-preferences').addEventListener('click', () => {
+    if (openingPreferences) return;
+    setOpeningPreferences(true);
+    post('open-preferences');
 });
 document.querySelector('.check-state').addEventListener('click', event => {
-    guideRequested = false;
+    if (checkingForCompletion) return;
+    checkingForCompletion = true;
     event.currentTarget.disabled = true;
-    document.querySelector('.waiting').textContent = 'Checking Safari…';
+    event.currentTarget.textContent = 'Проверяю…';
+    feedback();
     post('check-state');
 });
-document.querySelector('.back').addEventListener('click', () => { guideRequested = true; setStep(1); });
-document.querySelector('.view-guide').addEventListener('click', () => { guideRequested = true; setStep(1); });
 document.querySelectorAll('[data-site]').forEach(button => {
     button.addEventListener('click', () => {
         if (extensionEnabled !== true) return;
-        document.querySelector('.feedback').textContent = '';
+        feedback();
         post(`open-${button.dataset.site}`);
     });
 });

@@ -26,9 +26,7 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
     private func positionSetupWindow() {
         guard let window = view.window, let screen = window.screen ?? NSScreen.main else { return }
         let area = screen.visibleFrame.insetBy(dx: 16, dy: 16)
-        var frame = window.frame
-        frame.size.width = min(frame.width, area.width)
-        frame.size.height = min(frame.height, area.height)
+        var frame = NSRect(origin: .zero, size: NSSize(width: min(300, area.width), height: min(300, area.height)))
         frame.origin = NSPoint(x: area.maxX - frame.width, y: area.midY - frame.height / 2)
         window.setFrame(frame, display: true)
         window.level = .floating
@@ -73,6 +71,11 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         guard message.frameInfo.isMainFrame, let action = message.body as? String else { return }
         switch action {
+        case "setup-step-1", "setup-step-2", "setup-step-3":
+            positionSetupWindow()
+            return
+        case "setup-step-4":
+            return
         case "check-state":
             refreshExtensionState()
             return
@@ -96,7 +99,7 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
         // Launch Safari explicitly, even when another browser is the default.
         guard let safariURL = NSWorkspace.shared.urlForApplication(withBundleIdentifier: "com.apple.Safari") else {
             finishOpeningPreferences(error: NSError(domain: "ReelsBlocker", code: 1,
-                userInfo: [NSLocalizedDescriptionKey: "Safari could not be found on this Mac."]))
+                userInfo: [NSLocalizedDescriptionKey: "Safari не найден на этом Mac."]))
             return
         }
 
@@ -133,15 +136,12 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
         let message: String
         if let error = error {
             let nativeError = error as NSError
-            let reason = nativeError.domain == SFErrorDomain && nativeError.code == SFErrorCode.noExtensionFound.rawValue
-                ? "Safari cannot match Reels Blocker to this app. Keep one installed copy and open it again. If using an unsigned build, allow unsigned extensions in Safari's Developer settings. "
-                : "Could not open the extension settings. "
-            message = reason + "In Safari, choose Safari → Settings → Extensions. "
-                + "If Reels Blocker is missing, follow the steps below. "
-                + "\(nativeError.localizedDescription) (\(nativeError.domain), \(nativeError.code))"
+            message = nativeError.domain == SFErrorDomain && nativeError.code == SFErrorCode.noExtensionFound.rawValue
+                ? "Safari не нашёл расширение. Закрой старые копии приложения и попробуй снова."
+                : "Не удалось открыть настройки. Попробуй ещё раз."
             NSLog("Safari extension settings failed: %@", nativeError)
         } else {
-            message = "Safari extension settings are open. Select Reels Blocker and enable its checkbox."
+            message = ""
         }
         // Encode native error text as data, never as executable JavaScript.
         if let data = try? JSONSerialization.data(withJSONObject: [message]),
@@ -168,7 +168,8 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
                                 configuration: NSWorkspace.OpenConfiguration()) { [weak self] _, error in
             guard let error = error else { return }
             DispatchQueue.main.async {
-                let message = "Could not open the site in Safari. \(error.localizedDescription)"
+                NSLog("Opening website in Safari failed: %@", error as NSError)
+                let message = "Не удалось открыть сайт в Safari. Попробуй ещё раз."
                 if let data = try? JSONSerialization.data(withJSONObject: [message]),
                    let arguments = String(data: data, encoding: .utf8) {
                     self?.webView.evaluateJavaScript("showWebsiteError(\(arguments)[0])")

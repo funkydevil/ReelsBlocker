@@ -1,59 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../Style.css">
     <script src="../Script.js" defer></script>
-    <title>Set up Reels Blocker</title>
+    <title>Настройка Reels Blocker</title>
 </head>
 <body data-step="1">
-    <header><img src="../Icon.png" width="36" height="36" alt=""><span>Reels Blocker</span><span class="setup-label">SAFARI SETUP</span></header>
+    <header><button class="back" aria-label="Назад" hidden>‹ Назад</button><span class="step-count" aria-label="Шаг 1 из 4">1 / 4</span></header>
     <main>
-        <nav aria-label="Setup progress">
-            <ol class="progress"><li aria-current="step"><span>1</span> Open settings</li><li><span>2</span> Enable extension</li><li><span>3</span> Enjoy your feed</li></ol>
-        </nav>
-        <section class="screen" id="step-1" aria-labelledby="welcome-title">
-            <p class="eyebrow">ONE SMALL STEP TO A CALMER FEED</p>
-            <h1 id="welcome-title" tabindex="-1">Less scrolling.<br>More living.</h1>
-            <p class="intro">Let’s turn on Reels Blocker in Safari.<br>We’ll show you exactly where to click.</p>
-            <div class="route" aria-label="Safari, Settings, Extensions"><span class="compass" aria-hidden="true">↗</span><strong>Safari</strong><span>›</span><strong>Settings</strong><span>›</span><strong>Extensions</strong></div>
-            <button class="primary open-preferences">Open Safari Extension Settings</button>
-            <p class="caption">Next, tick the checkbox beside Reels Blocker.</p>
+        <section id="step-1" class="screen" aria-labelledby="welcome-title">
+            <img class="app-icon" src="../Icon.png" width="38" height="38" alt="">
+            <h1 id="welcome-title" tabindex="-1">Меньше коротких видео.<br>Больше твоего времени.</h1>
+            <p>Помогу настроить блокировку<br>коротких видео в Safari.</p>
+            <button class="primary start">Поехали</button>
         </section>
-        <section class="screen" id="step-2" aria-labelledby="enable-title" hidden>
-            <p class="eyebrow">IN THE SAFARI WINDOW</p>
-            <h1 id="enable-title" tabindex="-1">One checkbox. That’s it.</h1>
-            <p class="intro">Find <strong>Reels Blocker for Facebook</strong> in the list.<br>Click the checkbox to its left to turn it on.</p>
-            <figure class="safari-demo" aria-label="Illustration: in Safari Settings, choose Extensions and tick the checkbox to the left of Reels Blocker for Facebook.">
-                <div class="demo-title" aria-hidden="true"><span class="window-dots"><i></i><i></i><i></i></span>Safari Settings</div>
-                <div class="demo-tabs" aria-hidden="true"><span>General</span><span>Privacy</span><strong>Extensions</strong><span>Advanced</span></div>
-                <div class="demo-content" aria-hidden="true">
-                    <div class="demo-sidebar"><small>Installed</small><div class="extension-row"><span class="demo-checkbox"><span>✓</span></span><img src="../Icon.png" width="27" height="27" alt=""><strong>Reels Blocker<br>for Facebook</strong></div></div>
-                    <div class="demo-description"><img src="../Icon.png" width="40" height="40" alt=""><strong>Reels Blocker<br>for Facebook</strong><small>Facebook media &amp;<br>YouTube Shorts</small></div>
-                </div>
-                <figcaption><span class="instruction-dot" aria-hidden="true">1</span> Tick this checkbox in Safari <span class="illustration-label">Illustration</span></figcaption>
+        <section id="step-2" class="screen" aria-labelledby="settings-title" hidden>
+            <div class="step-symbol" aria-hidden="true">2</div>
+            <h1 id="settings-title" tabindex="-1">Откроем настройки Safari</h1>
+            <p>Нужен раздел «Расширения».<br>Открою его за тебя.</p>
+            <button class="primary open-preferences">Открыть настройки</button>
+        </section>
+        <section id="step-3" class="screen" aria-labelledby="enable-title" hidden>
+            <h1 id="enable-title" tabindex="-1">Поставь галочку</h1>
+            <p>В списке Safari найди<br><strong>Reels Blocker for Facebook</strong>.</p>
+            <figure class="settings-crop" aria-label="Образец: поставьте галочку слева от Reels Blocker for Facebook в настройках Safari.">
+                <span class="sample-arrow" aria-hidden="true">➜</span><span class="sample-checkbox" aria-hidden="true">✓</span><img src="../Icon.png" width="26" height="26" alt=""><strong aria-hidden="true">Reels Blocker<br>for Facebook</strong>
             </figure>
-            <p class="waiting" role="status">Waiting for Safari to confirm it’s enabled…</p>
-            <div class="actions"><button class="secondary open-preferences">Open Safari Settings Again</button><button class="text-button check-state">I’ve enabled it — check again</button></div>
-            <button class="text-button back">Back</button>
+            <p class="caption">Вот так выглядит нужная строка.</p>
+            <button class="primary check-state">Чек на месте. Давай дальше</button>
         </section>
-        <section class="screen" id="step-3" aria-labelledby="done-title" hidden>
+        <section id="step-4" class="screen" aria-labelledby="done-title" hidden>
             <div class="success-mark" aria-hidden="true">✓</div>
-            <p class="eyebrow">EXTENSION ENABLED</p>
-            <h1 id="done-title" tabindex="-1">Your feed, on your terms.</h1>
-            <p class="intro">You’re all set. A little less Reels.<br>A little more room for everything else.</p>
-            <div class="permission-note"><strong>Try it in Safari</strong><p>If Safari asks, allow Reels Blocker on Facebook and YouTube so it can block content. Already have those tabs open? Reload them.</p></div>
-            <div class="actions"><button class="primary" data-site="facebook">Open Facebook</button><button class="secondary" data-site="youtube">Open YouTube</button></div>
-            <button class="text-button view-guide">View setup guide</button>
+            <h1 id="done-title" tabindex="-1">Поздравляю!<br>Ты справился.</h1>
+            <p>Открой Facebook или YouTube. Когда Safari запросит доступ к сайту — разреши его. Короткие видео больше не будут тебя отвлекать.</p>
+            <div class="sites"><button class="primary" data-site="facebook">Facebook</button><button class="secondary" data-site="youtube">YouTube</button></div>
         </section>
-        <p class="feedback" role="status" aria-live="polite"></p>
-        <details>
-            <summary>Can’t find the extension?</summary>
-            <ol><li>Keep one copy of ReelsBlocker in Applications and open it once.</li><li>For an unsigned local build, turn on Safari → Settings → Advanced → Show features for web developers, then Developer → Allow unsigned extensions.</li><li>Return to Extensions and tick Reels Blocker for Facebook.</li></ol>
-            <p>Safari adds the extension from this app automatically. There’s nothing to drag into the list.</p>
-        </details>
     </main>
+    <p class="feedback" role="status" aria-live="polite"></p>
 </body>
 </html>
