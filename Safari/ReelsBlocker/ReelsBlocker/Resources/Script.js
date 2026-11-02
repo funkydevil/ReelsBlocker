@@ -71,3 +71,7 @@ document.querySelectorAll('[data-site]').forEach(button => {
         post(`open-${button.dataset.site}`);
     });
 });
+
+document.querySelector('.finish').addEventListener('click', () => {
+    if (step === 4) post('close-setup');
+});

@@ -80,3 +80,13 @@ test('verified completion opens sites in Safari and displays launch errors', t =
   window.showWebsiteError('Не удалось открыть сайт.');
   assert.equal(document.querySelector('.feedback').textContent, 'Не удалось открыть сайт.');
 });
+
+test('finish closes only from the completed step', t => {
+  const app = onboarding(t), { window, document, messages } = app;
+  document.querySelector('.finish').click();
+  assert.equal(messages.includes('close-setup'), false);
+  openSettings(app); window.finishOpeningPreferences('', false);
+  document.querySelector('.check-state').click(); window.show(true);
+  document.querySelector('.finish').click();
+  assert.equal(messages.at(-1), 'close-setup');
+});

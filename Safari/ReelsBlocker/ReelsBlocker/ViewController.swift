@@ -17,59 +17,57 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
     private var isOpeningPreferences = false
     private var stateTimer: Timer?
     private var isCheckingState = false
-    private var guideArrow: NSWindow?
-    private var isArrowStep = false
     private var hasPositionedWindow = false
-
-    private func hideGuideArrow() {
-        guard let arrow = guideArrow else { return }
-        arrow.parent?.removeChildWindow(arrow)
-        arrow.close()
-        guideArrow = nil
-    }
-
-    private func showGuideArrow() {
-        guard let window = view.window else { return }
-        let arrow: NSWindow
-        if let existing = guideArrow {
-            arrow = existing
-        } else {
-            arrow = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 84, height: 36),
-                             styleMask: .borderless, backing: .buffered, defer: false)
-            arrow.isOpaque = false
-            arrow.backgroundColor = .clear
-            arrow.hasShadow = false
-            arrow.ignoresMouseEvents = true
-            arrow.isReleasedWhenClosed = false
-            arrow.level = .floating
-            arrow.collectionBehavior = [.moveToActiveSpace, .fullScreenAuxiliary]
-            arrow.contentView = GuideArrowView(frame: NSRect(x: 0, y: 0, width: 84, height: 36))
-            guideArrow = arrow
-        }
-        arrow.setFrameOrigin(NSPoint(x: window.frame.minX - 80, y: window.frame.maxY - 90))
-        if arrow.parent !== window { window.addChildWindow(arrow, ordered: .above) }
-        arrow.orderFront(nil)
-    }
+    private var windowChrome: NSView?
 
     override func viewDidAppear() {
         super.viewDidAppear()
+        configureWindow()
         if !hasPositionedWindow {
             positionSetupWindow()
             hasPositionedWindow = true
         }
-        if isArrowStep { showGuideArrow() }
     }
 
-    override func viewWillDisappear() {
-        hideGuideArrow()
-        super.viewWillDisappear()
+    private func configureWindow() {
+        guard let window = view.window else { return }
+        window.styleMask = [.borderless, .closable]
+        window.isOpaque = false
+        window.backgroundColor = .clear
+        window.hasShadow = true
+        view.wantsLayer = true
+        view.layer?.cornerRadius = 20
+        view.layer?.masksToBounds = true
+        guard windowChrome == nil else { return }
+        let chrome = SetupDragRegion(frame: NSRect(x: 0, y: view.bounds.height - 24,
+                                                   width: view.bounds.width, height: 24))
+        chrome.autoresizingMask = [.width, .minYMargin]
+        let close = NSButton(frame: NSRect(x: 8, y: 1, width: 22, height: 22))
+        close.isBordered = false
+        close.image = NSImage(systemSymbolName: "xmark", accessibilityDescription: "Закрыть")
+        close.imageScaling = .scaleProportionallyDown
+        close.contentTintColor = .secondaryLabelColor
+        close.setAccessibilityLabel("Закрыть окно")
+        close.target = self
+        close.action = #selector(closeSetup)
+        close.keyEquivalent = "\u{1b}"
+        close.keyEquivalentModifierMask = []
+        chrome.addSubview(close)
+        view.addSubview(chrome, positioned: .above, relativeTo: webView)
+        windowChrome = chrome
+    }
+
+    @objc private func closeSetup() {
+        NSApplication.shared.terminate(nil)
     }
 
     private func positionSetupWindow() {
         guard let window = view.window, let screen = window.screen ?? NSScreen.main else { return }
         let area = screen.visibleFrame.insetBy(dx: 16, dy: 16)
         var frame = NSRect(origin: .zero, size: NSSize(width: min(300, area.width), height: min(300, area.height)))
-        frame.origin = NSPoint(x: area.maxX - frame.width, y: area.midY - frame.height / 2)
+        let proposedX = area.midX - frame.width / 2 + area.width * 0.10
+        frame.origin = NSPoint(x: min(max(proposedX, area.minX), area.maxX - frame.width),
+                               y: area.midY - frame.height / 2)
         window.setFrame(frame, display: true)
         window.level = .floating
         window.hidesOnDeactivate = false
@@ -113,20 +111,10 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         guard message.frameInfo.isMainFrame, let action = message.body as? String else { return }
         switch action {
-        case "setup-step-1", "setup-step-2":
-            isArrowStep = false
-            hideGuideArrow()
-            positionSetupWindow()
+        case "setup-step-1", "setup-step-2", "setup-step-3", "setup-step-4":
             return
-        case "setup-step-3":
-            isArrowStep = true
-            // This arrow is an illustration until the user aligns the guide.
-            // Do not guess the position of a control in another application.
-            showGuideArrow()
-            return
-        case "setup-step-4":
-            isArrowStep = false
-            hideGuideArrow()
+        case "close-setup":
+            closeSetup()
             return
         case "check-state":
             refreshExtensionState()
@@ -231,29 +219,7 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
     }
 
     deinit {
-        hideGuideArrow()
         stateTimer?.invalidate()
         NotificationCenter.default.removeObserver(self)
-    }
-}
-
-private final class GuideArrowView: NSView {
-    override var isOpaque: Bool { false }
-
-    override func draw(_ dirtyRect: NSRect) {
-        let arrow = NSBezierPath()
-        arrow.move(to: NSPoint(x: 78, y: 18))
-        arrow.line(to: NSPoint(x: 8, y: 18))
-        arrow.move(to: NSPoint(x: 20, y: 29))
-        arrow.line(to: NSPoint(x: 8, y: 18))
-        arrow.line(to: NSPoint(x: 20, y: 7))
-        arrow.lineCapStyle = .round
-        arrow.lineJoinStyle = .round
-        NSColor.windowBackgroundColor.setStroke()
-        arrow.lineWidth = 7
-        arrow.stroke()
-        NSColor.systemGreen.setStroke()
-        arrow.lineWidth = 3
-        arrow.stroke()
     }
 }
