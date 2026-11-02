@@ -86,7 +86,6 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
         self.webView.navigationDelegate = self
 
         self.webView.configuration.userContentController.add(self, name: "controller")
-        self.webView.configuration.userContentController.add(self, name: "analytics")
 
         self.webView.loadFileURL(Bundle.main.url(forResource: "Main", withExtension: "html")!, allowingReadAccessTo: Bundle.main.resourceURL!)
 
@@ -117,13 +116,6 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
 
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         guard message.frameInfo.isMainFrame else { return }
-        if message.name == "analytics" {
-            if let payload = message.body as? [String: Any], payload["action"] as? String == "analytics_capture",
-               let event = payload["event"] as? String {
-                Analytics.capture(event, properties: payload["properties"] as? [String: Any] ?? [:], source: "setup")
-            }
-            return
-        }
         guard let action = message.body as? String else { return }
         switch action {
         case "setup-step-1", "setup-step-2", "setup-step-3", "setup-step-4":

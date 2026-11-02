@@ -16,11 +16,8 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
             guard let enabled = payload["enabled"] as? Bool else { respond(["ok": false]); return }
             let saved = Analytics.setEnabled(enabled)
             respond(["ok": saved, "enabled": Analytics.preferences().enabled])
-        case "analytics_capture":
-            guard let event = payload["event"] as? String else { respond(["ok": false]); return }
-            Analytics.capture(event, properties: payload["properties"] as? [String: Any] ?? [:], source: "popup") {
-                respond(["ok": true])
-            }
+        case "analytics_extension_started":
+            Analytics.capture("extension_started") { respond(["ok": true]) }
         default: respond(["ok": false])
         }
     }

@@ -4,7 +4,7 @@
   "description": "Safari extension that blocks Facebook media and YouTube Shorts",
   "scripts": {
     "test": "node --test tests/*.test.cjs",
-    "check": "node scripts/build-localizations.cjs --check && node --check extension/i18n.js && node --check extension/content.js && node --check extension/popup.js && node --check extension/youtube.js && node --check Safari/ReelsBlocker/ReelsBlocker/Resources/Script.js && node --check extension/analytics.js && node --check scripts/prepare-analytics.cjs",
+    "check": "node scripts/build-localizations.cjs --check && node --check extension/i18n.js && node --check extension/content.js && node --check extension/popup.js && node --check extension/youtube.js && node --check Safari/ReelsBlocker/ReelsBlocker/Resources/Script.js && node --check extension/analytics.js && node --check scripts/prepare-analytics.cjs && node --check extension/background.js",
     "localize": "node scripts/build-localizations.cjs"
   },
   "keywords": [],

@@ -11,6 +11,7 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ notification: Notification) {
+        Analytics.capture("app_opened")
         guard let menu = NSApplication.shared.mainMenu else { return }
         let names = ["orderFrontStandardAboutPanel:": "aboutApp", "hide:": "hideApp",
                      "hideOtherApplications:": "hideOthers", "unhideAllApplications:": "showAll", "terminate:": "quitApp"]

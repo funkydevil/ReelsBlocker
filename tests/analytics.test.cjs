@@ -23,23 +23,44 @@ test('changing the preference uses the native store and reports persistence fail
   assert.equal(c.messages.at(-1).payload.action, 'analytics_set'); assert.equal(c.messages.at(-1).payload.enabled, false);
   const bad = client({ response: { ok: false } }); await bad.api.init('popup'); await assert.rejects(bad.api.setEnabled(false));
 });
-test('setup events go to the native handler, and setup cannot change the shared preference', async () => {
-  const c = client(); await c.api.init('setup'); await c.api.capture('setup_step_viewed', { step: 2 });
-  assert.equal(c.messages[0].payload.event, 'setup_step_viewed'); assert.equal(c.messages[0].payload.properties.step, 2);
+test('popup exposes no event-capture API and native failures remain contained', async () => {
+  const c = client({ failed: true }); assert.equal(await c.api.init('popup'), false);
+  assert.equal(c.api.capture, undefined);
   await assert.rejects(c.api.setEnabled(false));
 });
-test('native failures do not interrupt popup or onboarding actions', async () => {
-  const c = client({ failed: true }); assert.equal(await c.api.init('popup'), false);
-  await assert.doesNotReject(c.api.capture('popup_opened'));
+test('background records a launch only on startup/install, not script loads or repeated callbacks', async () => {
+  const callbacks = {}, messages = [];
+  const context = vm.createContext({ browser: { runtime: {
+    onStartup: { addListener: callback => { callbacks.startup = callback; } },
+    onInstalled: { addListener: callback => { callbacks.installed = callback; } },
+    sendNativeMessage: async (host, payload) => { messages.push({ host, payload }); }
+  } } });
+  vm.runInContext(fs.readFileSync('extension/background.js', 'utf8'), context);
+  assert.equal(messages.length, 0);
+  callbacks.startup(); callbacks.installed(); callbacks.startup();
+  await new Promise(resolve => setImmediate(resolve));
+  assert.equal(messages.length, 1);
+  assert.equal(messages[0].host, 'local.reelsblocker');
+  assert.equal(messages[0].payload.action, 'analytics_extension_started');
+  assert.deepEqual(Object.keys(messages[0].payload), ['action']);
 });
 test('analytics preference is revealed only through Settings in the extension popup', async t => {
   const dom = new JSDOM(fs.readFileSync('extension/popup.html', 'utf8'), { runScripts: 'outside-only' }); t.after(() => dom.window.close());
   dom.window.browser = { storage: { local: { get: async d => d, set: async () => {} } } };
-  dom.window.AppAnalytics = { init: async () => true, capture: async () => {}, setEnabled: async v => v };
+  const messages = [];
+  dom.window.browser.runtime = { sendNativeMessage: async (host, payload) => { messages.push(payload); return { ok: true, enabled: payload.enabled ?? true }; } };
+  dom.window.eval(fs.readFileSync('extension/analytics.js', 'utf8'));
   dom.window.eval(fs.readFileSync('extension/popup.js', 'utf8'));
   const panel = dom.window.document.getElementById('analytics-settings');
   assert.equal(panel.hidden, true); dom.window.document.querySelector('.open-settings').click(); assert.equal(panel.hidden, false);
   await new Promise(resolve => setImmediate(resolve)); assert.equal(dom.window.document.querySelector('.analytics-consent').checked, true);
+  dom.window.document.getElementById('blockVideos').click();
+  await new Promise(resolve => setImmediate(resolve));
+  assert.deepEqual(messages.map(x => x.action), ['analytics_get']);
+  dom.window.document.querySelector('.analytics-consent').click();
+  await new Promise(resolve => setImmediate(resolve));
+  assert.deepEqual(messages.map(x => x.action), ['analytics_get', 'analytics_set']);
+  assert.equal(messages.at(-1).enabled, false);
   assert.equal(fs.readFileSync('Safari/ReelsBlocker/ReelsBlocker/Resources/Base.lproj/Main.html', 'utf8').includes('analytics-consent'), false);
 });
 test('website content scripts do not load analytics or get PostHog host permissions', () => {

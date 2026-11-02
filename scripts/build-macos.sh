@@ -27,6 +27,7 @@ xcodebuild -project "$TASK_ROOT/Safari/ReelsBlocker/ReelsBlocker.xcodeproj" \
   -scheme ReelsBlocker -configuration Debug -derivedDataPath "$TASK_DERIVED_DATA" \
   CONFIGURATION_BUILD_DIR="$TASK_ROOT/dist" \
   "${TASK_SIGNING_ARGS[@]}" build
+node "$TASK_ROOT/scripts/check-bundle.cjs" "$TASK_ROOT/dist/Short Video Blocker.app"
 # Keep one build product: copying a registered app from DerivedData can leave
 # Safari looking up a different containing app with the same bundle identifier.
 TASK_LSREGISTER=/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister

@@ -1,8 +1,6 @@
 const t = (key, vars) => AppI18n.t(key, vars);
 AppI18n.apply();
 document.querySelector('.step-count').setAttribute('aria-label', t('stepLabel', { step: 1, total: 4 }));
-const capture = (event, values = {}) => { void globalThis.AppAnalytics?.capture(event, values); };
-globalThis.AppAnalytics?.init('setup').then(() => capture('app_opened'));
 let extensionEnabled = null;
 let openingPreferences = false;
 let checkingForCompletion = false;
@@ -29,8 +27,6 @@ function updateDemoControl(paused) {
 
 function setStep(next) {
     step = next;
-    capture('setup_step_viewed', { step });
-    if (step === 4) capture('setup_completed');
     document.body.dataset.step = String(step);
     document.querySelectorAll('.screen').forEach((screen, index) => { screen.hidden = index + 1 !== step; });
     document.querySelector('.back').hidden = step === 1;
@@ -48,7 +44,6 @@ function show(enabled) {
     extensionEnabled = typeof enabled === 'boolean' ? enabled : null;
     if (!checkingForCompletion) return;
     checkingForCompletion = false;
-    capture('extension_status_checked', { status: extensionEnabled === true ? 'enabled' : extensionEnabled === false ? 'disabled' : 'unknown' });
     const button = document.querySelector('.check-state');
     button.disabled = false;
     button.textContent = t('confirmEnabled');
@@ -67,7 +62,6 @@ function setOpeningPreferences(opening) {
 function finishOpeningPreferences(message, failed) {
     setOpeningPreferences(false);
     if (step !== 2) return;
-    capture('settings_open_result', { success: !failed });
     if (failed) feedback(message);
     else setStep(3);
 }
@@ -81,7 +75,6 @@ document.querySelector('.back').addEventListener('click', () => {
 document.querySelector('.open-preferences').addEventListener('click', () => {
     if (openingPreferences) return;
     setOpeningPreferences(true);
-    capture('settings_open_requested');
     post('open-preferences');
 });
 document.querySelector('.check-state').addEventListener('click', event => {

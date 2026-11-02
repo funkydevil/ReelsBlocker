@@ -7,8 +7,7 @@ enum Analytics {
     struct Preferences: Codable { var enabled: Bool; var id: String }
     private static let lock = NSLock()
     private static let group = "F93NU8DF46.local.reelsblocker.analytics"
-    private static let allowedEvents: Set<String> = ["app_opened", "setup_step_viewed", "settings_open_requested",
-        "settings_open_result", "extension_status_checked", "setup_completed", "popup_opened", "filter_changed"]
+    private static let allowedEvents: Set<String> = ["app_opened", "extension_started"]
 
     private static var query: [String: Any] {
         [kSecClass as String: kSecClassGenericPassword,
@@ -55,9 +54,8 @@ enum Analytics {
         return save(Preferences(enabled: enabled, id: enabled ? UUID().uuidString : ""))
     }
 
-    static func capture(_ event: String, properties: [String: Any] = [:], source: String,
-                        completion: @escaping () -> Void = {}) {
-        guard allowedEvents.contains(event), ["setup", "popup"].contains(source) else { completion(); return }
+    static func capture(_ event: String, completion: @escaping () -> Void = {}) {
+        guard allowedEvents.contains(event) else { completion(); return }
         let preferences = preferences()
         guard preferences.enabled, !preferences.id.isEmpty,
               let configURL = Bundle.main.url(forResource: "analytics-config", withExtension: "json"),
@@ -65,21 +63,9 @@ enum Analytics {
               let config = try? JSONSerialization.jsonObject(with: configData) as? [String: String],
               config["host"] == "https://eu.i.posthog.com", let token = config["token"], token.hasPrefix("phc_")
         else { completion(); return }
-        var selected: [String: Any] = ["source": source, "app_version": "1.4.0",
+        let selected: [String: Any] = [ "app_version": "1.4.0",
             "language": Bundle.main.preferredLocalizations.first ?? "en",
             "$process_person_profile": false, "$geoip_disable": true, "$ip": "0.0.0.0"]
-        switch event {
-        case "setup_step_viewed":
-            if let step = properties["step"] as? Int, (1...4).contains(step) { selected["step"] = step }
-        case "settings_open_result":
-            if let success = properties["success"] as? Bool { selected["success"] = success }
-        case "extension_status_checked":
-            if let status = properties["status"] as? String, ["enabled", "disabled", "unknown"].contains(status) { selected["status"] = status }
-        case "filter_changed":
-            if let filter = properties["filter"] as? String, ["blockVideos", "blockImages", "blockShorts"].contains(filter),
-               let enabled = properties["enabled"] as? Bool { selected["filter"] = filter; selected["enabled"] = enabled }
-        default: break
-        }
         let payload: [String: Any] = ["api_key": token, "event": event, "distinct_id": preferences.id, "properties": selected]
         guard let data = try? JSONSerialization.data(withJSONObject: payload),
               let endpoint = URL(string: "https://eu.i.posthog.com/i/v0/e/") else { completion(); return }

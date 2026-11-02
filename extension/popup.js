@@ -12,7 +12,7 @@
   });
   if (analytics && consent) {
     consent.disabled = true;
-    analytics.init('popup').then(enabled => { consent.checked = enabled; consent.disabled = false; void analytics.capture('popup_opened'); });
+    analytics.init('popup').then(enabled => { consent.checked = enabled; consent.disabled = false; });
     consent.addEventListener('change', async () => {
       consent.disabled = true;
       try { await analytics.setEnabled(consent.checked); }
@@ -40,7 +40,6 @@
     status.textContent = t("savingSettings", "Saving…");
     try {
       await browser.storage.local.set({ [input.id]: value });
-      void analytics?.capture('filter_changed', { filter: input.id, enabled: value });
       status.textContent = t("settingsSaved", "Saved. Applied to open Facebook and YouTube tabs.");
     } catch {
       input.checked = !value;

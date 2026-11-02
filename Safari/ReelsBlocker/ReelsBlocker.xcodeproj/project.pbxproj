@@ -36,6 +36,7 @@
 		F165172A30952309002E36C4 /* content.css in Resources */ = {isa = PBXBuildFile; fileRef = F165172730952309002E36C4 /* content.css */; };
 		F165172B30952309002E36C4 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = F165172830952309002E36C4 /* manifest.json */; };
 		F165172C30952309002E36C4 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = F165172930952309002E36C4 /* content.js */; };
+		AA1912340000000000000021 /* background.js */ = {isa = PBXBuildFile; fileRef = AA1912340000000000000020; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		F165172730952309002E36C4 /* content.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = content.css; path = ../../../extension/content.css; sourceTree = "<group>"; };
 		F165172830952309002E36C4 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = ../../../extension/manifest.json; sourceTree = "<group>"; };
 		F165172930952309002E36C4 /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = content.js; path = ../../../extension/content.js; sourceTree = "<group>"; };
+		AA1912340000000000000020 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "../../extension/background.js"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -299,7 +301,7 @@
 				F165170D30952308002E36C4 /* Main.storyboard in Resources */,
 				F165170830952308002E36C4 /* Script.js in Resources */,
 				CC1500000000000000000001 /* ../../extension/i18n.js in Resources */,
-				AA1912340000000000000002 /* ../../extension/analytics.js in Resources */,
+
 				AA1912340000000000000005 /* ../../extension/analytics-config.json in Resources */,
 				CC1500000000000000000004 /* ../../localization/catalog.json in Resources */,
 				CC1500000000000000000005 /* InfoPlist.strings in Resources */,
@@ -317,6 +319,7 @@
 				AB1400000000000000000002 /* youtube.js in Resources */,
 				CC1500000000000000000002 /* ../../extension/i18n.js in Resources */,
 				AA1912340000000000000003 /* ../../extension/analytics.js in Resources */,
+				AA1912340000000000000021 /* background.js in Resources */,
 				AA1912340000000000000006 /* ../../extension/analytics-config.json in Resources */,
 				CC1500000000000000000003 /* ../../extension/_locales in Resources */,
 				AB1300000000000000000002 /* icons in Resources */,
@@ -518,7 +521,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Analytics.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = F93NU8DF46;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -555,7 +558,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Analytics.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = F93NU8DF46;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -595,7 +598,7 @@
 				CODE_SIGN_ENTITLEMENTS = Analytics.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = F93NU8DF46;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -649,7 +652,7 @@
 				CODE_SIGN_ENTITLEMENTS = Analytics.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = F93NU8DF46;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
