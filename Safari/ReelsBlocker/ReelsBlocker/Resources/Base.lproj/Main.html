@@ -5,49 +5,50 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../Style.css">
+    <script src="../i18n.js" defer></script>
     <script src="../Script.js" defer></script>
-    <title>Настройка Reels Blocker</title>
+    <title data-i18n="appName">Short Video Blocker</title>
 </head>
 <body data-step="1">
     <header>
-        <button class="back" aria-label="Назад" hidden>Назад</button>
-        <span class="wordmark" aria-hidden="true">REELS BLOCKER</span>
-        <span class="step-count" aria-label="Шаг 1 из 4">1 / 4</span>
+        <button class="back" data-i18n="back" data-i18n-aria-label="back" hidden>Back</button>
+        <span class="wordmark" data-i18n="appName" data-i18n-title="appName">Short Video Blocker</span>
+        <span class="step-count" aria-label="Step 1 of 4">1 / 4</span>
     </header>
     <main>
         <section id="step-1" class="screen" aria-labelledby="welcome-title">
             <div class="focus-emblem" aria-hidden="true"><span class="pause-mark"></span><i></i></div>
-            <h1 id="welcome-title" tabindex="-1">Меньше видео.<br>Больше твоего времени.</h1>
-            <p>Вернём внимание тебе.<br>Начнём с настройки Safari.</p>
-            <button class="primary start">Поехали</button>
+            <h1 id="welcome-title" tabindex="-1" data-i18n="titleIntro">Less scrolling. More living.</h1>
+            <p data-i18n="introBody"></p>
+            <button class="primary start" data-i18n="start">Let’s go</button>
         </section>
         <section id="step-2" class="screen" aria-labelledby="settings-title" hidden>
             <div class="settings-emblem" aria-hidden="true"><span></span><span></span><span></span></div>
-            <h1 id="settings-title" tabindex="-1">Откроем<br>настройки Safari</h1>
-            <p>Нужен раздел «Расширения».<br>Открою его за тебя.</p>
-            <button class="primary open-preferences">Открыть настройки</button>
+            <h1 id="settings-title" tabindex="-1" data-i18n="titleSettings">Open Safari settings</h1>
+            <p data-i18n="settingsBody"></p>
+            <button class="primary open-preferences" data-i18n="openSettings">Open settings</button>
         </section>
         <section id="step-3" class="screen" aria-labelledby="enable-title" hidden>
-            <h1 id="enable-title" tabindex="-1">Одна галочка —<br>и можно выдохнуть</h1>
-            <p>В расширениях Safari найди<br><strong>Reels Blocker for Facebook</strong>.</p>
-            <figure id="checkbox-demo" class="settings-crop checkbox-demo" data-demo="settled" aria-label="Образец: поставьте галочку слева от Reels Blocker for Facebook в настройках Safari.">
+            <h1 id="enable-title" tabindex="-1" data-i18n="titleEnable">One checkbox. More calm.</h1>
+            <p data-i18n="enableBody"></p>
+            <figure id="checkbox-demo" class="settings-crop checkbox-demo" data-demo="settled" data-i18n-aria-label="exampleCheckboxLabel" aria-label="Extension checkbox example">
                 <span class="sample-checkbox" aria-hidden="true"><span class="check-mark">✓</span></span>
                 <img src="../Icon.png" width="28" height="28" alt="">
-                <strong aria-hidden="true">Reels Blocker<br>for Facebook</strong>
+                <strong aria-hidden="true" data-i18n="appName">Short Video Blocker</strong>
                 <svg class="demo-cursor" viewBox="0 0 24 30" aria-hidden="true" focusable="false"><path d="M3 2V23L8.6 17.5L13.5 28L18 25.8L13.1 15.7H21Z"/></svg>
             </figure>
             <div class="demo-caption">
-                <p class="caption">Поставь галочку в Safari.</p>
-                <button class="replay-demo" aria-controls="checkbox-demo" aria-label="Приостановить показ установки галочки">Пауза</button>
+                <p class="caption" data-i18n="checkInstruction">Enable the checkbox in Safari.</p>
+                <button class="replay-demo" aria-controls="checkbox-demo" data-i18n="pauseDemo" data-i18n-aria-label="pauseDemoLabel" aria-label="Приостановить показ установки галочки">Пауза</button>
             </div>
-            <button class="primary check-state">Чек на месте. Давай дальше</button>
+            <button class="primary check-state" data-i18n="confirmEnabled">It’s checked. Continue</button>
         </section>
         <section id="step-4" class="screen" aria-labelledby="done-title" hidden>
             <div class="success-mark" aria-hidden="true">✓</div>
-            <h1 id="done-title" tabindex="-1">Поздравляю!<br>Время снова твоё.</h1>
-            <p>Открой Facebook или YouTube.<br>Если Safari запросит доступ<br>к сайту — разреши его.</p>
-            <div class="sites" aria-label="Открыть сайт"><button data-site="facebook">Facebook</button><span aria-hidden="true">·</span><button data-site="youtube">YouTube</button></div>
-            <button class="primary finish">Круто, спасибо!</button>
+            <h1 id="done-title" tabindex="-1" data-i18n="titleDone">You’re all set.</h1>
+            <p data-i18n="doneBody"></p>
+            <div class="sites"><button data-site="facebook" data-i18n="facebook">Facebook</button><span aria-hidden="true">·</span><button data-site="youtube" data-i18n="youtube">YouTube</button></div>
+            <button class="primary finish" data-i18n="finish">Great, thanks!</button>
         </section>
     </main>
     <p class="feedback" role="status" aria-live="polite"></p>

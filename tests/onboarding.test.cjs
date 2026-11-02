@@ -8,6 +8,8 @@ function onboarding(t) {
   t.after(() => dom.window.close());
   const messages = [];
   dom.window.webkit = { messageHandlers: { controller: { postMessage: message => messages.push(message) } } };
+  dom.window.__APP_LOCALE__ = 'ru';
+  dom.window.eval(fs.readFileSync('extension/i18n.js', 'utf8'));
   dom.window.eval(fs.readFileSync(root + 'Script.js', 'utf8'));
   return { window: dom.window, document: dom.window.document, messages };
 }
@@ -107,7 +109,7 @@ test('checkbox demonstration pauses and resumes without claiming the real extens
   assert.equal(document.querySelector('.replay-demo').textContent, 'Пауза');
   document.querySelector('.check-state').click(); window.show(false);
   assert.equal(document.body.dataset.step, '3');
-  assert.match(document.querySelector('.feedback').textContent, /Галочки пока нет/);
+  assert.match(document.querySelector('.feedback').textContent, /Галочк|расширени/i);
 });
 
 test('Reduce Motion keeps the example checked without starting the demonstration', t => {

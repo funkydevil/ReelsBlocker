@@ -1,0 +1,188 @@
+{
+  "appName": {
+    "message": "Korte video's blokkeren"
+  },
+  "appDescription": {
+    "message": "Verberg afleidende feedvideo’s, afbeeldingen en korte video’s in Safari."
+  },
+  "toolbarTitle": {
+    "message": "Blokkeerinstellingen"
+  },
+  "popupTitle": {
+    "message": "Jouw feed, jouw keuze"
+  },
+  "popupSubtitle": {
+    "message": "Kies wat je in je feed wilt verbergen."
+  },
+  "blockLegend": {
+    "message": "Inhoud verbergen"
+  },
+  "facebookVideos": {
+    "message": "Facebook-video’s"
+  },
+  "facebookVideosDetail": {
+    "message": "Inclusief Reels en livestreams"
+  },
+  "facebookImages": {
+    "message": "Facebook-afbeeldingen"
+  },
+  "facebookImagesDetail": {
+    "message": "De tekst van berichten blijft zichtbaar"
+  },
+  "youtubeShorts": {
+    "message": "YouTube Shorts"
+  },
+  "youtubeShortsDetail": {
+    "message": "Gewone video’s blijven beschikbaar"
+  },
+  "loadingSettings": {
+    "message": "Instellingen laden…"
+  },
+  "settingsReady": {
+    "message": "Wijzigingen worden direct toegepast."
+  },
+  "savingSettings": {
+    "message": "Opslaan…"
+  },
+  "settingsSaved": {
+    "message": "Opgeslagen. Je open tabbladen zijn bijgewerkt."
+  },
+  "settingsLoadError": {
+    "message": "Instellingen laden is mislukt. Sluit dit paneel en open het opnieuw."
+  },
+  "settingsSaveError": {
+    "message": "Opslaan is mislukt. Probeer het opnieuw."
+  },
+  "titleIntro": {
+    "message": "Minder scrollen.\nMeer tijd voor jezelf."
+  },
+  "introBody": {
+    "message": "Laten we je Safari-feed rustiger maken."
+  },
+  "start": {
+    "message": "Aan de slag"
+  },
+  "titleSettings": {
+    "message": "Safari-instellingen\nopenen"
+  },
+  "settingsBody": {
+    "message": "We hebben het onderdeel Extensies nodig.\nIk open het voor je."
+  },
+  "openSettings": {
+    "message": "Instellingen openen"
+  },
+  "openingSettings": {
+    "message": "Safari openen…"
+  },
+  "titleEnable": {
+    "message": "Eén vinkje.\nEen beetje meer rust."
+  },
+  "enableBody": {
+    "message": "Zoek bij de Safari-extensies naar {appName}."
+  },
+  "exampleCheckboxLabel": {
+    "message": "Voorbeeld: vink {appName} aan in de instellingen van Safari."
+  },
+  "checkInstruction": {
+    "message": "Zet het vinkje in Safari."
+  },
+  "pauseDemo": {
+    "message": "Pauze"
+  },
+  "resumeDemo": {
+    "message": "Doorgaan"
+  },
+  "pauseDemoLabel": {
+    "message": "De vinkjesdemonstratie pauzeren"
+  },
+  "resumeDemoLabel": {
+    "message": "De vinkjesdemonstratie hervatten"
+  },
+  "confirmEnabled": {
+    "message": "Aangevinkt. Doorgaan"
+  },
+  "checkingEnabled": {
+    "message": "Controleren…"
+  },
+  "notEnabled": {
+    "message": "Nog niet aangevinkt. Schakel de extensie in Safari in."
+  },
+  "stateUnknown": {
+    "message": "De status kon niet worden gecontroleerd. Probeer het opnieuw."
+  },
+  "titleDone": {
+    "message": "Gelukt!\nJe tijd is weer van jou."
+  },
+  "doneBody": {
+    "message": "Open Facebook of YouTube. Sta toegang tot de website toe als Safari daarom vraagt."
+  },
+  "finish": {
+    "message": "Top, bedankt!"
+  },
+  "back": {
+    "message": "Terug"
+  },
+  "closeWindow": {
+    "message": "Venster sluiten"
+  },
+  "stepLabel": {
+    "message": "Stap {step} van {total}"
+  },
+  "demoLabel": {
+    "message": "Voorbeeld van het inschakelen van {appName}"
+  },
+  "facebook": {
+    "message": "Facebook"
+  },
+  "youtube": {
+    "message": "YouTube"
+  },
+  "websiteError": {
+    "message": "De website kon niet in Safari worden geopend. Probeer het opnieuw."
+  },
+  "settingsOpenError": {
+    "message": "De instellingen konden niet worden geopend. Probeer het opnieuw."
+  },
+  "extensionNotFound": {
+    "message": "Safari kan de extensie niet vinden. Sluit oudere kopieën van de app en probeer het opnieuw."
+  },
+  "safariNotFound": {
+    "message": "Safari is niet gevonden op deze Mac."
+  },
+  "blockedFacebookTitle": {
+    "message": "Korte video’s zijn geblokkeerd"
+  },
+  "blockedFacebookBody": {
+    "message": "Videoblokkering staat aan. Ga terug naar je Facebook-feed om verder te gaan."
+  },
+  "backToFeed": {
+    "message": "Terug naar feed"
+  },
+  "blockedShortsTitle": {
+    "message": "Korte video’s zijn geblokkeerd"
+  },
+  "blockedShortsBody": {
+    "message": "Blokkering van korte video’s staat aan. Gewone YouTube-video’s blijven beschikbaar."
+  },
+  "backToYouTube": {
+    "message": "Terug naar YouTube"
+  },
+  "aboutApp": {
+    "message": "Over {appName}"
+  },
+  "hideApp": {
+    "message": "Verberg {appName}"
+  },
+  "hideOthers": {
+    "message": "Verberg andere"
+  },
+  "showAll": {
+    "message": "Toon alles"
+  },
+  "quitApp": {
+    "message": "Stop {appName}"
+  },
+  "helpMenu": {
+    "message": "Help"
+  }
+}

@@ -31,6 +31,7 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
 
     private func configureWindow() {
         guard let window = view.window else { return }
+        window.title = AppLocalization.text("appName")
         window.styleMask = [.borderless, .closable]
         window.isOpaque = false
         window.backgroundColor = .clear
@@ -47,9 +48,9 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
         close.autoresizingMask = [.minXMargin, .minYMargin]
         close.isBordered = false
         close.title = ""
-        close.toolTip = "Закрыть окно"
+        close.toolTip = AppLocalization.text("closeWindow")
         close.focusRingType = .exterior
-        close.setAccessibilityLabel("Закрыть окно")
+        close.setAccessibilityLabel(AppLocalization.text("closeWindow"))
         close.target = self
         close.action = #selector(closeSetup)
         close.keyEquivalent = "\u{1b}"
@@ -79,6 +80,9 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let localeScript = WKUserScript(source: "window.__APP_LOCALE__ = '\(AppLocalization.locale)';",
+                                        injectionTime: .atDocumentStart, forMainFrameOnly: true)
+        webView.configuration.userContentController.addUserScript(localeScript)
         self.webView.navigationDelegate = self
 
         self.webView.configuration.userContentController.add(self, name: "controller")
@@ -141,7 +145,7 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
         // Launch Safari explicitly, even when another browser is the default.
         guard let safariURL = NSWorkspace.shared.urlForApplication(withBundleIdentifier: "com.apple.Safari") else {
             finishOpeningPreferences(error: NSError(domain: "ReelsBlocker", code: 1,
-                userInfo: [NSLocalizedDescriptionKey: "Safari не найден на этом Mac."]))
+                userInfo: [NSLocalizedDescriptionKey: AppLocalization.text("safariNotFound")]))
             return
         }
 
@@ -179,8 +183,8 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
         if let error = error {
             let nativeError = error as NSError
             message = nativeError.domain == SFErrorDomain && nativeError.code == SFErrorCode.noExtensionFound.rawValue
-                ? "Safari не нашёл расширение. Закрой старые копии приложения и попробуй снова."
-                : "Не удалось открыть настройки. Попробуй ещё раз."
+                ? AppLocalization.text("extensionNotFound")
+                : AppLocalization.text("settingsOpenError")
             NSLog("Safari extension settings failed: %@", nativeError)
         } else {
             message = ""
@@ -211,7 +215,7 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
             guard let error = error else { return }
             DispatchQueue.main.async {
                 NSLog("Opening website in Safari failed: %@", error as NSError)
-                let message = "Не удалось открыть сайт в Safari. Попробуй ещё раз."
+                let message = AppLocalization.text("websiteError")
                 if let data = try? JSONSerialization.data(withJSONObject: [message]),
                    let arguments = String(data: data, encoding: .utf8) {
                     self?.webView.evaluateJavaScript("showWebsiteError(\(arguments)[0])")

@@ -1,0 +1,188 @@
+{
+  "appName": {
+    "message": "Kısa Video Engelleyici"
+  },
+  "appDescription": {
+    "message": "Safari’de dikkat dağıtan akış videolarını, görselleri ve kısa videoları gizle."
+  },
+  "toolbarTitle": {
+    "message": "Engelleme ayarları"
+  },
+  "popupTitle": {
+    "message": "Akışın, senin seçimin"
+  },
+  "popupSubtitle": {
+    "message": "Akışında nelerin gizleneceğini seç."
+  },
+  "blockLegend": {
+    "message": "İçeriği gizle"
+  },
+  "facebookVideos": {
+    "message": "Facebook videoları"
+  },
+  "facebookVideosDetail": {
+    "message": "Reels ve canlı yayınlar dahil"
+  },
+  "facebookImages": {
+    "message": "Facebook görselleri"
+  },
+  "facebookImagesDetail": {
+    "message": "Gönderi metni görünür kalır"
+  },
+  "youtubeShorts": {
+    "message": "YouTube Shorts"
+  },
+  "youtubeShortsDetail": {
+    "message": "Normal videolar kullanılabilir kalır"
+  },
+  "loadingSettings": {
+    "message": "Ayarlar yükleniyor…"
+  },
+  "settingsReady": {
+    "message": "Değişiklikler hemen uygulanır."
+  },
+  "savingSettings": {
+    "message": "Kaydediliyor…"
+  },
+  "settingsSaved": {
+    "message": "Kaydedildi. Açık sekmeler güncellendi."
+  },
+  "settingsLoadError": {
+    "message": "Ayarlar yüklenemedi. Bu paneli kapatıp yeniden aç."
+  },
+  "settingsSaveError": {
+    "message": "Kaydedilemedi. Lütfen tekrar dene."
+  },
+  "titleIntro": {
+    "message": "Daha az kaydırma.\nKendine daha çok zaman."
+  },
+  "introBody": {
+    "message": "Safari akışını daha sakin hâle getirelim."
+  },
+  "start": {
+    "message": "Başlayalım"
+  },
+  "titleSettings": {
+    "message": "Safari ayarlarını\naç"
+  },
+  "settingsBody": {
+    "message": "Uzantılar bölümüne ihtiyacımız var.\nSenin için açacağım."
+  },
+  "openSettings": {
+    "message": "Ayarları aç"
+  },
+  "openingSettings": {
+    "message": "Safari açılıyor…"
+  },
+  "titleEnable": {
+    "message": "Tek bir onay.\nBiraz daha huzur."
+  },
+  "enableBody": {
+    "message": "Safari uzantılarında {appName} uygulamasını bul."
+  },
+  "exampleCheckboxLabel": {
+    "message": "Örnek: Safari ayarlarında {appName} yanındaki kutuyu işaretle."
+  },
+  "checkInstruction": {
+    "message": "Safari’de kutuyu işaretle."
+  },
+  "pauseDemo": {
+    "message": "Duraklat"
+  },
+  "resumeDemo": {
+    "message": "Devam et"
+  },
+  "pauseDemoLabel": {
+    "message": "Onay kutusu gösterimini duraklat"
+  },
+  "resumeDemoLabel": {
+    "message": "Onay kutusu gösterimine devam et"
+  },
+  "confirmEnabled": {
+    "message": "İşaretledim. Devam edelim"
+  },
+  "checkingEnabled": {
+    "message": "Kontrol ediliyor…"
+  },
+  "notEnabled": {
+    "message": "Henüz işaretli değil. Safari’de uzantıyı etkinleştir."
+  },
+  "stateUnknown": {
+    "message": "Durum kontrol edilemedi. Lütfen tekrar dene."
+  },
+  "titleDone": {
+    "message": "Başardın!\nZamanın yine senin."
+  },
+  "doneBody": {
+    "message": "Facebook veya YouTube’u aç. Safari site erişimi isterse izin ver."
+  },
+  "finish": {
+    "message": "Harika, teşekkürler!"
+  },
+  "back": {
+    "message": "Geri"
+  },
+  "closeWindow": {
+    "message": "Pencereyi kapat"
+  },
+  "stepLabel": {
+    "message": "Adım {step} / {total}"
+  },
+  "demoLabel": {
+    "message": "{appName} etkinleştirme örneği"
+  },
+  "facebook": {
+    "message": "Facebook"
+  },
+  "youtube": {
+    "message": "YouTube"
+  },
+  "websiteError": {
+    "message": "Site Safari’de açılamadı. Lütfen tekrar dene."
+  },
+  "settingsOpenError": {
+    "message": "Ayarlar açılamadı. Lütfen tekrar dene."
+  },
+  "extensionNotFound": {
+    "message": "Safari uzantıyı bulamadı. Uygulamanın eski kopyalarını kapatıp tekrar dene."
+  },
+  "safariNotFound": {
+    "message": "Bu Mac’te Safari bulunamadı."
+  },
+  "blockedFacebookTitle": {
+    "message": "Kısa videolar engellendi"
+  },
+  "blockedFacebookBody": {
+    "message": "Video engelleme açık. Devam etmek için Facebook akışına dön."
+  },
+  "backToFeed": {
+    "message": "Akışa dön"
+  },
+  "blockedShortsTitle": {
+    "message": "Kısa videolar engellendi"
+  },
+  "blockedShortsBody": {
+    "message": "Kısa video engelleme açık. Normal YouTube videoları kullanılabilir."
+  },
+  "backToYouTube": {
+    "message": "YouTube’a dön"
+  },
+  "aboutApp": {
+    "message": "{appName} Hakkında"
+  },
+  "hideApp": {
+    "message": "{appName} Uygulamasını Gizle"
+  },
+  "hideOthers": {
+    "message": "Diğerlerini Gizle"
+  },
+  "showAll": {
+    "message": "Tümünü Göster"
+  },
+  "quitApp": {
+    "message": "{appName} Uygulamasından Çık"
+  },
+  "helpMenu": {
+    "message": "Yardım"
+  }
+}

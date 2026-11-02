@@ -1,0 +1,188 @@
+{
+  "appName": {
+    "message": "ショート動画ブロッカー"
+  },
+  "appDescription": {
+    "message": "Safariで気が散るフィード動画や画像、ショート動画を非表示にします。"
+  },
+  "toolbarTitle": {
+    "message": "ブロック設定"
+  },
+  "popupTitle": {
+    "message": "フィードは、自分で選ぶ"
+  },
+  "popupSubtitle": {
+    "message": "フィードで非表示にするものを選びましょう。"
+  },
+  "blockLegend": {
+    "message": "コンテンツを非表示"
+  },
+  "facebookVideos": {
+    "message": "Facebookの動画"
+  },
+  "facebookVideosDetail": {
+    "message": "Reelsとライブ配信も含む"
+  },
+  "facebookImages": {
+    "message": "Facebookの画像"
+  },
+  "facebookImagesDetail": {
+    "message": "投稿のテキストは表示したまま"
+  },
+  "youtubeShorts": {
+    "message": "YouTube Shorts"
+  },
+  "youtubeShortsDetail": {
+    "message": "通常の動画は引き続き視聴できます"
+  },
+  "loadingSettings": {
+    "message": "設定を読み込み中…"
+  },
+  "settingsReady": {
+    "message": "変更はすぐに反映されます。"
+  },
+  "savingSettings": {
+    "message": "保存中…"
+  },
+  "settingsSaved": {
+    "message": "保存しました。開いているタブに反映しました。"
+  },
+  "settingsLoadError": {
+    "message": "設定を読み込めませんでした。このパネルを閉じて開き直してください。"
+  },
+  "settingsSaveError": {
+    "message": "保存できませんでした。もう一度お試しください。"
+  },
+  "titleIntro": {
+    "message": "スクロールを減らして、\n自分の時間を増やそう。"
+  },
+  "introBody": {
+    "message": "Safariのフィードを落ち着いた空間にしましょう。"
+  },
+  "start": {
+    "message": "はじめる"
+  },
+  "titleSettings": {
+    "message": "Safariの設定を\n開きましょう"
+  },
+  "settingsBody": {
+    "message": "「機能拡張」を使います。\nこちらから開きます。"
+  },
+  "openSettings": {
+    "message": "設定を開く"
+  },
+  "openingSettings": {
+    "message": "Safariを開いています…"
+  },
+  "titleEnable": {
+    "message": "チェックひとつで、\nもっと穏やかに。"
+  },
+  "enableBody": {
+    "message": "Safariの機能拡張で{appName}を見つけてください。"
+  },
+  "exampleCheckboxLabel": {
+    "message": "例：Safariの設定で{appName}の横にチェックを入れます。"
+  },
+  "checkInstruction": {
+    "message": "Safariでチェックを入れてください。"
+  },
+  "pauseDemo": {
+    "message": "一時停止"
+  },
+  "resumeDemo": {
+    "message": "再開"
+  },
+  "pauseDemoLabel": {
+    "message": "チェック操作のデモを一時停止"
+  },
+  "resumeDemoLabel": {
+    "message": "チェック操作のデモを再開"
+  },
+  "confirmEnabled": {
+    "message": "チェックしました。次へ"
+  },
+  "checkingEnabled": {
+    "message": "確認中…"
+  },
+  "notEnabled": {
+    "message": "まだチェックされていません。Safariで機能拡張を有効にしてください。"
+  },
+  "stateUnknown": {
+    "message": "状態を確認できませんでした。もう一度お試しください。"
+  },
+  "titleDone": {
+    "message": "できました！\n自分の時間を取り戻そう。"
+  },
+  "doneBody": {
+    "message": "FacebookかYouTubeを開きましょう。Safariがサイトへのアクセスを求めたら許可してください。"
+  },
+  "finish": {
+    "message": "ありがとう！"
+  },
+  "back": {
+    "message": "戻る"
+  },
+  "closeWindow": {
+    "message": "ウインドウを閉じる"
+  },
+  "stepLabel": {
+    "message": "{total}ステップ中{step}"
+  },
+  "demoLabel": {
+    "message": "{appName}を有効にする例"
+  },
+  "facebook": {
+    "message": "Facebook"
+  },
+  "youtube": {
+    "message": "YouTube"
+  },
+  "websiteError": {
+    "message": "Safariでサイトを開けませんでした。もう一度お試しください。"
+  },
+  "settingsOpenError": {
+    "message": "設定を開けませんでした。もう一度お試しください。"
+  },
+  "extensionNotFound": {
+    "message": "Safariで機能拡張が見つかりません。古いアプリのコピーを閉じて、もう一度お試しください。"
+  },
+  "safariNotFound": {
+    "message": "このMacにSafariが見つかりませんでした。"
+  },
+  "blockedFacebookTitle": {
+    "message": "ショート動画をブロック中"
+  },
+  "blockedFacebookBody": {
+    "message": "動画のブロックが有効です。Facebookのフィードに戻って閲覧を続けられます。"
+  },
+  "backToFeed": {
+    "message": "フィードに戻る"
+  },
+  "blockedShortsTitle": {
+    "message": "ショート動画をブロック中"
+  },
+  "blockedShortsBody": {
+    "message": "ショート動画のブロックが有効です。通常のYouTube動画は引き続き視聴できます。"
+  },
+  "backToYouTube": {
+    "message": "YouTubeに戻る"
+  },
+  "aboutApp": {
+    "message": "{appName}について"
+  },
+  "hideApp": {
+    "message": "{appName}を非表示"
+  },
+  "hideOthers": {
+    "message": "ほかを非表示"
+  },
+  "showAll": {
+    "message": "すべてを表示"
+  },
+  "quitApp": {
+    "message": "{appName}を終了"
+  },
+  "helpMenu": {
+    "message": "ヘルプ"
+  }
+}

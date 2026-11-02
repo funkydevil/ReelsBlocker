@@ -1,0 +1,188 @@
+{
+  "appName": {
+    "message": "Bloqueador de vídeos cortos"
+  },
+  "appDescription": {
+    "message": "Oculta vídeos, imágenes y vídeos cortos que te distraen en Safari."
+  },
+  "toolbarTitle": {
+    "message": "Ajustes de bloqueo"
+  },
+  "popupTitle": {
+    "message": "Tu feed, tú decides"
+  },
+  "popupSubtitle": {
+    "message": "Elige qué quieres ocultar de tu feed."
+  },
+  "blockLegend": {
+    "message": "Ocultar contenido"
+  },
+  "facebookVideos": {
+    "message": "Vídeos de Facebook"
+  },
+  "facebookVideosDetail": {
+    "message": "Incluye Reels y emisiones en directo"
+  },
+  "facebookImages": {
+    "message": "Imágenes de Facebook"
+  },
+  "facebookImagesDetail": {
+    "message": "Se conserva el texto de las publicaciones"
+  },
+  "youtubeShorts": {
+    "message": "YouTube Shorts"
+  },
+  "youtubeShortsDetail": {
+    "message": "Los vídeos normales siguen disponibles"
+  },
+  "loadingSettings": {
+    "message": "Cargando ajustes…"
+  },
+  "settingsReady": {
+    "message": "Los cambios se aplican al instante."
+  },
+  "savingSettings": {
+    "message": "Guardando…"
+  },
+  "settingsSaved": {
+    "message": "Guardado. Se actualizaron las pestañas abiertas."
+  },
+  "settingsLoadError": {
+    "message": "No se pudieron cargar los ajustes. Cierra este panel y ábrelo de nuevo."
+  },
+  "settingsSaveError": {
+    "message": "No se pudo guardar. Inténtalo de nuevo."
+  },
+  "titleIntro": {
+    "message": "Menos desplazarte.\nMás tiempo para ti."
+  },
+  "introBody": {
+    "message": "Vamos a hacer tu feed de Safari más tranquilo."
+  },
+  "start": {
+    "message": "Vamos allá"
+  },
+  "titleSettings": {
+    "message": "Abrir los ajustes\nde Safari"
+  },
+  "settingsBody": {
+    "message": "Necesitamos la sección Extensiones.\nLa abriré por ti."
+  },
+  "openSettings": {
+    "message": "Abrir ajustes"
+  },
+  "openingSettings": {
+    "message": "Abriendo Safari…"
+  },
+  "titleEnable": {
+    "message": "Una casilla.\nUn poco más de calma."
+  },
+  "enableBody": {
+    "message": "En las extensiones de Safari, busca {appName}."
+  },
+  "exampleCheckboxLabel": {
+    "message": "Ejemplo: marca la casilla junto a {appName} en los ajustes de Safari."
+  },
+  "checkInstruction": {
+    "message": "Marca la casilla en Safari."
+  },
+  "pauseDemo": {
+    "message": "Pausa"
+  },
+  "resumeDemo": {
+    "message": "Continuar"
+  },
+  "pauseDemoLabel": {
+    "message": "Pausar la demostración de la casilla"
+  },
+  "resumeDemoLabel": {
+    "message": "Continuar la demostración de la casilla"
+  },
+  "confirmEnabled": {
+    "message": "Ya está marcada. Continuar"
+  },
+  "checkingEnabled": {
+    "message": "Comprobando…"
+  },
+  "notEnabled": {
+    "message": "Aún no está marcada. Activa la extensión en Safari."
+  },
+  "stateUnknown": {
+    "message": "No se pudo comprobar el estado. Inténtalo de nuevo."
+  },
+  "titleDone": {
+    "message": "¡Lo has conseguido!\nTu tiempo vuelve a ser tuyo."
+  },
+  "doneBody": {
+    "message": "Abre Facebook o YouTube. Si Safari pide acceso al sitio, permítelo."
+  },
+  "finish": {
+    "message": "¡Genial, gracias!"
+  },
+  "back": {
+    "message": "Atrás"
+  },
+  "closeWindow": {
+    "message": "Cerrar ventana"
+  },
+  "stepLabel": {
+    "message": "Paso {step} de {total}"
+  },
+  "demoLabel": {
+    "message": "Ejemplo de activación de {appName}"
+  },
+  "facebook": {
+    "message": "Facebook"
+  },
+  "youtube": {
+    "message": "YouTube"
+  },
+  "websiteError": {
+    "message": "No se pudo abrir el sitio en Safari. Inténtalo de nuevo."
+  },
+  "settingsOpenError": {
+    "message": "No se pudieron abrir los ajustes. Inténtalo de nuevo."
+  },
+  "extensionNotFound": {
+    "message": "Safari no encontró la extensión. Cierra las copias antiguas de la app e inténtalo de nuevo."
+  },
+  "safariNotFound": {
+    "message": "No se encontró Safari en este Mac."
+  },
+  "blockedFacebookTitle": {
+    "message": "Los vídeos cortos están bloqueados"
+  },
+  "blockedFacebookBody": {
+    "message": "El bloqueo de vídeos está activo. Vuelve a tu feed de Facebook para continuar."
+  },
+  "backToFeed": {
+    "message": "Volver al feed"
+  },
+  "blockedShortsTitle": {
+    "message": "Los vídeos cortos están bloqueados"
+  },
+  "blockedShortsBody": {
+    "message": "El bloqueo de vídeos cortos está activo. Los vídeos normales de YouTube siguen disponibles."
+  },
+  "backToYouTube": {
+    "message": "Volver a YouTube"
+  },
+  "aboutApp": {
+    "message": "Acerca de {appName}"
+  },
+  "hideApp": {
+    "message": "Ocultar {appName}"
+  },
+  "hideOthers": {
+    "message": "Ocultar otras"
+  },
+  "showAll": {
+    "message": "Mostrar todo"
+  },
+  "quitApp": {
+    "message": "Salir de {appName}"
+  },
+  "helpMenu": {
+    "message": "Ayuda"
+  }
+}

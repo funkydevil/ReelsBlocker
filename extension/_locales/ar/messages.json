@@ -1,0 +1,188 @@
+{
+  "appName": {
+    "message": "مانع الفيديوهات القصيرة"
+  },
+  "appDescription": {
+    "message": "أخفِ فيديوهات الخلاصة والصور والفيديوهات القصيرة المشتتة في Safari."
+  },
+  "toolbarTitle": {
+    "message": "إعدادات الحظر"
+  },
+  "popupTitle": {
+    "message": "خلاصتك، اختيارك"
+  },
+  "popupSubtitle": {
+    "message": "اختر ما تريد إخفاءه من خلاصتك."
+  },
+  "blockLegend": {
+    "message": "إخفاء المحتوى"
+  },
+  "facebookVideos": {
+    "message": "فيديوهات Facebook"
+  },
+  "facebookVideosDetail": {
+    "message": "تشمل Reels والبث المباشر"
+  },
+  "facebookImages": {
+    "message": "صور Facebook"
+  },
+  "facebookImagesDetail": {
+    "message": "يبقى نص المنشورات ظاهرًا"
+  },
+  "youtubeShorts": {
+    "message": "YouTube Shorts"
+  },
+  "youtubeShortsDetail": {
+    "message": "تبقى الفيديوهات العادية متاحة"
+  },
+  "loadingSettings": {
+    "message": "جارٍ تحميل الإعدادات…"
+  },
+  "settingsReady": {
+    "message": "تُطبّق التغييرات فورًا."
+  },
+  "savingSettings": {
+    "message": "جارٍ الحفظ…"
+  },
+  "settingsSaved": {
+    "message": "تم الحفظ والتطبيق على علامات التبويب المفتوحة."
+  },
+  "settingsLoadError": {
+    "message": "تعذّر تحميل الإعدادات. أغلق هذه اللوحة وافتحها مجددًا."
+  },
+  "settingsSaveError": {
+    "message": "تعذّر الحفظ. حاول مرة أخرى."
+  },
+  "titleIntro": {
+    "message": "تصفّح أقل.\nوقت أكثر لك."
+  },
+  "introBody": {
+    "message": "لنُعدّ خلاصة أكثر هدوءًا في Safari."
+  },
+  "start": {
+    "message": "لنبدأ"
+  },
+  "titleSettings": {
+    "message": "افتح إعدادات\nSafari"
+  },
+  "settingsBody": {
+    "message": "نحتاج إلى قسم الملحقات.\nسأفتحه لك."
+  },
+  "openSettings": {
+    "message": "فتح الإعدادات"
+  },
+  "openingSettings": {
+    "message": "جارٍ فتح Safari…"
+  },
+  "titleEnable": {
+    "message": "علامة واحدة.\nوقليل من الهدوء."
+  },
+  "enableBody": {
+    "message": "ابحث عن {appName} ضمن ملحقات Safari."
+  },
+  "exampleCheckboxLabel": {
+    "message": "مثال: ضع علامة في المربع بجانب {appName} في إعدادات Safari."
+  },
+  "checkInstruction": {
+    "message": "ضع علامة في المربع في Safari."
+  },
+  "pauseDemo": {
+    "message": "إيقاف مؤقت"
+  },
+  "resumeDemo": {
+    "message": "متابعة"
+  },
+  "pauseDemoLabel": {
+    "message": "إيقاف العرض التوضيحي لعلامة الاختيار مؤقتًا"
+  },
+  "resumeDemoLabel": {
+    "message": "متابعة العرض التوضيحي لعلامة الاختيار"
+  },
+  "confirmEnabled": {
+    "message": "تم التحديد. لنتابع"
+  },
+  "checkingEnabled": {
+    "message": "جارٍ التحقق…"
+  },
+  "notEnabled": {
+    "message": "لم يُحدّد المربع بعد. فعّل الملحق في Safari."
+  },
+  "stateUnknown": {
+    "message": "تعذّر التحقق من الحالة. حاول مرة أخرى."
+  },
+  "titleDone": {
+    "message": "أحسنت!\nوقتك لك من جديد."
+  },
+  "doneBody": {
+    "message": "افتح Facebook أو YouTube. إذا طلب Safari الوصول إلى الموقع، فاسمح له بذلك."
+  },
+  "finish": {
+    "message": "رائع، شكرًا!"
+  },
+  "back": {
+    "message": "رجوع"
+  },
+  "closeWindow": {
+    "message": "إغلاق النافذة"
+  },
+  "stepLabel": {
+    "message": "الخطوة {step} من {total}"
+  },
+  "demoLabel": {
+    "message": "مثال على تفعيل {appName}"
+  },
+  "facebook": {
+    "message": "Facebook"
+  },
+  "youtube": {
+    "message": "YouTube"
+  },
+  "websiteError": {
+    "message": "تعذّر فتح الموقع في Safari. حاول مرة أخرى."
+  },
+  "settingsOpenError": {
+    "message": "تعذّر فتح الإعدادات. حاول مرة أخرى."
+  },
+  "extensionNotFound": {
+    "message": "لم يعثر Safari على الملحق. أغلق النسخ القديمة من التطبيق وحاول مجددًا."
+  },
+  "safariNotFound": {
+    "message": "لم يتم العثور على Safari على هذا الـ Mac."
+  },
+  "blockedFacebookTitle": {
+    "message": "الفيديوهات القصيرة محظورة"
+  },
+  "blockedFacebookBody": {
+    "message": "حظر الفيديو مفعّل. عُد إلى خلاصة Facebook لمتابعة التصفّح."
+  },
+  "backToFeed": {
+    "message": "العودة إلى الخلاصة"
+  },
+  "blockedShortsTitle": {
+    "message": "الفيديوهات القصيرة محظورة"
+  },
+  "blockedShortsBody": {
+    "message": "حظر الفيديوهات القصيرة مفعّل. تبقى فيديوهات YouTube العادية متاحة."
+  },
+  "backToYouTube": {
+    "message": "العودة إلى YouTube"
+  },
+  "aboutApp": {
+    "message": "حول {appName}"
+  },
+  "hideApp": {
+    "message": "إخفاء {appName}"
+  },
+  "hideOthers": {
+    "message": "إخفاء التطبيقات الأخرى"
+  },
+  "showAll": {
+    "message": "إظهار الكل"
+  },
+  "quitApp": {
+    "message": "إنهاء {appName}"
+  },
+  "helpMenu": {
+    "message": "مساعدة"
+  }
+}

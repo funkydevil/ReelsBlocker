@@ -1,0 +1,188 @@
+{
+  "appName": {
+    "message": "Blocco video brevi"
+  },
+  "appDescription": {
+    "message": "Nascondi video, immagini e video brevi che ti distraggono in Safari."
+  },
+  "toolbarTitle": {
+    "message": "Impostazioni di blocco"
+  },
+  "popupTitle": {
+    "message": "Il tuo feed, la tua scelta"
+  },
+  "popupSubtitle": {
+    "message": "Scegli cosa nascondere dal feed."
+  },
+  "blockLegend": {
+    "message": "Nascondi contenuti"
+  },
+  "facebookVideos": {
+    "message": "Video di Facebook"
+  },
+  "facebookVideosDetail": {
+    "message": "Inclusi Reels e dirette"
+  },
+  "facebookImages": {
+    "message": "Immagini di Facebook"
+  },
+  "facebookImagesDetail": {
+    "message": "Il testo dei post resta visibile"
+  },
+  "youtubeShorts": {
+    "message": "YouTube Shorts"
+  },
+  "youtubeShortsDetail": {
+    "message": "I video normali restano disponibili"
+  },
+  "loadingSettings": {
+    "message": "Caricamento impostazioni…"
+  },
+  "settingsReady": {
+    "message": "Le modifiche si applicano subito."
+  },
+  "savingSettings": {
+    "message": "Salvataggio…"
+  },
+  "settingsSaved": {
+    "message": "Salvato. Le schede aperte sono state aggiornate."
+  },
+  "settingsLoadError": {
+    "message": "Impossibile caricare le impostazioni. Chiudi il pannello e riaprilo."
+  },
+  "settingsSaveError": {
+    "message": "Impossibile salvare. Riprova."
+  },
+  "titleIntro": {
+    "message": "Meno scorrimento.\nPiù tempo per te."
+  },
+  "introBody": {
+    "message": "Rendiamo più tranquillo il tuo feed in Safari."
+  },
+  "start": {
+    "message": "Cominciamo"
+  },
+  "titleSettings": {
+    "message": "Apri le impostazioni\ndi Safari"
+  },
+  "settingsBody": {
+    "message": "Serve la sezione Estensioni.\nLa apro io per te."
+  },
+  "openSettings": {
+    "message": "Apri impostazioni"
+  },
+  "openingSettings": {
+    "message": "Apertura di Safari…"
+  },
+  "titleEnable": {
+    "message": "Una spunta.\nUn po’ più di calma."
+  },
+  "enableBody": {
+    "message": "Nelle estensioni di Safari, cerca {appName}."
+  },
+  "exampleCheckboxLabel": {
+    "message": "Esempio: seleziona la casella accanto a {appName} nelle impostazioni di Safari."
+  },
+  "checkInstruction": {
+    "message": "Metti la spunta in Safari."
+  },
+  "pauseDemo": {
+    "message": "Pausa"
+  },
+  "resumeDemo": {
+    "message": "Continua"
+  },
+  "pauseDemoLabel": {
+    "message": "Metti in pausa la dimostrazione"
+  },
+  "resumeDemoLabel": {
+    "message": "Riprendi la dimostrazione"
+  },
+  "confirmEnabled": {
+    "message": "Spunta messa. Continuiamo"
+  },
+  "checkingEnabled": {
+    "message": "Verifica…"
+  },
+  "notEnabled": {
+    "message": "La spunta non c’è ancora. Attiva l’estensione in Safari."
+  },
+  "stateUnknown": {
+    "message": "Impossibile verificare lo stato. Riprova."
+  },
+  "titleDone": {
+    "message": "Ce l’hai fatta!\nIl tempo torna tuo."
+  },
+  "doneBody": {
+    "message": "Apri Facebook o YouTube. Se Safari chiede l’accesso al sito, consentilo."
+  },
+  "finish": {
+    "message": "Perfetto, grazie!"
+  },
+  "back": {
+    "message": "Indietro"
+  },
+  "closeWindow": {
+    "message": "Chiudi finestra"
+  },
+  "stepLabel": {
+    "message": "Passaggio {step} di {total}"
+  },
+  "demoLabel": {
+    "message": "Esempio di attivazione di {appName}"
+  },
+  "facebook": {
+    "message": "Facebook"
+  },
+  "youtube": {
+    "message": "YouTube"
+  },
+  "websiteError": {
+    "message": "Impossibile aprire il sito in Safari. Riprova."
+  },
+  "settingsOpenError": {
+    "message": "Impossibile aprire le impostazioni. Riprova."
+  },
+  "extensionNotFound": {
+    "message": "Safari non trova l’estensione. Chiudi le vecchie copie dell’app e riprova."
+  },
+  "safariNotFound": {
+    "message": "Safari non è stato trovato su questo Mac."
+  },
+  "blockedFacebookTitle": {
+    "message": "I video brevi sono bloccati"
+  },
+  "blockedFacebookBody": {
+    "message": "Il blocco dei video è attivo. Torna al feed di Facebook per continuare."
+  },
+  "backToFeed": {
+    "message": "Torna al feed"
+  },
+  "blockedShortsTitle": {
+    "message": "I video brevi sono bloccati"
+  },
+  "blockedShortsBody": {
+    "message": "Il blocco dei video brevi è attivo. I video normali di YouTube restano disponibili."
+  },
+  "backToYouTube": {
+    "message": "Torna a YouTube"
+  },
+  "aboutApp": {
+    "message": "Informazioni su {appName}"
+  },
+  "hideApp": {
+    "message": "Nascondi {appName}"
+  },
+  "hideOthers": {
+    "message": "Nascondi altre"
+  },
+  "showAll": {
+    "message": "Mostra tutto"
+  },
+  "quitApp": {
+    "message": "Esci da {appName}"
+  },
+  "helpMenu": {
+    "message": "Aiuto"
+  }
+}

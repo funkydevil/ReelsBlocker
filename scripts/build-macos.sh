@@ -21,6 +21,7 @@ fi
 if [[ -n "${REELSBLOCKER_DEVELOPMENT_TEAM:-}" ]]; then
   TASK_SIGNING_ARGS+=("DEVELOPMENT_TEAM=$REELSBLOCKER_DEVELOPMENT_TEAM")
 fi
+node "$TASK_ROOT/scripts/build-localizations.cjs"
 xcodebuild -project "$TASK_ROOT/Safari/ReelsBlocker/ReelsBlocker.xcodeproj" \
   -scheme ReelsBlocker -configuration Debug -derivedDataPath "$TASK_DERIVED_DATA" \
   CONFIGURATION_BUILD_DIR="$TASK_ROOT/dist" \
@@ -28,5 +29,14 @@ xcodebuild -project "$TASK_ROOT/Safari/ReelsBlocker/ReelsBlocker.xcodeproj" \
 # Keep one build product: copying a registered app from DerivedData can leave
 # Safari looking up a different containing app with the same bundle identifier.
 TASK_LSREGISTER=/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister
-"$TASK_LSREGISTER" -f -R -trusted "$TASK_ROOT/dist/ReelsBlocker.app"
-echo "App: $TASK_ROOT/dist/ReelsBlocker.app"
+# Retire only this repository's obsolete generated product after a successful
+# build. Preserve it outside the app search path so Safari has one owner.
+TASK_LEGACY_APP="$TASK_ROOT/dist/ReelsBlocker.app"
+if [[ -d "$TASK_LEGACY_APP" && "$(/usr/libexec/PlistBuddy -c 'Print CFBundleIdentifier' "$TASK_LEGACY_APP/Contents/Info.plist" 2>/dev/null)" == "local.reelsblocker" ]]; then
+  TASK_LEGACY_BACKUP="$(mktemp -d /private/tmp/short-video-blocker-legacy.XXXXXX)"
+  "$TASK_LSREGISTER" -u "$TASK_LEGACY_APP" || true
+  mv "$TASK_LEGACY_APP" "$TASK_LEGACY_BACKUP/ReelsBlocker.app.disabled"
+  echo "Previous generated app preserved: $TASK_LEGACY_BACKUP/ReelsBlocker.app.disabled"
+fi
+"$TASK_LSREGISTER" -f -R -trusted "$TASK_ROOT/dist/Short Video Blocker.app"
+echo "App: $TASK_ROOT/dist/Short Video Blocker.app"

@@ -1,0 +1,188 @@
+{
+  "appName": {
+    "message": "Блокувальник коротких відео"
+  },
+  "appDescription": {
+    "message": "Приховуй відео, зображення та короткі ролики, що відволікають, у Safari."
+  },
+  "toolbarTitle": {
+    "message": "Налаштування блокування"
+  },
+  "popupTitle": {
+    "message": "Твоя стрічка — твій вибір"
+  },
+  "popupSubtitle": {
+    "message": "Вибери, що приховувати у стрічці."
+  },
+  "blockLegend": {
+    "message": "Приховувати вміст"
+  },
+  "facebookVideos": {
+    "message": "Відео у Facebook"
+  },
+  "facebookVideosDetail": {
+    "message": "Зокрема Reels і прямі ефіри"
+  },
+  "facebookImages": {
+    "message": "Зображення у Facebook"
+  },
+  "facebookImagesDetail": {
+    "message": "Текст дописів залишається"
+  },
+  "youtubeShorts": {
+    "message": "YouTube Shorts"
+  },
+  "youtubeShortsDetail": {
+    "message": "Звичайні відео доступні"
+  },
+  "loadingSettings": {
+    "message": "Завантажую налаштування…"
+  },
+  "settingsReady": {
+    "message": "Зміни застосовуються одразу."
+  },
+  "savingSettings": {
+    "message": "Зберігаю…"
+  },
+  "settingsSaved": {
+    "message": "Збережено. Відкриті вкладки оновлено."
+  },
+  "settingsLoadError": {
+    "message": "Не вдалося завантажити налаштування. Закрий панель і відкрий знову."
+  },
+  "settingsSaveError": {
+    "message": "Не вдалося зберегти. Спробуй ще раз."
+  },
+  "titleIntro": {
+    "message": "Менше гортання.\nБільше твого часу."
+  },
+  "introBody": {
+    "message": "Налаштуймо спокійнішу стрічку в Safari."
+  },
+  "start": {
+    "message": "Почнімо"
+  },
+  "titleSettings": {
+    "message": "Відкриємо\nналаштування Safari"
+  },
+  "settingsBody": {
+    "message": "Потрібен розділ «Розширення».\nВідкрию його за тебе."
+  },
+  "openSettings": {
+    "message": "Відкрити налаштування"
+  },
+  "openingSettings": {
+    "message": "Відкриваю Safari…"
+  },
+  "titleEnable": {
+    "message": "Одна позначка —\nі можна видихнути."
+  },
+  "enableBody": {
+    "message": "У розширеннях Safari знайди {appName}."
+  },
+  "exampleCheckboxLabel": {
+    "message": "Приклад: постав позначку поруч із {appName} у налаштуваннях Safari."
+  },
+  "checkInstruction": {
+    "message": "Постав позначку в Safari."
+  },
+  "pauseDemo": {
+    "message": "Пауза"
+  },
+  "resumeDemo": {
+    "message": "Продовжити"
+  },
+  "pauseDemoLabel": {
+    "message": "Призупинити показ встановлення позначки"
+  },
+  "resumeDemoLabel": {
+    "message": "Продовжити показ встановлення позначки"
+  },
+  "confirmEnabled": {
+    "message": "Позначку поставлено. Далі"
+  },
+  "checkingEnabled": {
+    "message": "Перевіряю…"
+  },
+  "notEnabled": {
+    "message": "Позначки поки немає. Увімкни розширення в Safari."
+  },
+  "stateUnknown": {
+    "message": "Не вдалося перевірити стан. Спробуй ще раз."
+  },
+  "titleDone": {
+    "message": "Вітаю!\nЧас знову твій."
+  },
+  "doneBody": {
+    "message": "Відкрий Facebook або YouTube. Якщо Safari запитає доступ до сайту — дозволь його."
+  },
+  "finish": {
+    "message": "Чудово, дякую!"
+  },
+  "back": {
+    "message": "Назад"
+  },
+  "closeWindow": {
+    "message": "Закрити вікно"
+  },
+  "stepLabel": {
+    "message": "Крок {step} із {total}"
+  },
+  "demoLabel": {
+    "message": "Приклад увімкнення {appName}"
+  },
+  "facebook": {
+    "message": "Facebook"
+  },
+  "youtube": {
+    "message": "YouTube"
+  },
+  "websiteError": {
+    "message": "Не вдалося відкрити сайт у Safari. Спробуй ще раз."
+  },
+  "settingsOpenError": {
+    "message": "Не вдалося відкрити налаштування. Спробуй ще раз."
+  },
+  "extensionNotFound": {
+    "message": "Safari не знайшов розширення. Закрий старі копії програми та спробуй знову."
+  },
+  "safariNotFound": {
+    "message": "Safari не знайдено на цьому Mac."
+  },
+  "blockedFacebookTitle": {
+    "message": "Короткі відео заблоковано"
+  },
+  "blockedFacebookBody": {
+    "message": "Блокування відео ввімкнено. Повернися до стрічки Facebook, щоб продовжити."
+  },
+  "backToFeed": {
+    "message": "Повернутися до стрічки"
+  },
+  "blockedShortsTitle": {
+    "message": "Короткі відео заблоковано"
+  },
+  "blockedShortsBody": {
+    "message": "Блокування коротких відео ввімкнено. Звичайні відео YouTube залишаються доступними."
+  },
+  "backToYouTube": {
+    "message": "Повернутися до YouTube"
+  },
+  "aboutApp": {
+    "message": "Про {appName}"
+  },
+  "hideApp": {
+    "message": "Сховати {appName}"
+  },
+  "hideOthers": {
+    "message": "Сховати інші"
+  },
+  "showAll": {
+    "message": "Показати всі"
+  },
+  "quitApp": {
+    "message": "Завершити {appName}"
+  },
+  "helpMenu": {
+    "message": "Довідка"
+  }
+}

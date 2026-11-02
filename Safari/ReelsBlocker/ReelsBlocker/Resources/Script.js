@@ -1,3 +1,6 @@
+const t = (key, vars) => AppI18n.t(key, vars);
+AppI18n.apply();
+document.querySelector('.step-count').setAttribute('aria-label', t('stepLabel', { step: 1, total: 4 }));
 let extensionEnabled = null;
 let openingPreferences = false;
 let checkingForCompletion = false;
@@ -18,8 +21,8 @@ function replayCheckboxDemo() {
 
 function updateDemoControl(paused) {
     const button = document.querySelector('.replay-demo');
-    button.textContent = paused ? 'Продолжить' : 'Пауза';
-    button.setAttribute('aria-label', paused ? 'Продолжить показ установки галочки' : 'Приостановить показ установки галочки');
+    button.textContent = t(paused ? 'resumeDemo' : 'pauseDemo');
+    button.setAttribute('aria-label', t(paused ? 'resumeDemoLabel' : 'pauseDemoLabel'));
 }
 
 function setStep(next) {
@@ -29,7 +32,7 @@ function setStep(next) {
     document.querySelector('.back').hidden = step === 1;
     const count = document.querySelector('.step-count');
     count.textContent = `${step} / 4`;
-    count.setAttribute('aria-label', `Шаг ${step} из 4`);
+    count.setAttribute('aria-label', t('stepLabel', { step, total: 4 }));
     feedback();
     document.querySelector(`#step-${step} h1`).focus();
     if (step === 3) replayCheckboxDemo();
@@ -43,16 +46,16 @@ function show(enabled) {
     checkingForCompletion = false;
     const button = document.querySelector('.check-state');
     button.disabled = false;
-    button.textContent = 'Чек на месте. Давай дальше';
+    button.textContent = t('confirmEnabled');
     if (extensionEnabled === true) setStep(4);
-    else feedback(extensionEnabled === false ? 'Галочки пока нет. Включи расширение в Safari.' : 'Не удалось проверить галочку. Попробуй ещё раз.');
+    else feedback(t(extensionEnabled === false ? 'notEnabled' : 'stateUnknown'));
 }
 
 function setOpeningPreferences(opening) {
     openingPreferences = opening;
     const button = document.querySelector('.open-preferences');
     button.disabled = opening;
-    button.textContent = opening ? 'Открываю Safari…' : 'Открыть настройки';
+    button.textContent = t(opening ? 'openingSettings' : 'openSettings');
     if (opening) feedback();
 }
 
@@ -78,7 +81,7 @@ document.querySelector('.check-state').addEventListener('click', event => {
     if (checkingForCompletion) return;
     checkingForCompletion = true;
     event.currentTarget.disabled = true;
-    event.currentTarget.textContent = 'Проверяю…';
+    event.currentTarget.textContent = t('checkingEnabled');
     feedback();
     post('check-state');
 });

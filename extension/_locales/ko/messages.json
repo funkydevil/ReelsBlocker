@@ -1,0 +1,188 @@
+{
+  "appName": {
+    "message": "짧은 동영상 차단기"
+  },
+  "appDescription": {
+    "message": "Safari에서 방해되는 피드 동영상, 이미지와 짧은 동영상을 숨기세요."
+  },
+  "toolbarTitle": {
+    "message": "차단 설정"
+  },
+  "popupTitle": {
+    "message": "내 피드는 내 선택대로"
+  },
+  "popupSubtitle": {
+    "message": "피드에서 숨길 콘텐츠를 선택하세요."
+  },
+  "blockLegend": {
+    "message": "콘텐츠 숨기기"
+  },
+  "facebookVideos": {
+    "message": "Facebook 동영상"
+  },
+  "facebookVideosDetail": {
+    "message": "Reels와 라이브 방송 포함"
+  },
+  "facebookImages": {
+    "message": "Facebook 이미지"
+  },
+  "facebookImagesDetail": {
+    "message": "게시물의 글은 그대로 표시"
+  },
+  "youtubeShorts": {
+    "message": "YouTube Shorts"
+  },
+  "youtubeShortsDetail": {
+    "message": "일반 동영상은 계속 시청 가능"
+  },
+  "loadingSettings": {
+    "message": "설정을 불러오는 중…"
+  },
+  "settingsReady": {
+    "message": "변경 사항이 즉시 적용됩니다."
+  },
+  "savingSettings": {
+    "message": "저장 중…"
+  },
+  "settingsSaved": {
+    "message": "저장했습니다. 열려 있는 탭에 적용했습니다."
+  },
+  "settingsLoadError": {
+    "message": "설정을 불러오지 못했습니다. 패널을 닫고 다시 열어 주세요."
+  },
+  "settingsSaveError": {
+    "message": "저장하지 못했습니다. 다시 시도해 주세요."
+  },
+  "titleIntro": {
+    "message": "스크롤은 줄이고,\n나만의 시간은 늘리고."
+  },
+  "introBody": {
+    "message": "Safari 피드를 더 차분하게 설정해 볼까요?"
+  },
+  "start": {
+    "message": "시작하기"
+  },
+  "titleSettings": {
+    "message": "Safari 설정을\n열어 볼까요?"
+  },
+  "settingsBody": {
+    "message": "확장 프로그램 항목이 필요합니다.\n바로 열어 드릴게요."
+  },
+  "openSettings": {
+    "message": "설정 열기"
+  },
+  "openingSettings": {
+    "message": "Safari를 여는 중…"
+  },
+  "titleEnable": {
+    "message": "체크 한 번으로\n더 여유롭게."
+  },
+  "enableBody": {
+    "message": "Safari 확장 프로그램에서 {appName}를 찾아 주세요."
+  },
+  "exampleCheckboxLabel": {
+    "message": "예시: Safari 설정에서 {appName} 옆의 확인란을 선택하세요."
+  },
+  "checkInstruction": {
+    "message": "Safari에서 확인란을 선택하세요."
+  },
+  "pauseDemo": {
+    "message": "일시 정지"
+  },
+  "resumeDemo": {
+    "message": "계속"
+  },
+  "pauseDemoLabel": {
+    "message": "확인란 선택 시연 일시 정지"
+  },
+  "resumeDemoLabel": {
+    "message": "확인란 선택 시연 계속"
+  },
+  "confirmEnabled": {
+    "message": "체크했어요. 다음으로"
+  },
+  "checkingEnabled": {
+    "message": "확인 중…"
+  },
+  "notEnabled": {
+    "message": "아직 선택되지 않았습니다. Safari에서 확장 프로그램을 켜 주세요."
+  },
+  "stateUnknown": {
+    "message": "상태를 확인하지 못했습니다. 다시 시도해 주세요."
+  },
+  "titleDone": {
+    "message": "완료했어요!\n이제 내 시간을 되찾아요."
+  },
+  "doneBody": {
+    "message": "Facebook이나 YouTube를 열어 보세요. Safari에서 사이트 접근을 요청하면 허용해 주세요."
+  },
+  "finish": {
+    "message": "좋아요, 고마워요!"
+  },
+  "back": {
+    "message": "뒤로"
+  },
+  "closeWindow": {
+    "message": "윈도우 닫기"
+  },
+  "stepLabel": {
+    "message": "{total}단계 중 {step}단계"
+  },
+  "demoLabel": {
+    "message": "{appName} 활성화 예시"
+  },
+  "facebook": {
+    "message": "Facebook"
+  },
+  "youtube": {
+    "message": "YouTube"
+  },
+  "websiteError": {
+    "message": "Safari에서 사이트를 열지 못했습니다. 다시 시도해 주세요."
+  },
+  "settingsOpenError": {
+    "message": "설정을 열지 못했습니다. 다시 시도해 주세요."
+  },
+  "extensionNotFound": {
+    "message": "Safari에서 확장 프로그램을 찾지 못했습니다. 이전 앱 복사본을 닫고 다시 시도해 주세요."
+  },
+  "safariNotFound": {
+    "message": "이 Mac에서 Safari를 찾지 못했습니다."
+  },
+  "blockedFacebookTitle": {
+    "message": "짧은 동영상이 차단되었습니다"
+  },
+  "blockedFacebookBody": {
+    "message": "동영상 차단이 켜져 있습니다. Facebook 피드로 돌아가 계속 둘러보세요."
+  },
+  "backToFeed": {
+    "message": "피드로 돌아가기"
+  },
+  "blockedShortsTitle": {
+    "message": "짧은 동영상이 차단되었습니다"
+  },
+  "blockedShortsBody": {
+    "message": "짧은 동영상 차단이 켜져 있습니다. 일반 YouTube 동영상은 계속 시청할 수 있습니다."
+  },
+  "backToYouTube": {
+    "message": "YouTube로 돌아가기"
+  },
+  "aboutApp": {
+    "message": "{appName}에 관하여"
+  },
+  "hideApp": {
+    "message": "{appName} 가리기"
+  },
+  "hideOthers": {
+    "message": "기타 가리기"
+  },
+  "showAll": {
+    "message": "모두 보기"
+  },
+  "quitApp": {
+    "message": "{appName} 종료"
+  },
+  "helpMenu": {
+    "message": "도움말"
+  }
+}

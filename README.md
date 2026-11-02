@@ -1,4 +1,4 @@
-# Reels Blocker for Facebook and YouTube
+# Short Video Blocker
 
 A Safari Web Extension for **macOS** that hides Facebook feed videos and images and blocks YouTube Shorts. Choose what to block using three independent checkboxes in the extension's toolbar popup. Regular YouTube videos, live streams, and embedded players remain available.
 
@@ -24,12 +24,13 @@ Videos and images in private messages and floating chat dialogs are excluded fro
 
 ```sh
 npm ci
+node scripts/build-localizations.cjs
 npm run check
 npm test
 zsh scripts/build-macos.sh
 ```
 
-The app is written to `dist/ReelsBlocker.app`. Build products, dependencies, and personal Xcode state are excluded from Git.
+The app is written to `dist/Short Video Blocker.app`. Build products, dependencies, and personal Xcode state are excluded from Git.
 
 The Xcode project is `Safari/ReelsBlocker/ReelsBlocker.xcodeproj`. It references the original files in `extension/`, so no resource copying is needed after editing them.
 
@@ -43,26 +44,34 @@ If that error persists, check old Xcode build locations and the Trash for other 
 
 ## Enable in Safari
 
-1. Open `dist/ReelsBlocker.app` at least once to register the extension.
-2. Use the app's **Open Safari Extension Settings** button.
-3. In **Safari → Settings → Extensions**, enable **Reels Blocker for Facebook** and allow access to `facebook.com` and `youtube.com`.
+1. Open `dist/Short Video Blocker.app` at least once to register the extension.
+2. Follow the setup card and use **Open settings** (the wording follows your selected language).
+3. In **Safari → Settings → Extensions**, enable **Short Video Blocker** and allow access to `facebook.com` and `youtube.com`.
 4. Reload your open Facebook and YouTube tabs.
 
 This local development build is not notarized or published in the App Store. Distribution requires appropriate Apple Developer signing. Unsigned builds made outside this script require Safari's developer option to allow unsigned extensions, which may reset after restarting Safari.
 
-The app's **Open Safari Extension Settings** button launches Safari explicitly and opens this extension's settings. The app stays open so you can retry if Safari reports an error; returning to the app refreshes the enabled status. If the extension is missing, expand **Can’t find the extension?** for setup instructions. Keep one installed copy in Applications and launch that copy. Safari discovers the extension from its containing app; dragging the app icon into Safari's Extensions list is not an installation method.
+The app's **Open settings** button launches Safari explicitly and opens this extension's settings. The app stays open so you can retry if Safari reports an error; returning to the app refreshes the enabled status. Keep one installed copy in Applications and launch that copy. Safari discovers the extension from its containing app; dragging the app icon into Safari's Extensions list is not an installation method.
 
-The containing app uses a compact 300×300 point card without the standard window frame, with four Russian-language screens: introduction, opening Safari settings, a close-up illustration of the extension checkbox, and completion with a reminder about website access. Violet and mint gradients, short transitions, light/dark appearance and Reduce Motion support keep the guide readable and compact. **Чек на месте. Давай дальше** requests a fresh Safari check; the user's claim alone cannot advance to completion. Already enabled users follow the same explicit sequence. Facebook and YouTube buttons open their sites in Safari. **Круто, спасибо!** closes the app; the custom close control and Escape also close it. Enabled status does not confirm website permissions or individual blocking options.
+The containing app uses a compact 300×300 point card without the standard window frame, with four localized screens: introduction, opening Safari settings, a close-up illustration of the extension checkbox, and completion with a reminder about website access. Violet and mint gradients, short transitions, light/dark appearance and Reduce Motion support keep the guide readable and compact. **It’s checked. Let’s continue** requests a fresh Safari check; the user's claim alone cannot advance to completion. Already enabled users follow the same explicit sequence. Facebook and YouTube buttons open their sites in Safari. **Great, thanks!** closes the app; the custom close control and Escape also close it. Enabled status does not confirm website permissions or individual blocking options.
 
 The card starts slightly right of the center of its screen, within the visible area above the Dock. Drag it using the small handle at the top. It remains visible above Safari while the user enables the extension. Opening a test website returns it to the normal window level. The guide does not create external arrows, inspect Safari window geometry, or ask for Accessibility permission.
 
-On the checkbox step, a looping demonstration shows a decorative cursor moving onto an empty checkbox, clicking it, and revealing the checkmark, with a local click pulse. The 2.4-second cycle repeats for as long as the checkbox step is visible. **Пауза** freezes the demonstration; **Продолжить** resumes it. Reduce Motion displays a static checked example without the cursor. This visual example never substitutes for the real Safari enabled-state check.
+On the checkbox step, a looping demonstration shows a decorative cursor moving onto an empty checkbox, clicking it, and revealing the checkmark, with a local click pulse. The 2.4-second cycle repeats for as long as the checkbox step is visible. **Pause** freezes the demonstration; **Continue** resumes it. Reduce Motion displays a static checked example without the cursor. This visual example never substitutes for the real Safari enabled-state check.
 
 See Apple's guides to [enabling developer features](https://developer.apple.com/documentation/safari-developer-tools/enabling-developer-features) and [running a Safari Web Extension](https://developer.apple.com/documentation/safariservices/running-your-safari-web-extension).
 
+## Languages
+
+The setup card, extension popup, blocking screens and native app/menu strings support 15 languages: English, Russian, Portuguese (Portugal), Spanish, French, German, Italian, Dutch, Polish, Ukrainian, Turkish, Japanese, Korean, Simplified Chinese and Arabic. Language selection follows system/browser preferences, with English as the fallback. Arabic uses right-to-left layout.
+
+The source of truth is `localization/catalog.json`. Run `node scripts/build-localizations.cjs` after changing translations; it generates the runtime catalog, Web Extension `_locales` messages and native localization resources. The macOS build script runs this generation automatically. The generator checks locale/key completeness, interpolation placeholders, nonempty values and app-name length. Translations still benefit from native-speaker review and visual testing on each supported system language.
+
+The visible app and extension name is **Short Video Blocker**. Existing technical bundle identifiers (`local.reelsblocker` and `local.reelsblocker.Extension`), storage keys, source project paths and signing-variable names are retained to preserve upgrade continuity. The built application is `dist/Short Video Blocker.app`. See `docs/BRAND.md` for the naming decision, scoped Kōmori keyword comparison and third-party-brand guidance.
+
 ## Settings
 
-Click **Reels Blocker** in Safari's toolbar. If needed, find it in Safari's extensions menu or customize the toolbar to show it.
+Click **Short Video Blocker** in Safari's toolbar. If needed, find it in Safari's extensions menu or customize the toolbar to show it.
 
 - **Facebook videos:** block feed videos, Reels, and live streams.
 - **Facebook images:** hide feed images and leave post text visible.

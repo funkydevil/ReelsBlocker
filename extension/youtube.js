@@ -40,6 +40,12 @@
       </style><main aria-labelledby="title"><h1 id="title">YouTube Shorts are blocked</h1>
         <p>Regular YouTube videos are still available.</p>
         <a href="https://www.youtube.com/">Back to YouTube</a></main>`;
+      if (globalThis.AppI18n) {
+        screen.dir = AppI18n.direction;
+        root.querySelector("h1").textContent = AppI18n.t("blockedShortsTitle");
+        root.querySelector("p").textContent = AppI18n.t("blockedShortsBody");
+        root.querySelector("a").textContent = AppI18n.t("backToYouTube");
+      }
     }
     if (!screen.isConnected) document.body.append(screen);
   }

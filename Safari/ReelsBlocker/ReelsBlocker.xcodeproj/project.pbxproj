@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB1200000000000000000002 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = AB1200000000000000000001 /* popup.html */; };
+		AB1200000000000000000012 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = AB1200000000000000000011 /* popup.css */; };
+		AB1200000000000000000022 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = AB1200000000000000000021 /* popup.js */; };
+		AB1300000000000000000002 /* icons in Resources */ = {isa = PBXBuildFile; fileRef = AB1300000000000000000001 /* icons */; };
+		AB1400000000000000000002 /* youtube.js in Resources */ = {isa = PBXBuildFile; fileRef = AB1400000000000000000001 /* youtube.js */; };
+		CC1500000000000000000001 /* ../../extension/i18n.js in Resources */ = {isa = PBXBuildFile; fileRef = CC1500000000000000000006 /* ../../extension/i18n.js */; };
+		CC1500000000000000000002 /* ../../extension/i18n.js in Resources */ = {isa = PBXBuildFile; fileRef = CC1500000000000000000006 /* ../../extension/i18n.js */; };
+		CC1500000000000000000003 /* ../../extension/_locales in Resources */ = {isa = PBXBuildFile; fileRef = CC1500000000000000000007 /* ../../extension/_locales */; };
+		CC1500000000000000000004 /* ../../localization/catalog.json in Resources */ = {isa = PBXBuildFile; fileRef = CC1500000000000000000008 /* ../../localization/catalog.json */; };
+		CC1500000000000000000005 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC1500000000000000000009 /* InfoPlist.strings */; };
 		F16516FE30952308002E36C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16516FD30952308002E36C4 /* AppDelegate.swift */; };
 		F165170230952308002E36C4 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = F165170030952308002E36C4 /* Main.html */; };
 		F165170430952308002E36C4 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F165170330952308002E36C4 /* Icon.png */; };
@@ -15,16 +25,11 @@
 		F165170A30952308002E36C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F165170930952308002E36C4 /* ViewController.swift */; };
 		F165170D30952308002E36C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F165170B30952308002E36C4 /* Main.storyboard */; };
 		F165170F30952308002E36C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F165170E30952308002E36C4 /* Assets.xcassets */; };
-		F165171630952309002E36C4 /* ReelsBlocker Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F165171530952309002E36C4 /* ReelsBlocker Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F165171630952309002E36C4 /* Short Video Blocker Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F165171530952309002E36C4 /* Short Video Blocker Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F165171B30952309002E36C4 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F165171A30952309002E36C4 /* SafariWebExtensionHandler.swift */; };
 		F165172A30952309002E36C4 /* content.css in Resources */ = {isa = PBXBuildFile; fileRef = F165172730952309002E36C4 /* content.css */; };
 		F165172B30952309002E36C4 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = F165172830952309002E36C4 /* manifest.json */; };
 		F165172C30952309002E36C4 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = F165172930952309002E36C4 /* content.js */; };
-		AB1200000000000000000002 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = AB1200000000000000000001; };
-		AB1200000000000000000012 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = AB1200000000000000000011; };
-		AB1200000000000000000022 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = AB1200000000000000000021; };
-		AB1300000000000000000002 /* icons in Resources */ = {isa = PBXBuildFile; fileRef = AB1300000000000000000001; };
-		AB1400000000000000000002 /* youtube.js in Resources */ = {isa = PBXBuildFile; fileRef = AB1400000000000000000001; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,14 +48,37 @@
 			dstPath = "";
 			dstSubfolder = PlugIns;
 			files = (
-				F165171630952309002E36C4 /* ReelsBlocker Extension.appex in Embed Foundation Extensions */,
+				F165171630952309002E36C4 /* Short Video Blocker Extension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F16516FA30952308002E36C4 /* ReelsBlocker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReelsBlocker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB1200000000000000000001 /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = popup.html; path = ../../../extension/popup.html; sourceTree = "<group>"; };
+		AB1200000000000000000011 /* popup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = popup.css; path = ../../../extension/popup.css; sourceTree = "<group>"; };
+		AB1200000000000000000021 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = popup.js; path = ../../../extension/popup.js; sourceTree = "<group>"; };
+		AB1300000000000000000001 /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = icons; path = ../../../extension/icons; sourceTree = "<group>"; };
+		AB1400000000000000000001 /* youtube.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = youtube.js; path = ../../../extension/youtube.js; sourceTree = "<group>"; };
+		CC1500000000000000000006 /* ../../extension/i18n.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = ../../extension/i18n.js; sourceTree = SOURCE_ROOT; };
+		CC1500000000000000000007 /* ../../extension/_locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ../../extension/_locales; sourceTree = SOURCE_ROOT; };
+		CC1500000000000000000008 /* ../../localization/catalog.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ../../localization/catalog.json; sourceTree = SOURCE_ROOT; };
+		CC1500000000000000000064 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = ../../localization/native/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		CC1500000000000000000065 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ../../localization/native/ru.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		CC1500000000000000000066 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "../../localization/native/pt-PT.lproj/InfoPlist.strings"; sourceTree = SOURCE_ROOT; };
+		CC1500000000000000000067 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = ../../localization/native/es.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		CC1500000000000000000068 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = ../../localization/native/fr.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		CC1500000000000000000069 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = ../../localization/native/de.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		CC150000000000000000006A /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = ../../localization/native/it.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		CC150000000000000000006B /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = ../../localization/native/nl.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		CC150000000000000000006C /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = ../../localization/native/pl.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		CC150000000000000000006D /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = ../../localization/native/uk.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		CC150000000000000000006E /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = ../../localization/native/tr.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		CC150000000000000000006F /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ../../localization/native/ja.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		CC1500000000000000000070 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ../../localization/native/ko.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		CC1500000000000000000071 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "../../localization/native/zh-Hans.lproj/InfoPlist.strings"; sourceTree = SOURCE_ROOT; };
+		CC1500000000000000000072 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ../../localization/native/ar.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		F16516FA30952308002E36C4 /* Short Video Blocker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Short Video Blocker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F16516FD30952308002E36C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F165170130952308002E36C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = Base.lproj/Main.html; sourceTree = "<group>"; };
 		F165170330952308002E36C4 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
@@ -60,17 +88,12 @@
 		F165170C30952308002E36C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F165170E30952308002E36C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F165171030952308002E36C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F165171530952309002E36C4 /* ReelsBlocker Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ReelsBlocker Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F165171530952309002E36C4 /* Short Video Blocker Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Short Video Blocker Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F165171A30952309002E36C4 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
 		F165171C30952309002E36C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F165172730952309002E36C4 /* content.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = content.css; path = ../../../extension/content.css; sourceTree = "<group>"; };
 		F165172830952309002E36C4 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = ../../../extension/manifest.json; sourceTree = "<group>"; };
 		F165172930952309002E36C4 /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = content.js; path = ../../../extension/content.js; sourceTree = "<group>"; };
-		AB1200000000000000000001 /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = popup.html; path = ../../../extension/popup.html; sourceTree = "<group>"; };
-		AB1200000000000000000011 /* popup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = popup.css; path = ../../../extension/popup.css; sourceTree = "<group>"; };
-		AB1200000000000000000021 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = popup.js; path = ../../../extension/popup.js; sourceTree = "<group>"; };
-		AB1300000000000000000001 /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = icons; path = ../../../extension/icons; sourceTree = "<group>"; };
-		AB1400000000000000000001 /* youtube.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = youtube.js; path = ../../../extension/youtube.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +122,8 @@
 		F16516FB30952308002E36C4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F16516FA30952308002E36C4 /* ReelsBlocker.app */,
-				F165171530952309002E36C4 /* ReelsBlocker Extension.appex */,
+				F16516FA30952308002E36C4 /* Short Video Blocker.app */,
+				F165171530952309002E36C4 /* Short Video Blocker Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,6 +148,9 @@
 				F165170330952308002E36C4 /* Icon.png */,
 				F165170530952308002E36C4 /* Style.css */,
 				F165170730952308002E36C4 /* Script.js */,
+				CC1500000000000000000006 /* ../../extension/i18n.js */,
+				CC1500000000000000000008 /* ../../localization/catalog.json */,
+				CC1500000000000000000009 /* InfoPlist.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -144,6 +170,7 @@
 			children = (
 				F165172730952309002E36C4 /* content.css */,
 				AB1400000000000000000001 /* youtube.js */,
+				CC1500000000000000000007 /* ../../extension/_locales */,
 				AB1300000000000000000001 /* icons */,
 				AB1200000000000000000021 /* popup.js */,
 				AB1200000000000000000011 /* popup.css */,
@@ -174,7 +201,7 @@
 			);
 			name = ReelsBlocker;
 			productName = ReelsBlocker;
-			productReference = F16516FA30952308002E36C4 /* ReelsBlocker.app */;
+			productReference = F16516FA30952308002E36C4 /* Short Video Blocker.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F165171430952309002E36C4 /* ReelsBlocker Extension */ = {
@@ -189,7 +216,7 @@
 			);
 			name = "ReelsBlocker Extension";
 			productName = "ReelsBlocker Extension";
-			productReference = F165171530952309002E36C4 /* ReelsBlocker Extension.appex */;
+			productReference = F165171530952309002E36C4 /* Short Video Blocker Extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -216,6 +243,20 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
+				"pt-PT",
+				es,
+				fr,
+				de,
+				it,
+				nl,
+				pl,
+				uk,
+				tr,
+				ja,
+				ko,
+				"zh-Hans",
+				ar,
 			);
 			mainGroup = F16516F130952308002E36C4;
 			minimizedProjectReferenceProxies = 1;
@@ -237,6 +278,9 @@
 				F165170430952308002E36C4 /* Icon.png in Resources */,
 				F165170D30952308002E36C4 /* Main.storyboard in Resources */,
 				F165170830952308002E36C4 /* Script.js in Resources */,
+				CC1500000000000000000001 /* ../../extension/i18n.js in Resources */,
+				CC1500000000000000000004 /* ../../localization/catalog.json in Resources */,
+				CC1500000000000000000005 /* InfoPlist.strings in Resources */,
 				F165170230952308002E36C4 /* Main.html in Resources */,
 				F165170F30952308002E36C4 /* Assets.xcassets in Resources */,
 				F165170630952308002E36C4 /* Style.css in Resources */,
@@ -249,6 +293,8 @@
 				F165172B30952309002E36C4 /* manifest.json in Resources */,
 				F165172A30952309002E36C4 /* content.css in Resources */,
 				AB1400000000000000000002 /* youtube.js in Resources */,
+				CC1500000000000000000002 /* ../../extension/i18n.js in Resources */,
+				CC1500000000000000000003 /* ../../extension/_locales in Resources */,
 				AB1300000000000000000002 /* icons in Resources */,
 				AB1200000000000000000022 /* popup.js in Resources */,
 				AB1200000000000000000012 /* popup.css in Resources */,
@@ -282,6 +328,28 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		CC1500000000000000000009 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC1500000000000000000064 /* en */,
+				CC1500000000000000000065 /* ru */,
+				CC1500000000000000000066 /* pt-PT */,
+				CC1500000000000000000067 /* es */,
+				CC1500000000000000000068 /* fr */,
+				CC1500000000000000000069 /* de */,
+				CC150000000000000000006A /* it */,
+				CC150000000000000000006B /* nl */,
+				CC150000000000000000006C /* pl */,
+				CC150000000000000000006D /* uk */,
+				CC150000000000000000006E /* tr */,
+				CC150000000000000000006F /* ja */,
+				CC1500000000000000000070 /* ko */,
+				CC1500000000000000000071 /* zh-Hans */,
+				CC1500000000000000000072 /* ar */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		F165170030952308002E36C4 /* Main.html */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -423,14 +491,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = F93NU8DF46;
-				CURRENT_PROJECT_VERSION = 7;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ReelsBlocker Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "ReelsBlocker Extension";
+				INFOPLIST_KEY_CFBundleDisplayName = "Short Video Blocker";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -438,13 +506,14 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.3.0;
+				MARKETING_VERSION = 1.4.0;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = local.reelsblocker.Extension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = ReelsBlocker_Extension;
+				PRODUCT_NAME = "Short Video Blocker Extension";
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -458,14 +527,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = F93NU8DF46;
-				CURRENT_PROJECT_VERSION = 7;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ReelsBlocker Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "ReelsBlocker Extension";
+				INFOPLIST_KEY_CFBundleDisplayName = "Short Video Blocker";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -473,13 +542,14 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.3.0;
+				MARKETING_VERSION = 1.4.0;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = local.reelsblocker.Extension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = ReelsBlocker_Extension;
+				PRODUCT_NAME = "Short Video Blocker Extension";
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -495,16 +565,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F93NU8DF46;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
+				DEVELOPMENT_TEAM = F93NU8DF46;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ReelsBlocker/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = ReelsBlocker;
+				INFOPLIST_KEY_CFBundleDisplayName = "Short Video Blocker";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -513,7 +583,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
+				MARKETING_VERSION = 1.4.0;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -521,7 +591,8 @@
 					WebKit,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = local.reelsblocker;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = ReelsBlocker;
+				PRODUCT_NAME = "Short Video Blocker";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -538,16 +609,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F93NU8DF46;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
+				DEVELOPMENT_TEAM = F93NU8DF46;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ReelsBlocker/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = ReelsBlocker;
+				INFOPLIST_KEY_CFBundleDisplayName = "Short Video Blocker";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -556,7 +627,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
+				MARKETING_VERSION = 1.4.0;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -564,7 +635,8 @@
 					WebKit,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = local.reelsblocker;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = ReelsBlocker;
+				PRODUCT_NAME = "Short Video Blocker";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;

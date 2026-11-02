@@ -1,0 +1,188 @@
+{
+  "appName": {
+    "message": "Short Video Blocker"
+  },
+  "appDescription": {
+    "message": "Hide distracting feed videos, images and short videos in Safari."
+  },
+  "toolbarTitle": {
+    "message": "Blocking settings"
+  },
+  "popupTitle": {
+    "message": "Your feed, your choice"
+  },
+  "popupSubtitle": {
+    "message": "Choose what stays out of your feed."
+  },
+  "blockLegend": {
+    "message": "Hide content"
+  },
+  "facebookVideos": {
+    "message": "Facebook videos"
+  },
+  "facebookVideosDetail": {
+    "message": "Including Reels and live streams"
+  },
+  "facebookImages": {
+    "message": "Facebook images"
+  },
+  "facebookImagesDetail": {
+    "message": "Keep the post text"
+  },
+  "youtubeShorts": {
+    "message": "YouTube Shorts"
+  },
+  "youtubeShortsDetail": {
+    "message": "Regular videos stay available"
+  },
+  "loadingSettings": {
+    "message": "Loading settings…"
+  },
+  "settingsReady": {
+    "message": "Changes apply immediately."
+  },
+  "savingSettings": {
+    "message": "Saving…"
+  },
+  "settingsSaved": {
+    "message": "Saved. Updated in your open tabs."
+  },
+  "settingsLoadError": {
+    "message": "Couldn’t load settings. Close this panel and open it again."
+  },
+  "settingsSaveError": {
+    "message": "Couldn’t save. Please try again."
+  },
+  "titleIntro": {
+    "message": "Less scrolling.\nMore time for you."
+  },
+  "introBody": {
+    "message": "Let’s set up a calmer feed in Safari."
+  },
+  "start": {
+    "message": "Let’s go"
+  },
+  "titleSettings": {
+    "message": "Open Safari\nsettings"
+  },
+  "settingsBody": {
+    "message": "We need the Extensions section.\nI’ll open it for you."
+  },
+  "openSettings": {
+    "message": "Open settings"
+  },
+  "openingSettings": {
+    "message": "Opening Safari…"
+  },
+  "titleEnable": {
+    "message": "One checkbox.\nA little more calm."
+  },
+  "enableBody": {
+    "message": "In Safari extensions, find {appName}."
+  },
+  "exampleCheckboxLabel": {
+    "message": "Example: tick the checkbox beside {appName} in Safari settings."
+  },
+  "checkInstruction": {
+    "message": "Tick the checkbox in Safari."
+  },
+  "pauseDemo": {
+    "message": "Pause"
+  },
+  "resumeDemo": {
+    "message": "Continue"
+  },
+  "pauseDemoLabel": {
+    "message": "Pause the checkbox demonstration"
+  },
+  "resumeDemoLabel": {
+    "message": "Continue the checkbox demonstration"
+  },
+  "confirmEnabled": {
+    "message": "It’s checked. Let’s continue"
+  },
+  "checkingEnabled": {
+    "message": "Checking…"
+  },
+  "notEnabled": {
+    "message": "Not checked yet. Enable the extension in Safari."
+  },
+  "stateUnknown": {
+    "message": "Couldn’t check its status. Please try again."
+  },
+  "titleDone": {
+    "message": "You did it!\nYour time is yours."
+  },
+  "doneBody": {
+    "message": "Open Facebook or YouTube. If Safari asks for website access, allow it."
+  },
+  "finish": {
+    "message": "Great, thanks!"
+  },
+  "back": {
+    "message": "Back"
+  },
+  "closeWindow": {
+    "message": "Close window"
+  },
+  "stepLabel": {
+    "message": "Step {step} of {total}"
+  },
+  "demoLabel": {
+    "message": "Example of enabling {appName}"
+  },
+  "facebook": {
+    "message": "Facebook"
+  },
+  "youtube": {
+    "message": "YouTube"
+  },
+  "websiteError": {
+    "message": "Couldn’t open the site in Safari. Please try again."
+  },
+  "settingsOpenError": {
+    "message": "Couldn’t open settings. Please try again."
+  },
+  "extensionNotFound": {
+    "message": "Safari couldn’t find the extension. Close older copies of the app and try again."
+  },
+  "safariNotFound": {
+    "message": "Safari wasn’t found on this Mac."
+  },
+  "blockedFacebookTitle": {
+    "message": "Short videos are blocked"
+  },
+  "blockedFacebookBody": {
+    "message": "Video blocking is on. Return to your Facebook feed to keep browsing."
+  },
+  "backToFeed": {
+    "message": "Back to feed"
+  },
+  "blockedShortsTitle": {
+    "message": "Short videos are blocked"
+  },
+  "blockedShortsBody": {
+    "message": "Short-video blocking is on. Regular YouTube videos are still available."
+  },
+  "backToYouTube": {
+    "message": "Back to YouTube"
+  },
+  "aboutApp": {
+    "message": "About {appName}"
+  },
+  "hideApp": {
+    "message": "Hide {appName}"
+  },
+  "hideOthers": {
+    "message": "Hide Others"
+  },
+  "showAll": {
+    "message": "Show All"
+  },
+  "quitApp": {
+    "message": "Quit {appName}"
+  },
+  "helpMenu": {
+    "message": "Help"
+  }
+}

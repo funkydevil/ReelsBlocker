@@ -60,7 +60,14 @@
         small { margin-top:28px; color:#9ca3af; }
       </style><main role="main" aria-labelledby="title"><h1 id="title">Reels are blocked</h1>
       <p>Return to your Facebook feed and continue without short videos.</p>
-      <a href="https://www.facebook.com/">Back to feed</a><small>Reels Blocker for Facebook</small></main>`;
+      <a href="https://www.facebook.com/">Back to feed</a><small>Short Video Blocker</small></main>`;
+      if (globalThis.AppI18n) {
+        screen.dir = AppI18n.direction;
+        root.querySelector("h1").textContent = AppI18n.t("blockedFacebookTitle");
+        root.querySelector("p").textContent = AppI18n.t("blockedFacebookBody");
+        root.querySelector("a").textContent = AppI18n.t("backToFeed");
+        root.querySelector("small").textContent = AppI18n.t("appName");
+      }
     }
     if (!screen.isConnected) document.body.append(screen);
   }

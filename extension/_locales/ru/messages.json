@@ -1,0 +1,188 @@
+{
+  "appName": {
+    "message": "Блокировщик коротких видео"
+  },
+  "appDescription": {
+    "message": "Скрывай отвлекающие видео, изображения и короткие ролики в Safari."
+  },
+  "toolbarTitle": {
+    "message": "Настройки блокировки"
+  },
+  "popupTitle": {
+    "message": "Твоя лента — твой выбор"
+  },
+  "popupSubtitle": {
+    "message": "Выбери, что скрывать в ленте."
+  },
+  "blockLegend": {
+    "message": "Скрывать контент"
+  },
+  "facebookVideos": {
+    "message": "Видео в Facebook"
+  },
+  "facebookVideosDetail": {
+    "message": "Включая Reels и прямые эфиры"
+  },
+  "facebookImages": {
+    "message": "Изображения в Facebook"
+  },
+  "facebookImagesDetail": {
+    "message": "Текст публикаций остаётся"
+  },
+  "youtubeShorts": {
+    "message": "YouTube Shorts"
+  },
+  "youtubeShortsDetail": {
+    "message": "Обычные видео доступны"
+  },
+  "loadingSettings": {
+    "message": "Загружаю настройки…"
+  },
+  "settingsReady": {
+    "message": "Изменения применяются сразу."
+  },
+  "savingSettings": {
+    "message": "Сохраняю…"
+  },
+  "settingsSaved": {
+    "message": "Сохранено. Открытые вкладки обновлены."
+  },
+  "settingsLoadError": {
+    "message": "Не удалось загрузить настройки. Закрой панель и открой снова."
+  },
+  "settingsSaveError": {
+    "message": "Не удалось сохранить. Попробуй ещё раз."
+  },
+  "titleIntro": {
+    "message": "Меньше скроллинга.\nБольше твоего времени."
+  },
+  "introBody": {
+    "message": "Настроим спокойную ленту в Safari."
+  },
+  "start": {
+    "message": "Поехали"
+  },
+  "titleSettings": {
+    "message": "Откроем\nнастройки Safari"
+  },
+  "settingsBody": {
+    "message": "Нужен раздел «Расширения».\nОткрою его за тебя."
+  },
+  "openSettings": {
+    "message": "Открыть настройки"
+  },
+  "openingSettings": {
+    "message": "Открываю Safari…"
+  },
+  "titleEnable": {
+    "message": "Одна галочка —\nи можно выдохнуть."
+  },
+  "enableBody": {
+    "message": "В расширениях Safari найди {appName}."
+  },
+  "exampleCheckboxLabel": {
+    "message": "Образец: поставь галочку рядом с {appName} в настройках Safari."
+  },
+  "checkInstruction": {
+    "message": "Поставь галочку в Safari."
+  },
+  "pauseDemo": {
+    "message": "Пауза"
+  },
+  "resumeDemo": {
+    "message": "Продолжить"
+  },
+  "pauseDemoLabel": {
+    "message": "Приостановить показ установки галочки"
+  },
+  "resumeDemoLabel": {
+    "message": "Продолжить показ установки галочки"
+  },
+  "confirmEnabled": {
+    "message": "Чек на месте. Давай дальше"
+  },
+  "checkingEnabled": {
+    "message": "Проверяю…"
+  },
+  "notEnabled": {
+    "message": "Галочки пока нет. Включи расширение в Safari."
+  },
+  "stateUnknown": {
+    "message": "Не удалось проверить состояние. Попробуй ещё раз."
+  },
+  "titleDone": {
+    "message": "Поздравляю!\nВремя снова твоё."
+  },
+  "doneBody": {
+    "message": "Открой Facebook или YouTube. Если Safari запросит доступ к сайту — разреши его."
+  },
+  "finish": {
+    "message": "Круто, спасибо!"
+  },
+  "back": {
+    "message": "Назад"
+  },
+  "closeWindow": {
+    "message": "Закрыть окно"
+  },
+  "stepLabel": {
+    "message": "Шаг {step} из {total}"
+  },
+  "demoLabel": {
+    "message": "Пример включения {appName}"
+  },
+  "facebook": {
+    "message": "Facebook"
+  },
+  "youtube": {
+    "message": "YouTube"
+  },
+  "websiteError": {
+    "message": "Не удалось открыть сайт в Safari. Попробуй ещё раз."
+  },
+  "settingsOpenError": {
+    "message": "Не удалось открыть настройки. Попробуй ещё раз."
+  },
+  "extensionNotFound": {
+    "message": "Safari не нашёл расширение. Закрой старые копии приложения и попробуй снова."
+  },
+  "safariNotFound": {
+    "message": "Safari не найден на этом Mac."
+  },
+  "blockedFacebookTitle": {
+    "message": "Короткие видео заблокированы"
+  },
+  "blockedFacebookBody": {
+    "message": "Блокировка видео включена. Вернись в ленту Facebook, чтобы продолжить просмотр."
+  },
+  "backToFeed": {
+    "message": "Вернуться в ленту"
+  },
+  "blockedShortsTitle": {
+    "message": "Короткие видео заблокированы"
+  },
+  "blockedShortsBody": {
+    "message": "Блокировка коротких видео включена. Обычные видео YouTube остаются доступными."
+  },
+  "backToYouTube": {
+    "message": "Вернуться в YouTube"
+  },
+  "aboutApp": {
+    "message": "О приложении {appName}"
+  },
+  "hideApp": {
+    "message": "Скрыть {appName}"
+  },
+  "hideOthers": {
+    "message": "Скрыть остальные"
+  },
+  "showAll": {
+    "message": "Показать все"
+  },
+  "quitApp": {
+    "message": "Завершить {appName}"
+  },
+  "helpMenu": {
+    "message": "Справка"
+  }
+}

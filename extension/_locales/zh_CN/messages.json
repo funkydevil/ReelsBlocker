@@ -1,0 +1,188 @@
+{
+  "appName": {
+    "message": "短视频拦截器"
+  },
+  "appDescription": {
+    "message": "在Safari中隐藏分散注意力的信息流视频、图片和短视频。"
+  },
+  "toolbarTitle": {
+    "message": "屏蔽设置"
+  },
+  "popupTitle": {
+    "message": "你的信息流，由你选择"
+  },
+  "popupSubtitle": {
+    "message": "选择要在信息流中隐藏的内容。"
+  },
+  "blockLegend": {
+    "message": "隐藏内容"
+  },
+  "facebookVideos": {
+    "message": "Facebook视频"
+  },
+  "facebookVideosDetail": {
+    "message": "包括Reels和直播"
+  },
+  "facebookImages": {
+    "message": "Facebook图片"
+  },
+  "facebookImagesDetail": {
+    "message": "保留帖子文字"
+  },
+  "youtubeShorts": {
+    "message": "YouTube Shorts"
+  },
+  "youtubeShortsDetail": {
+    "message": "普通视频仍可观看"
+  },
+  "loadingSettings": {
+    "message": "正在加载设置…"
+  },
+  "settingsReady": {
+    "message": "更改会立即生效。"
+  },
+  "savingSettings": {
+    "message": "正在保存…"
+  },
+  "settingsSaved": {
+    "message": "已保存，并已应用到打开的标签页。"
+  },
+  "settingsLoadError": {
+    "message": "无法加载设置。请关闭此面板后重新打开。"
+  },
+  "settingsSaveError": {
+    "message": "无法保存，请重试。"
+  },
+  "titleIntro": {
+    "message": "少刷一会儿，\n多留时间给自己。"
+  },
+  "introBody": {
+    "message": "一起让Safari的信息流更清静。"
+  },
+  "start": {
+    "message": "开始吧"
+  },
+  "titleSettings": {
+    "message": "打开Safari\n设置"
+  },
+  "settingsBody": {
+    "message": "需要进入“扩展”部分。\n我来帮你打开。"
+  },
+  "openSettings": {
+    "message": "打开设置"
+  },
+  "openingSettings": {
+    "message": "正在打开Safari…"
+  },
+  "titleEnable": {
+    "message": "勾选一次，\n多一分清静。"
+  },
+  "enableBody": {
+    "message": "在Safari扩展中找到{appName}。"
+  },
+  "exampleCheckboxLabel": {
+    "message": "示例：在Safari设置中勾选{appName}旁的复选框。"
+  },
+  "checkInstruction": {
+    "message": "请在Safari中勾选复选框。"
+  },
+  "pauseDemo": {
+    "message": "暂停"
+  },
+  "resumeDemo": {
+    "message": "继续"
+  },
+  "pauseDemoLabel": {
+    "message": "暂停勾选演示"
+  },
+  "resumeDemoLabel": {
+    "message": "继续勾选演示"
+  },
+  "confirmEnabled": {
+    "message": "已勾选，继续"
+  },
+  "checkingEnabled": {
+    "message": "正在检查…"
+  },
+  "notEnabled": {
+    "message": "尚未勾选。请在Safari中启用扩展。"
+  },
+  "stateUnknown": {
+    "message": "无法检查状态，请重试。"
+  },
+  "titleDone": {
+    "message": "完成啦！\n时间重新属于你。"
+  },
+  "doneBody": {
+    "message": "打开Facebook或YouTube。如果Safari请求访问网站，请允许。"
+  },
+  "finish": {
+    "message": "太好了，谢谢！"
+  },
+  "back": {
+    "message": "返回"
+  },
+  "closeWindow": {
+    "message": "关闭窗口"
+  },
+  "stepLabel": {
+    "message": "第{step}步，共{total}步"
+  },
+  "demoLabel": {
+    "message": "启用{appName}的示例"
+  },
+  "facebook": {
+    "message": "Facebook"
+  },
+  "youtube": {
+    "message": "YouTube"
+  },
+  "websiteError": {
+    "message": "无法在Safari中打开网站，请重试。"
+  },
+  "settingsOpenError": {
+    "message": "无法打开设置，请重试。"
+  },
+  "extensionNotFound": {
+    "message": "Safari找不到扩展。请关闭旧版应用副本后重试。"
+  },
+  "safariNotFound": {
+    "message": "这台Mac上未找到Safari。"
+  },
+  "blockedFacebookTitle": {
+    "message": "短视频已屏蔽"
+  },
+  "blockedFacebookBody": {
+    "message": "视频屏蔽已开启。返回Facebook信息流即可继续浏览。"
+  },
+  "backToFeed": {
+    "message": "返回信息流"
+  },
+  "blockedShortsTitle": {
+    "message": "短视频已屏蔽"
+  },
+  "blockedShortsBody": {
+    "message": "短视频屏蔽已开启，普通YouTube视频仍可观看。"
+  },
+  "backToYouTube": {
+    "message": "返回YouTube"
+  },
+  "aboutApp": {
+    "message": "关于{appName}"
+  },
+  "hideApp": {
+    "message": "隐藏{appName}"
+  },
+  "hideOthers": {
+    "message": "隐藏其他"
+  },
+  "showAll": {
+    "message": "显示全部"
+  },
+  "quitApp": {
+    "message": "退出{appName}"
+  },
+  "helpMenu": {
+    "message": "帮助"
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "appName": {
+    "message": "Bloqueur de vidéos courtes"
+  },
+  "appDescription": {
+    "message": "Masque les vidéos, images et vidéos courtes qui te distraient dans Safari."
+  },
+  "toolbarTitle": {
+    "message": "Réglages du blocage"
+  },
+  "popupTitle": {
+    "message": "Ton fil, ton choix"
+  },
+  "popupSubtitle": {
+    "message": "Choisis ce que tu veux masquer dans ton fil."
+  },
+  "blockLegend": {
+    "message": "Masquer le contenu"
+  },
+  "facebookVideos": {
+    "message": "Vidéos Facebook"
+  },
+  "facebookVideosDetail": {
+    "message": "Reels et diffusions en direct inclus"
+  },
+  "facebookImages": {
+    "message": "Images Facebook"
+  },
+  "facebookImagesDetail": {
+    "message": "Le texte des publications reste visible"
+  },
+  "youtubeShorts": {
+    "message": "YouTube Shorts"
+  },
+  "youtubeShortsDetail": {
+    "message": "Les vidéos classiques restent accessibles"
+  },
+  "loadingSettings": {
+    "message": "Chargement des réglages…"
+  },
+  "settingsReady": {
+    "message": "Les modifications sont immédiates."
+  },
+  "savingSettings": {
+    "message": "Enregistrement…"
+  },
+  "settingsSaved": {
+    "message": "Enregistré. Les onglets ouverts ont été mis à jour."
+  },
+  "settingsLoadError": {
+    "message": "Impossible de charger les réglages. Ferme ce panneau, puis rouvre-le."
+  },
+  "settingsSaveError": {
+    "message": "Impossible d’enregistrer. Réessaie."
+  },
+  "titleIntro": {
+    "message": "Moins de défilement.\nPlus de temps pour toi."
+  },
+  "introBody": {
+    "message": "Rendons ton fil Safari plus paisible."
+  },
+  "start": {
+    "message": "C’est parti"
+  },
+  "titleSettings": {
+    "message": "Ouvrir les réglages\nde Safari"
+  },
+  "settingsBody": {
+    "message": "Il nous faut la section Extensions.\nJe l’ouvre pour toi."
+  },
+  "openSettings": {
+    "message": "Ouvrir les réglages"
+  },
+  "openingSettings": {
+    "message": "Ouverture de Safari…"
+  },
+  "titleEnable": {
+    "message": "Une case à cocher.\nUn peu plus de calme."
+  },
+  "enableBody": {
+    "message": "Dans les extensions de Safari, cherche {appName}."
+  },
+  "exampleCheckboxLabel": {
+    "message": "Exemple : coche la case à côté de {appName} dans les réglages de Safari."
+  },
+  "checkInstruction": {
+    "message": "Coche la case dans Safari."
+  },
+  "pauseDemo": {
+    "message": "Pause"
+  },
+  "resumeDemo": {
+    "message": "Continuer"
+  },
+  "pauseDemoLabel": {
+    "message": "Mettre en pause la démonstration"
+  },
+  "resumeDemoLabel": {
+    "message": "Reprendre la démonstration"
+  },
+  "confirmEnabled": {
+    "message": "C’est coché. On continue"
+  },
+  "checkingEnabled": {
+    "message": "Vérification…"
+  },
+  "notEnabled": {
+    "message": "La case n’est pas encore cochée. Active l’extension dans Safari."
+  },
+  "stateUnknown": {
+    "message": "Impossible de vérifier l’état. Réessaie."
+  },
+  "titleDone": {
+    "message": "Bravo !\nTon temps t’appartient."
+  },
+  "doneBody": {
+    "message": "Ouvre Facebook ou YouTube. Si Safari demande l’accès au site, autorise-le."
+  },
+  "finish": {
+    "message": "Super, merci !"
+  },
+  "back": {
+    "message": "Retour"
+  },
+  "closeWindow": {
+    "message": "Fermer la fenêtre"
+  },
+  "stepLabel": {
+    "message": "Étape {step} sur {total}"
+  },
+  "demoLabel": {
+    "message": "Exemple d’activation de {appName}"
+  },
+  "facebook": {
+    "message": "Facebook"
+  },
+  "youtube": {
+    "message": "YouTube"
+  },
+  "websiteError": {
+    "message": "Impossible d’ouvrir le site dans Safari. Réessaie."
+  },
+  "settingsOpenError": {
+    "message": "Impossible d’ouvrir les réglages. Réessaie."
+  },
+  "extensionNotFound": {
+    "message": "Safari ne trouve pas l’extension. Ferme les anciennes copies de l’app, puis réessaie."
+  },
+  "safariNotFound": {
+    "message": "Safari est introuvable sur ce Mac."
+  },
+  "blockedFacebookTitle": {
+    "message": "Les vidéos courtes sont bloquées"
+  },
+  "blockedFacebookBody": {
+    "message": "Le blocage des vidéos est activé. Retourne à ton fil Facebook pour continuer."
+  },
+  "backToFeed": {
+    "message": "Retour au fil"
+  },
+  "blockedShortsTitle": {
+    "message": "Les vidéos courtes sont bloquées"
+  },
+  "blockedShortsBody": {
+    "message": "Le blocage des vidéos courtes est activé. Les vidéos classiques de YouTube restent accessibles."
+  },
+  "backToYouTube": {
+    "message": "Retour à YouTube"
+  },
+  "aboutApp": {
+    "message": "À propos de {appName}"
+  },
+  "hideApp": {
+    "message": "Masquer {appName}"
+  },
+  "hideOthers": {
+    "message": "Masquer les autres"
+  },
+  "showAll": {
+    "message": "Tout afficher"
+  },
+  "quitApp": {
+    "message": "Quitter {appName}"
+  },
+  "helpMenu": {
+    "message": "Aide"
+  }
+}

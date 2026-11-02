@@ -1,0 +1,188 @@
+{
+  "appName": {
+    "message": "Blokada krótkich filmów"
+  },
+  "appDescription": {
+    "message": "Ukrywaj rozpraszające filmy, obrazy i krótkie wideo w Safari."
+  },
+  "toolbarTitle": {
+    "message": "Ustawienia blokowania"
+  },
+  "popupTitle": {
+    "message": "Twój feed, Twój wybór"
+  },
+  "popupSubtitle": {
+    "message": "Wybierz, co chcesz ukryć w swoim feedzie."
+  },
+  "blockLegend": {
+    "message": "Ukrywaj treści"
+  },
+  "facebookVideos": {
+    "message": "Filmy na Facebooku"
+  },
+  "facebookVideosDetail": {
+    "message": "Także Reels i transmisje na żywo"
+  },
+  "facebookImages": {
+    "message": "Obrazy na Facebooku"
+  },
+  "facebookImagesDetail": {
+    "message": "Tekst postów pozostaje widoczny"
+  },
+  "youtubeShorts": {
+    "message": "YouTube Shorts"
+  },
+  "youtubeShortsDetail": {
+    "message": "Zwykłe filmy pozostają dostępne"
+  },
+  "loadingSettings": {
+    "message": "Wczytywanie ustawień…"
+  },
+  "settingsReady": {
+    "message": "Zmiany są stosowane od razu."
+  },
+  "savingSettings": {
+    "message": "Zapisywanie…"
+  },
+  "settingsSaved": {
+    "message": "Zapisano. Otwarte karty zostały zaktualizowane."
+  },
+  "settingsLoadError": {
+    "message": "Nie udało się wczytać ustawień. Zamknij panel i otwórz go ponownie."
+  },
+  "settingsSaveError": {
+    "message": "Nie udało się zapisać. Spróbuj ponownie."
+  },
+  "titleIntro": {
+    "message": "Mniej przewijania.\nWięcej czasu dla Ciebie."
+  },
+  "introBody": {
+    "message": "Zadbajmy o spokojniejszy feed w Safari."
+  },
+  "start": {
+    "message": "Zaczynamy"
+  },
+  "titleSettings": {
+    "message": "Otwórz ustawienia\nSafari"
+  },
+  "settingsBody": {
+    "message": "Potrzebujemy sekcji Rozszerzenia.\nOtworzę ją za Ciebie."
+  },
+  "openSettings": {
+    "message": "Otwórz ustawienia"
+  },
+  "openingSettings": {
+    "message": "Otwieranie Safari…"
+  },
+  "titleEnable": {
+    "message": "Jedno zaznaczenie.\nTrochę więcej spokoju."
+  },
+  "enableBody": {
+    "message": "W rozszerzeniach Safari znajdź {appName}."
+  },
+  "exampleCheckboxLabel": {
+    "message": "Przykład: zaznacz pole obok {appName} w ustawieniach Safari."
+  },
+  "checkInstruction": {
+    "message": "Zaznacz pole w Safari."
+  },
+  "pauseDemo": {
+    "message": "Pauza"
+  },
+  "resumeDemo": {
+    "message": "Kontynuuj"
+  },
+  "pauseDemoLabel": {
+    "message": "Wstrzymaj pokaz zaznaczania pola"
+  },
+  "resumeDemoLabel": {
+    "message": "Wznów pokaz zaznaczania pola"
+  },
+  "confirmEnabled": {
+    "message": "Zaznaczone. Idziemy dalej"
+  },
+  "checkingEnabled": {
+    "message": "Sprawdzanie…"
+  },
+  "notEnabled": {
+    "message": "Pole nie jest jeszcze zaznaczone. Włącz rozszerzenie w Safari."
+  },
+  "stateUnknown": {
+    "message": "Nie udało się sprawdzić stanu. Spróbuj ponownie."
+  },
+  "titleDone": {
+    "message": "Udało się!\nTwój czas znów jest Twój."
+  },
+  "doneBody": {
+    "message": "Otwórz Facebook lub YouTube. Gdy Safari poprosi o dostęp do witryny, zezwól na niego."
+  },
+  "finish": {
+    "message": "Super, dzięki!"
+  },
+  "back": {
+    "message": "Wstecz"
+  },
+  "closeWindow": {
+    "message": "Zamknij okno"
+  },
+  "stepLabel": {
+    "message": "Krok {step} z {total}"
+  },
+  "demoLabel": {
+    "message": "Przykład włączenia {appName}"
+  },
+  "facebook": {
+    "message": "Facebook"
+  },
+  "youtube": {
+    "message": "YouTube"
+  },
+  "websiteError": {
+    "message": "Nie udało się otworzyć witryny w Safari. Spróbuj ponownie."
+  },
+  "settingsOpenError": {
+    "message": "Nie udało się otworzyć ustawień. Spróbuj ponownie."
+  },
+  "extensionNotFound": {
+    "message": "Safari nie znalazło rozszerzenia. Zamknij starsze kopie aplikacji i spróbuj ponownie."
+  },
+  "safariNotFound": {
+    "message": "Nie znaleziono Safari na tym Macu."
+  },
+  "blockedFacebookTitle": {
+    "message": "Krótkie filmy są zablokowane"
+  },
+  "blockedFacebookBody": {
+    "message": "Blokowanie filmów jest włączone. Wróć do feedu Facebooka, aby kontynuować."
+  },
+  "backToFeed": {
+    "message": "Wróć do feedu"
+  },
+  "blockedShortsTitle": {
+    "message": "Krótkie filmy są zablokowane"
+  },
+  "blockedShortsBody": {
+    "message": "Blokowanie krótkich filmów jest włączone. Zwykłe filmy w YouTube są nadal dostępne."
+  },
+  "backToYouTube": {
+    "message": "Wróć do YouTube"
+  },
+  "aboutApp": {
+    "message": "O aplikacji {appName}"
+  },
+  "hideApp": {
+    "message": "Ukryj {appName}"
+  },
+  "hideOthers": {
+    "message": "Ukryj pozostałe"
+  },
+  "showAll": {
+    "message": "Pokaż wszystkie"
+  },
+  "quitApp": {
+    "message": "Zakończ {appName}"
+  },
+  "helpMenu": {
+    "message": "Pomoc"
+  }
+}
