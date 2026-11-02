@@ -41,6 +41,14 @@ function setOpeningPreferences(opening) {
 function finishOpeningPreferences(message, failed) {
     setOpeningPreferences(false);
     const feedback = document.querySelector('.feedback');
+    // Activation can be confirmed while an earlier Settings request is pending.
+    // A late navigation error must not undo that verified success.
+    if (extensionEnabled === true && !guideRequested) {
+        feedback.textContent = '';
+        document.querySelector('details').open = false;
+        setStep(3);
+        return;
+    }
     feedback.textContent = failed ? message : '';
     feedback.classList.toggle('error', failed);
     document.querySelector('details').open = failed;
@@ -48,6 +56,12 @@ function finishOpeningPreferences(message, failed) {
 }
 
 function post(message) { webkit.messageHandlers.controller.postMessage(message); }
+
+function showWebsiteError(message) {
+    const feedback = document.querySelector('.feedback');
+    feedback.textContent = message;
+    feedback.classList.add('error');
+}
 
 document.querySelectorAll('.open-preferences').forEach(button => {
     button.dataset.label = button.textContent;
@@ -69,5 +83,9 @@ document.querySelector('.check-state').addEventListener('click', event => {
 document.querySelector('.back').addEventListener('click', () => { guideRequested = true; setStep(1); });
 document.querySelector('.view-guide').addEventListener('click', () => { guideRequested = true; setStep(1); });
 document.querySelectorAll('[data-site]').forEach(button => {
-    button.addEventListener('click', () => { if (extensionEnabled === true) post(`open-${button.dataset.site}`); });
+    button.addEventListener('click', () => {
+        if (extensionEnabled !== true) return;
+        document.querySelector('.feedback').textContent = '';
+        post(`open-${button.dataset.site}`);
+    });
 });

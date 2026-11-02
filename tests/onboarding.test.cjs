@@ -82,3 +82,24 @@ test('errors are readable text, reveal recovery instructions, and allow retry', 
   assert.equal(feedback.textContent, '');
   assert.equal(document.querySelector('details').open, false);
 });
+
+test('a late Settings error cannot override activation confirmed by Safari', t => {
+  const { window, document } = onboarding(t);
+  document.querySelector('.open-preferences').click();
+  window.show(true);
+  window.finishOpeningPreferences('Extension not found in earlier request.', true);
+  assert.equal(document.body.dataset.step, '3');
+  assert.equal(document.querySelector('.feedback').textContent, '');
+  assert.equal(document.querySelector('details').open, false);
+});
+
+test('website launch errors stay visible on the verified completion screen', t => {
+  const { window, document, messages } = onboarding(t);
+  window.show(true);
+  window.showWebsiteError('Could not open YouTube in Safari.');
+  assert.equal(document.body.dataset.step, '3');
+  assert.equal(document.querySelector('.feedback').textContent, 'Could not open YouTube in Safari.');
+  document.querySelector('[data-site="youtube"]').click();
+  assert.equal(document.querySelector('.feedback').textContent, '');
+  assert.deepEqual(messages, ['open-youtube']);
+});

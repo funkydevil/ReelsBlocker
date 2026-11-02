@@ -18,6 +18,24 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
     private var stateTimer: Timer?
     private var isCheckingState = false
 
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        positionSetupWindow()
+    }
+
+    private func positionSetupWindow() {
+        guard let window = view.window, let screen = window.screen ?? NSScreen.main else { return }
+        let area = screen.visibleFrame.insetBy(dx: 16, dy: 16)
+        var frame = window.frame
+        frame.size.width = min(frame.width, area.width)
+        frame.size.height = min(frame.height, area.height)
+        frame.origin = NSPoint(x: area.maxX - frame.width, y: area.midY - frame.height / 2)
+        window.setFrame(frame, display: true)
+        window.level = .floating
+        window.hidesOnDeactivate = false
+        window.collectionBehavior = [.moveToActiveSpace, .fullScreenAuxiliary]
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -71,6 +89,8 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
         }
 
         isOpeningPreferences = true
+        positionSetupWindow()
+        startCheckingState()
         webView.evaluateJavaScript("setOpeningPreferences(true)")
 
         // Launch Safari explicitly, even when another browser is the default.
@@ -129,11 +149,13 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
             webView.evaluateJavaScript("finishOpeningPreferences(\(arguments)[0], \(error != nil))")
         }
         refreshExtensionState()
-        if error == nil {
-            stateTimer?.invalidate()
-            stateTimer = Timer.scheduledTimer(withTimeInterval: 2, repeats: true) { [weak self] _ in
-                self?.refreshExtensionState()
-            }
+    }
+
+    private func startCheckingState() {
+        stateTimer?.invalidate()
+        // Keep checking even if opening Settings fails: the user may open it manually.
+        stateTimer = Timer.scheduledTimer(withTimeInterval: 2, repeats: true) { [weak self] _ in
+            self?.refreshExtensionState()
         }
     }
 
@@ -141,6 +163,7 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
         guard let url = URL(string: address),
               let safariURL = NSWorkspace.shared.urlForApplication(withBundleIdentifier: "com.apple.Safari") else { return }
         // The demo must open in Safari, where this extension is installed.
+        view.window?.level = .normal
         NSWorkspace.shared.open([url], withApplicationAt: safariURL,
                                 configuration: NSWorkspace.OpenConfiguration()) { [weak self] _, error in
             guard let error = error else { return }
@@ -148,7 +171,7 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
                 let message = "Could not open the site in Safari. \(error.localizedDescription)"
                 if let data = try? JSONSerialization.data(withJSONObject: [message]),
                    let arguments = String(data: data, encoding: .utf8) {
-                    self?.webView.evaluateJavaScript("finishOpeningPreferences(\(arguments)[0], true)")
+                    self?.webView.evaluateJavaScript("showWebsiteError(\(arguments)[0])")
                 }
             }
         }
