@@ -112,10 +112,12 @@ button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
     42%, 62% { opacity: 1; transform: translate(0, 0) scale(1); }
     82%, 100% { opacity: 0; transform: translate(28px, -10px) scale(1); }
 }
-.screen:not([hidden]) .checkbox-demo[data-demo="playing"] .sample-checkbox { animation: checkbox-install 2.4s var(--ease) 2 both; }
-.screen:not([hidden]) .checkbox-demo[data-demo="playing"] .check-mark { animation: checkbox-draw 2.4s var(--ease) 2 both; }
-.screen:not([hidden]) .checkbox-demo[data-demo="playing"] .sample-checkbox::before { animation: checkbox-click 2.4s var(--ease) 2 both; }
-.screen:not([hidden]) .checkbox-demo[data-demo="playing"] .demo-cursor { display: block; animation: cursor-demonstration 2.4s var(--ease) 2 both; }
+.screen:not([hidden]) .checkbox-demo:is([data-demo="playing"], [data-demo="paused"]) .sample-checkbox { animation: checkbox-install 2.4s var(--ease) infinite both; }
+.screen:not([hidden]) .checkbox-demo:is([data-demo="playing"], [data-demo="paused"]) .check-mark { animation: checkbox-draw 2.4s var(--ease) infinite both; }
+.screen:not([hidden]) .checkbox-demo:is([data-demo="playing"], [data-demo="paused"]) .sample-checkbox::before { animation: checkbox-click 2.4s var(--ease) infinite both; }
+.screen:not([hidden]) .checkbox-demo:is([data-demo="playing"], [data-demo="paused"]) .demo-cursor { display: block; animation: cursor-demonstration 2.4s var(--ease) infinite both; }
+.screen:not([hidden]) .checkbox-demo[data-demo="paused"] :is(.sample-checkbox, .check-mark, .demo-cursor),
+.screen:not([hidden]) .checkbox-demo[data-demo="paused"] .sample-checkbox::before { animation-play-state: paused; }
 @media (prefers-color-scheme: dark) {
     :root { --bg: #211e2c; --ink: #f4effb; --muted: #c4bbd2; --accent: #bda4f2; --accent-end: #d2b4f3; --on-accent: #2b1846; --lavender: #3f315a; --mint: #293e39; --surface: #332c40d9; --line: #60516f; --error: #ffb5bd; --shadow: #08061138; }
 }

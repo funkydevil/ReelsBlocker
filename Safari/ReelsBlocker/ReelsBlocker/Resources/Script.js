@@ -10,9 +10,16 @@ function replayCheckboxDemo() {
     const demo = document.querySelector('.checkbox-demo');
     demo.dataset.demo = 'settled';
     if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
-    // Restart the finite demonstration, including when it is already playing.
+    // Start the loop from the beginning when entering the checkbox step.
     void demo.offsetWidth;
     demo.dataset.demo = 'playing';
+    updateDemoControl(false);
+}
+
+function updateDemoControl(paused) {
+    const button = document.querySelector('.replay-demo');
+    button.textContent = paused ? 'Продолжить' : 'Пауза';
+    button.setAttribute('aria-label', paused ? 'Продолжить показ установки галочки' : 'Приостановить показ установки галочки');
 }
 
 function setStep(next) {
@@ -26,6 +33,7 @@ function setStep(next) {
     feedback();
     document.querySelector(`#step-${step} h1`).focus();
     if (step === 3) replayCheckboxDemo();
+    else document.querySelector('.checkbox-demo').dataset.demo = 'settled';
     post(`setup-step-${step}`);
 }
 
@@ -86,9 +94,10 @@ document.querySelector('.finish').addEventListener('click', () => {
     if (step === 4) post('close-setup');
 });
 
-document.querySelector('.replay-demo').addEventListener('click', replayCheckboxDemo);
-document.querySelector('.sample-checkbox').addEventListener('animationend', event => {
-    if (event.target === event.currentTarget && event.animationName === 'checkbox-install') {
-        document.querySelector('.checkbox-demo').dataset.demo = 'settled';
-    }
+document.querySelector('.replay-demo').addEventListener('click', () => {
+    if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
+    const demo = document.querySelector('.checkbox-demo');
+    const paused = demo.dataset.demo === 'playing';
+    demo.dataset.demo = paused ? 'paused' : 'playing';
+    updateDemoControl(paused);
 });

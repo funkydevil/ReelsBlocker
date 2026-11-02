@@ -56,7 +56,7 @@ The containing app uses a compact 300×300 point card without the standard windo
 
 The card starts slightly right of the center of its screen, within the visible area above the Dock. Drag it using the small handle at the top. It remains visible above Safari while the user enables the extension. Opening a test website returns it to the normal window level. The guide does not create external arrows, inspect Safari window geometry, or ask for Accessibility permission.
 
-On the checkbox step, a 4.8-second demonstration shows a decorative cursor moving onto an empty checkbox, clicking it, and revealing the checkmark twice, with a local click pulse. **Повторить** replays the demonstration. Reduce Motion displays a static checked example without the cursor. This visual example never substitutes for the real Safari enabled-state check.
+On the checkbox step, a looping demonstration shows a decorative cursor moving onto an empty checkbox, clicking it, and revealing the checkmark, with a local click pulse. The 2.4-second cycle repeats for as long as the checkbox step is visible. **Пауза** freezes the demonstration; **Продолжить** resumes it. Reduce Motion displays a static checked example without the cursor. This visual example never substitutes for the real Safari enabled-state check.
 
 See Apple's guides to [enabling developer features](https://developer.apple.com/documentation/safari-developer-tools/enabling-developer-features) and [running a Safari Web Extension](https://developer.apple.com/documentation/safariservices/running-your-safari-web-extension).
 
