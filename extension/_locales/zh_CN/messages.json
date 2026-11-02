@@ -184,5 +184,14 @@
   },
   "helpMenu": {
     "message": "帮助"
+  },
+  "analyticsConsent": {
+    "message": "共享匿名使用情况以改进应用"
+  },
+  "analyticsDetails": {
+    "message": "可以随时关闭，不包含页面内容或浏览记录。"
+  },
+  "settingsButton": {
+    "message": "设置"
   }
 }

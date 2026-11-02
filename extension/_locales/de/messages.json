@@ -184,5 +184,14 @@
   },
   "helpMenu": {
     "message": "Hilfe"
+  },
+  "analyticsConsent": {
+    "message": "Anonyme Nutzungsdaten zur App-Verbesserung teilen"
+  },
+  "analyticsDetails": {
+    "message": "Du kannst dies ausschalten. Keine Seiteninhalte und kein Browserverlauf."
+  },
+  "settingsButton": {
+    "message": "Einstellungen"
   }
 }

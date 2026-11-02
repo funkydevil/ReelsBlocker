@@ -81,7 +81,7 @@ There is no Save button: changes are stored immediately. After updating the app,
 
 ## Privacy and limitations
 
-The extension only runs on Facebook and YouTube websites, including mobile subdomains. It does not affect their native apps. It has no analytics, background service, or extension-initiated network requests. Settings use local extension storage.
+The extension only runs on Facebook and YouTube websites, including mobile subdomains. It does not affect their native apps. PostHog EU product analytics is enabled by default. Users can turn it off in the extension menu → Settings. It reports only selected app/setup/filter interactions, language, app version, and a random installation identifier. It never captures page content, browsing URLs/history, names, emails, session recordings, or automatic clicks. Filtering remains local and works without analytics or a network connection. One shared native preference controls analytics from both the setup window and extension popup. Settings use local extension storage.
 
 Blocking hides page elements and stops playback. Facebook may begin downloading media before the content script blocks it. Image blocking covers HTML images, SVG image elements, and inline `background-image` URLs; background images defined only in external stylesheets are not detected.
 
@@ -106,3 +106,7 @@ The macOS Debug app builds successfully and passes `codesign --verify --deep --s
 - Open a direct `/shorts/<id>` URL: verify the blocking screen and stopped sound. Return to a normal `/watch?v=<id>` video and confirm playback works, including after Back/Forward navigation.
 - Toggle **YouTube Shorts** off and on; check restoration, persistence, and independence from Facebook settings.
 - On YouTube, verify normal videos, live streams, images, and embedded players remain usable with every Facebook setting combination.
+
+### Analytics configuration
+
+The integration uses PostHog’s explicit HTTP Capture API from native Swift code with an event/property allowlist, no autocapture, and no person profiles or replay. A shared Keychain item holds only the analytics preference and a random identifier; both app targets use the same access group. The public write-only project token is kept in ignored `.posthog/config.json` (`token`, `host`, `projectId`). Run `node scripts/prepare-analytics.cjs` before building; the normal build script does this automatically. Without local configuration, analytics stays disabled. The generated JSON is bundled only into the native app and extension. JavaScript sends explicit native messages and never receives the token. Do not put a personal or project-secret PostHog API key in the app.

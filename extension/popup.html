@@ -6,6 +6,7 @@
   <title data-i18n="toolbarTitle">Blocking settings</title>
   <link rel="stylesheet" href="popup.css">
   <script src="i18n.js" defer></script>
+  <script src="analytics.js" defer></script>
   <script src="popup.js" defer></script>
 </head>
 <body>
@@ -40,6 +41,12 @@
       </div>
     </fieldset>
   </main>
-  <footer><p id="status" role="status" aria-live="polite" data-i18n="loadingSettings">Loading settings…</p></footer>
+  <footer>
+    <div class="footer-row"><p id="status" role="status" aria-live="polite" data-i18n="loadingSettings">Loading settings…</p><button class="open-settings" type="button" aria-expanded="false" aria-controls="analytics-settings" data-i18n="settingsButton">Settings</button></div>
+    <section id="analytics-settings" hidden>
+      <label class="analytics-preference"><input class="analytics-consent" type="checkbox" checked data-i18n-aria-label="analyticsConsent"><span data-i18n="analyticsConsent">Share anonymous usage to improve the app</span></label>
+      <p class="analytics-details" data-i18n="analyticsDetails">You can turn this off. No page content or browsing history.</p>
+    </section>
+  </footer>
 </body>
 </html>

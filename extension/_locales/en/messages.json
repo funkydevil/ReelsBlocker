@@ -184,5 +184,14 @@
   },
   "helpMenu": {
     "message": "Help"
+  },
+  "analyticsConsent": {
+    "message": "Share anonymous usage to improve the app"
+  },
+  "analyticsDetails": {
+    "message": "You can turn this off. No page content or browsing history."
+  },
+  "settingsButton": {
+    "message": "Settings"
   }
 }

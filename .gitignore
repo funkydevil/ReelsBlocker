@@ -3,3 +3,6 @@ dist/
 .DS_Store
 *.xcuserstate
 xcuserdata/
+.posthog/
+extension/analytics-config.js
+extension/analytics-config.json

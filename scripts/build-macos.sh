@@ -22,6 +22,7 @@ if [[ -n "${REELSBLOCKER_DEVELOPMENT_TEAM:-}" ]]; then
   TASK_SIGNING_ARGS+=("DEVELOPMENT_TEAM=$REELSBLOCKER_DEVELOPMENT_TEAM")
 fi
 node "$TASK_ROOT/scripts/build-localizations.cjs"
+node "$TASK_ROOT/scripts/prepare-analytics.cjs"
 xcodebuild -project "$TASK_ROOT/Safari/ReelsBlocker/ReelsBlocker.xcodeproj" \
   -scheme ReelsBlocker -configuration Debug -derivedDataPath "$TASK_DERIVED_DATA" \
   CONFIGURATION_BUILD_DIR="$TASK_ROOT/dist" \

@@ -61,7 +61,10 @@
     "hideOthers": "Hide Others",
     "showAll": "Show All",
     "quitApp": "Quit {appName}",
-    "helpMenu": "Help"
+    "helpMenu": "Help",
+    "analyticsConsent": "Share anonymous usage to improve the app",
+    "analyticsDetails": "You can turn this off. No page content or browsing history.",
+    "settingsButton": "Settings"
   },
   "ru": {
     "appName": "Блокировщик коротких видео",
@@ -125,7 +128,10 @@
     "hideOthers": "Скрыть остальные",
     "showAll": "Показать все",
     "quitApp": "Завершить {appName}",
-    "helpMenu": "Справка"
+    "helpMenu": "Справка",
+    "analyticsConsent": "Делиться анонимными данными использования для улучшения приложения",
+    "analyticsDetails": "Можно выключить. Без содержимого страниц и истории просмотра.",
+    "settingsButton": "Настройка"
   },
   "pt_PT": {
     "appName": "Bloqueador de vídeos curtos",
@@ -189,7 +195,10 @@
     "hideOthers": "Ocultar outras",
     "showAll": "Mostrar tudo",
     "quitApp": "Sair de {appName}",
-    "helpMenu": "Ajuda"
+    "helpMenu": "Ajuda",
+    "analyticsConsent": "Partilhar utilização anónima para melhorar a aplicação",
+    "analyticsDetails": "Podes desativar. Sem conteúdo das páginas nem histórico de navegação.",
+    "settingsButton": "Definições"
   },
   "es": {
     "appName": "Bloqueador de vídeos cortos",
@@ -253,7 +262,10 @@
     "hideOthers": "Ocultar otras",
     "showAll": "Mostrar todo",
     "quitApp": "Salir de {appName}",
-    "helpMenu": "Ayuda"
+    "helpMenu": "Ayuda",
+    "analyticsConsent": "Compartir uso anónimo para mejorar la app",
+    "analyticsDetails": "Puedes desactivarlo. Sin contenido de páginas ni historial de navegación.",
+    "settingsButton": "Ajustes"
   },
   "fr": {
     "appName": "Bloqueur de vidéos courtes",
@@ -317,7 +329,10 @@
     "hideOthers": "Masquer les autres",
     "showAll": "Tout afficher",
     "quitApp": "Quitter {appName}",
-    "helpMenu": "Aide"
+    "helpMenu": "Aide",
+    "analyticsConsent": "Partager des données d’utilisation anonymes pour améliorer l’app",
+    "analyticsDetails": "Tu peux désactiver ce partage. Sans contenu des pages ni historique de navigation.",
+    "settingsButton": "Réglages"
   },
   "de": {
     "appName": "Kurzvideo-Blocker",
@@ -381,7 +396,10 @@
     "hideOthers": "Andere ausblenden",
     "showAll": "Alle einblenden",
     "quitApp": "{appName} beenden",
-    "helpMenu": "Hilfe"
+    "helpMenu": "Hilfe",
+    "analyticsConsent": "Anonyme Nutzungsdaten zur App-Verbesserung teilen",
+    "analyticsDetails": "Du kannst dies ausschalten. Keine Seiteninhalte und kein Browserverlauf.",
+    "settingsButton": "Einstellungen"
   },
   "it": {
     "appName": "Blocco video brevi",
@@ -445,7 +463,10 @@
     "hideOthers": "Nascondi altre",
     "showAll": "Mostra tutto",
     "quitApp": "Esci da {appName}",
-    "helpMenu": "Aiuto"
+    "helpMenu": "Aiuto",
+    "analyticsConsent": "Condividi dati d’uso anonimi per migliorare l’app",
+    "analyticsDetails": "Puoi disattivarlo. Nessun contenuto delle pagine o cronologia di navigazione.",
+    "settingsButton": "Impostazioni"
   },
   "nl": {
     "appName": "Korte video's blokkeren",
@@ -509,7 +530,10 @@
     "hideOthers": "Verberg andere",
     "showAll": "Toon alles",
     "quitApp": "Stop {appName}",
-    "helpMenu": "Help"
+    "helpMenu": "Help",
+    "analyticsConsent": "Deel anoniem gebruik om de app te verbeteren",
+    "analyticsDetails": "Je kunt dit uitzetten. Geen pagina-inhoud of browsegeschiedenis.",
+    "settingsButton": "Instellingen"
   },
   "pl": {
     "appName": "Blokada krótkich filmów",
@@ -573,7 +597,10 @@
     "hideOthers": "Ukryj pozostałe",
     "showAll": "Pokaż wszystkie",
     "quitApp": "Zakończ {appName}",
-    "helpMenu": "Pomoc"
+    "helpMenu": "Pomoc",
+    "analyticsConsent": "Udostępniaj anonimowe dane użycia, aby ulepszać aplikację",
+    "analyticsDetails": "Możesz to wyłączyć. Bez treści stron i historii przeglądania.",
+    "settingsButton": "Ustawienia"
   },
   "uk": {
     "appName": "Блокувальник коротких відео",
@@ -637,7 +664,10 @@
     "hideOthers": "Сховати інші",
     "showAll": "Показати всі",
     "quitApp": "Завершити {appName}",
-    "helpMenu": "Довідка"
+    "helpMenu": "Довідка",
+    "analyticsConsent": "Ділитися анонімними даними використання для покращення програми",
+    "analyticsDetails": "Можна вимкнути. Без вмісту сторінок та історії перегляду.",
+    "settingsButton": "Налаштування"
   },
   "tr": {
     "appName": "Kısa Video Engelleyici",
@@ -701,7 +731,10 @@
     "hideOthers": "Diğerlerini Gizle",
     "showAll": "Tümünü Göster",
     "quitApp": "{appName} Uygulamasından Çık",
-    "helpMenu": "Yardım"
+    "helpMenu": "Yardım",
+    "analyticsConsent": "Uygulamayı geliştirmek için anonim kullanım verilerini paylaş",
+    "analyticsDetails": "Bunu kapatabilirsin. Sayfa içeriği veya göz atma geçmişi içermez.",
+    "settingsButton": "Ayarlar"
   },
   "ja": {
     "appName": "ショート動画ブロッカー",
@@ -765,7 +798,10 @@
     "hideOthers": "ほかを非表示",
     "showAll": "すべてを表示",
     "quitApp": "{appName}を終了",
-    "helpMenu": "ヘルプ"
+    "helpMenu": "ヘルプ",
+    "analyticsConsent": "アプリ改善のため匿名の利用状況を共有",
+    "analyticsDetails": "いつでもオフにできます。ページの内容や閲覧履歴は含まれません。",
+    "settingsButton": "設定"
   },
   "ko": {
     "appName": "짧은 동영상 차단기",
@@ -829,7 +865,10 @@
     "hideOthers": "기타 가리기",
     "showAll": "모두 보기",
     "quitApp": "{appName} 종료",
-    "helpMenu": "도움말"
+    "helpMenu": "도움말",
+    "analyticsConsent": "앱 개선을 위해 익명 사용 정보 공유",
+    "analyticsDetails": "언제든 끌 수 있습니다. 페이지 내용과 방문 기록은 포함하지 않습니다.",
+    "settingsButton": "설정"
   },
   "zh_CN": {
     "appName": "短视频拦截器",
@@ -893,7 +932,10 @@
     "hideOthers": "隐藏其他",
     "showAll": "显示全部",
     "quitApp": "退出{appName}",
-    "helpMenu": "帮助"
+    "helpMenu": "帮助",
+    "analyticsConsent": "共享匿名使用情况以改进应用",
+    "analyticsDetails": "可以随时关闭，不包含页面内容或浏览记录。",
+    "settingsButton": "设置"
   },
   "ar": {
     "appName": "مانع الفيديوهات القصيرة",
@@ -957,6 +999,9 @@
     "hideOthers": "إخفاء التطبيقات الأخرى",
     "showAll": "إظهار الكل",
     "quitApp": "إنهاء {appName}",
-    "helpMenu": "مساعدة"
+    "helpMenu": "مساعدة",
+    "analyticsConsent": "مشاركة بيانات استخدام مجهولة لتحسين التطبيق",
+    "analyticsDetails": "يمكنك إيقاف ذلك. من دون محتوى الصفحات أو سجل التصفح.",
+    "settingsButton": "الإعدادات"
   }
 }

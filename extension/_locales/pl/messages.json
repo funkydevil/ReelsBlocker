@@ -184,5 +184,14 @@
   },
   "helpMenu": {
     "message": "Pomoc"
+  },
+  "analyticsConsent": {
+    "message": "Udostępniaj anonimowe dane użycia, aby ulepszać aplikację"
+  },
+  "analyticsDetails": {
+    "message": "Możesz to wyłączyć. Bez treści stron i historii przeglądania."
+  },
+  "settingsButton": {
+    "message": "Ustawienia"
   }
 }

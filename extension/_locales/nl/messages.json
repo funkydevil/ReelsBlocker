@@ -184,5 +184,14 @@
   },
   "helpMenu": {
     "message": "Help"
+  },
+  "analyticsConsent": {
+    "message": "Deel anoniem gebruik om de app te verbeteren"
+  },
+  "analyticsDetails": {
+    "message": "Je kunt dit uitzetten. Geen pagina-inhoud of browsegeschiedenis."
+  },
+  "settingsButton": {
+    "message": "Instellingen"
   }
 }

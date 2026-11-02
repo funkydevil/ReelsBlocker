@@ -184,5 +184,14 @@
   },
   "helpMenu": {
     "message": "Ayuda"
+  },
+  "analyticsConsent": {
+    "message": "Compartir uso anónimo para mejorar la app"
+  },
+  "analyticsDetails": {
+    "message": "Puedes desactivarlo. Sin contenido de páginas ni historial de navegación."
+  },
+  "settingsButton": {
+    "message": "Ajustes"
   }
 }

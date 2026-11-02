@@ -184,5 +184,14 @@
   },
   "helpMenu": {
     "message": "مساعدة"
+  },
+  "analyticsConsent": {
+    "message": "مشاركة بيانات استخدام مجهولة لتحسين التطبيق"
+  },
+  "analyticsDetails": {
+    "message": "يمكنك إيقاف ذلك. من دون محتوى الصفحات أو سجل التصفح."
+  },
+  "settingsButton": {
+    "message": "الإعدادات"
   }
 }

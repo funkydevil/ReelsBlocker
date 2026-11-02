@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA1912340000000000000002 /* ../../extension/analytics.js in Resources */ = {isa = PBXBuildFile; fileRef = AA1912340000000000000001 /* ../../extension/analytics.js */; };
+		AA1912340000000000000003 /* ../../extension/analytics.js in Resources */ = {isa = PBXBuildFile; fileRef = AA1912340000000000000001 /* ../../extension/analytics.js */; };
+		AA1912340000000000000005 /* ../../extension/analytics-config.json in Resources */ = {isa = PBXBuildFile; fileRef = AA1912340000000000000004 /* ../../extension/analytics-config.json */; };
+		AA1912340000000000000006 /* ../../extension/analytics-config.json in Resources */ = {isa = PBXBuildFile; fileRef = AA1912340000000000000004 /* ../../extension/analytics-config.json */; };
+		AA1912340000000000000011 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1912340000000000000010 /* Analytics.swift */; };
+		AA1912340000000000000012 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1912340000000000000010 /* Analytics.swift */; };
 		AB1200000000000000000002 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = AB1200000000000000000001 /* popup.html */; };
 		AB1200000000000000000012 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = AB1200000000000000000011 /* popup.css */; };
 		AB1200000000000000000022 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = AB1200000000000000000021 /* popup.js */; };
@@ -55,6 +61,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AA1912340000000000000001 /* ../../extension/analytics.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = ../../extension/analytics.js; sourceTree = SOURCE_ROOT; };
+		AA1912340000000000000004 /* ../../extension/analytics-config.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "../../extension/analytics-config.json"; sourceTree = SOURCE_ROOT; };
+		AA1912340000000000000010 /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = SOURCE_ROOT; };
 		AB1200000000000000000001 /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = popup.html; path = ../../../extension/popup.html; sourceTree = "<group>"; };
 		AB1200000000000000000011 /* popup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = popup.css; path = ../../../extension/popup.css; sourceTree = "<group>"; };
 		AB1200000000000000000021 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = popup.js; path = ../../../extension/popup.js; sourceTree = "<group>"; };
@@ -116,6 +125,7 @@
 				F16516FC30952308002E36C4 /* ReelsBlocker */,
 				F165171930952309002E36C4 /* ReelsBlocker Extension */,
 				F16516FB30952308002E36C4 /* Products */,
+				F1A5806230991E4000531EA5 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,6 +159,8 @@
 				F165170530952308002E36C4 /* Style.css */,
 				F165170730952308002E36C4 /* Script.js */,
 				CC1500000000000000000006 /* ../../extension/i18n.js */,
+				AA1912340000000000000004 /* ../../extension/analytics-config.json */,
+				AA1912340000000000000001 /* ../../extension/analytics.js */,
 				CC1500000000000000000008 /* ../../localization/catalog.json */,
 				CC1500000000000000000009 /* InfoPlist.strings */,
 			);
@@ -181,6 +193,14 @@
 			name = Resources;
 			path = "ReelsBlocker Extension";
 			sourceTree = SOURCE_ROOT;
+		};
+		F1A5806230991E4000531EA5 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				AA1912340000000000000010 /* Analytics.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -279,6 +299,8 @@
 				F165170D30952308002E36C4 /* Main.storyboard in Resources */,
 				F165170830952308002E36C4 /* Script.js in Resources */,
 				CC1500000000000000000001 /* ../../extension/i18n.js in Resources */,
+				AA1912340000000000000002 /* ../../extension/analytics.js in Resources */,
+				AA1912340000000000000005 /* ../../extension/analytics-config.json in Resources */,
 				CC1500000000000000000004 /* ../../localization/catalog.json in Resources */,
 				CC1500000000000000000005 /* InfoPlist.strings in Resources */,
 				F165170230952308002E36C4 /* Main.html in Resources */,
@@ -294,6 +316,8 @@
 				F165172A30952309002E36C4 /* content.css in Resources */,
 				AB1400000000000000000002 /* youtube.js in Resources */,
 				CC1500000000000000000002 /* ../../extension/i18n.js in Resources */,
+				AA1912340000000000000003 /* ../../extension/analytics.js in Resources */,
+				AA1912340000000000000006 /* ../../extension/analytics-config.json in Resources */,
 				CC1500000000000000000003 /* ../../extension/_locales in Resources */,
 				AB1300000000000000000002 /* icons in Resources */,
 				AB1200000000000000000022 /* popup.js in Resources */,
@@ -308,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			files = (
 				F165170A30952308002E36C4 /* ViewController.swift in Sources */,
+				AA1912340000000000000011 /* Analytics.swift in Sources */,
 				F16516FE30952308002E36C4 /* AppDelegate.swift in Sources */,
 			);
 		};
@@ -315,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			files = (
 				F165171B30952309002E36C4 /* SafariWebExtensionHandler.swift in Sources */,
+				AA1912340000000000000012 /* Analytics.swift in Sources */,
 			);
 		};
 /* End PBXSourcesBuildPhase section */
@@ -490,8 +516,9 @@
 		F165172030952309002E36C4 /* Debug configuration for PBXNativeTarget "ReelsBlocker Extension" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Analytics.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = F93NU8DF46;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -526,8 +553,9 @@
 		F165172130952309002E36C4 /* Release configuration for PBXNativeTarget "ReelsBlocker Extension" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Analytics.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = F93NU8DF46;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -564,13 +592,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Analytics.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = F93NU8DF46;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ReelsBlocker/Info.plist;
@@ -608,13 +646,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Analytics.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = F93NU8DF46;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ReelsBlocker/Info.plist;

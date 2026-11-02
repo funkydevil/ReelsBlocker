@@ -1,0 +1,19 @@
+{
+  "locale": "en",
+  "appName": "Short Video Blocker",
+  "platform": "FOR SAFARI ON MAC",
+  "02": {
+    "headline": ["Your feed.", "Your rules."],
+    "body": ["Three independent filters.", "One calmer feed."],
+    "note": ["Regular YouTube videos", "stay available."]
+  },
+  "04": {
+    "headline": ["We’ll guide you.", "One step at a time."],
+    "stepOneTitle": "We open Safari settings.",
+    "stepOneBody": "Straight to Extensions.",
+    "stepTwoTitle": "You tick the checkbox.",
+    "stepTwoBody": "Follow the visual demo.",
+    "stepThreeTitle": "You allow website access.",
+    "stepThreeBody": "When Safari asks."
+  }
+}

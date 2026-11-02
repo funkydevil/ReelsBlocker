@@ -1,42 +1,27 @@
-//
-//  SafariWebExtensionHandler.swift
-//  ReelsBlocker Extension
-//
-//  Created by K on 30/10/2026.
-//
-
 import SafariServices
-import os.log
 
 class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
-
     func beginRequest(with context: NSExtensionContext) {
         let request = context.inputItems.first as? NSExtensionItem
-
-        let profile: UUID?
-        if #available(iOS 17.0, macOS 14.0, *) {
-            profile = request?.userInfo?[SFExtensionProfileKey] as? UUID
-        } else {
-            profile = request?.userInfo?["profile"] as? UUID
+        let payload = request?.userInfo?[SFExtensionMessageKey] as? [String: Any] ?? [:]
+        func respond(_ values: [String: Any]) {
+            let response = NSExtensionItem()
+            response.userInfo = [SFExtensionMessageKey: values]
+            context.completeRequest(returningItems: [response], completionHandler: nil)
         }
-
-        let message: Any?
-        if #available(iOS 15.0, macOS 11.0, *) {
-            message = request?.userInfo?[SFExtensionMessageKey]
-        } else {
-            message = request?.userInfo?["message"]
+        switch payload["action"] as? String {
+        case "analytics_get":
+            respond(["ok": true, "enabled": Analytics.preferences().enabled])
+        case "analytics_set":
+            guard let enabled = payload["enabled"] as? Bool else { respond(["ok": false]); return }
+            let saved = Analytics.setEnabled(enabled)
+            respond(["ok": saved, "enabled": Analytics.preferences().enabled])
+        case "analytics_capture":
+            guard let event = payload["event"] as? String else { respond(["ok": false]); return }
+            Analytics.capture(event, properties: payload["properties"] as? [String: Any] ?? [:], source: "popup") {
+                respond(["ok": true])
+            }
+        default: respond(["ok": false])
         }
-
-        os_log(.default, "Received message from browser.runtime.sendNativeMessage: %@ (profile: %@)", String(describing: message), profile?.uuidString ?? "none")
-
-        let response = NSExtensionItem()
-        if #available(iOS 15.0, macOS 11.0, *) {
-            response.userInfo = [ SFExtensionMessageKey: [ "echo": message ] ]
-        } else {
-            response.userInfo = [ "message": [ "echo": message ] ]
-        }
-
-        context.completeRequest(returningItems: [ response ], completionHandler: nil)
     }
-
 }

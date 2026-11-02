@@ -184,5 +184,14 @@
   },
   "helpMenu": {
     "message": "도움말"
+  },
+  "analyticsConsent": {
+    "message": "앱 개선을 위해 익명 사용 정보 공유"
+  },
+  "analyticsDetails": {
+    "message": "언제든 끌 수 있습니다. 페이지 내용과 방문 기록은 포함하지 않습니다."
+  },
+  "settingsButton": {
+    "message": "설정"
   }
 }

@@ -184,5 +184,14 @@
   },
   "helpMenu": {
     "message": "ヘルプ"
+  },
+  "analyticsConsent": {
+    "message": "アプリ改善のため匿名の利用状況を共有"
+  },
+  "analyticsDetails": {
+    "message": "いつでもオフにできます。ページの内容や閲覧履歴は含まれません。"
+  },
+  "settingsButton": {
+    "message": "設定"
   }
 }
