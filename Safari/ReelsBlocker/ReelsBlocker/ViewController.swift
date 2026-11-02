@@ -15,6 +15,8 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
 
     @IBOutlet var webView: WKWebView!
     private var isOpeningPreferences = false
+    private var stateTimer: Timer?
+    private var isCheckingState = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,18 +36,39 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
     }
 
     @objc private func refreshExtensionState() {
+        guard !isCheckingState else { return }
+        isCheckingState = true
         SFSafariExtensionManager.getStateOfSafariExtension(withIdentifier: extensionBundleIdentifier) { [weak self] state, error in
             DispatchQueue.main.async {
+                guard let self = self else { return }
+                self.isCheckingState = false
+                if error == nil && state?.isEnabled == true {
+                    self.stateTimer?.invalidate()
+                    self.stateTimer = nil
+                }
                 let enabled = error == nil ? state.map { String($0.isEnabled) } ?? "null" : "null"
-                self?.webView.evaluateJavaScript("show(\(enabled))")
+                self.webView.evaluateJavaScript("show(\(enabled))")
             }
         }
     }
 
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        guard message.frameInfo.isMainFrame,
-              message.body as? String == "open-preferences",
-              !isOpeningPreferences else { return }
+        guard message.frameInfo.isMainFrame, let action = message.body as? String else { return }
+        switch action {
+        case "check-state":
+            refreshExtensionState()
+            return
+        case "open-facebook":
+            openWebsite("https://www.facebook.com/")
+            return
+        case "open-youtube":
+            openWebsite("https://www.youtube.com/")
+            return
+        case "open-preferences":
+            guard !isOpeningPreferences else { return }
+        default:
+            return
+        }
 
         isOpeningPreferences = true
         webView.evaluateJavaScript("setOpeningPreferences(true)")
@@ -106,9 +129,33 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
             webView.evaluateJavaScript("finishOpeningPreferences(\(arguments)[0], \(error != nil))")
         }
         refreshExtensionState()
+        if error == nil {
+            stateTimer?.invalidate()
+            stateTimer = Timer.scheduledTimer(withTimeInterval: 2, repeats: true) { [weak self] _ in
+                self?.refreshExtensionState()
+            }
+        }
+    }
+
+    private func openWebsite(_ address: String) {
+        guard let url = URL(string: address),
+              let safariURL = NSWorkspace.shared.urlForApplication(withBundleIdentifier: "com.apple.Safari") else { return }
+        // The demo must open in Safari, where this extension is installed.
+        NSWorkspace.shared.open([url], withApplicationAt: safariURL,
+                                configuration: NSWorkspace.OpenConfiguration()) { [weak self] _, error in
+            guard let error = error else { return }
+            DispatchQueue.main.async {
+                let message = "Could not open the site in Safari. \(error.localizedDescription)"
+                if let data = try? JSONSerialization.data(withJSONObject: [message]),
+                   let arguments = String(data: data, encoding: .utf8) {
+                    self?.webView.evaluateJavaScript("finishOpeningPreferences(\(arguments)[0], true)")
+                }
+            }
+        }
     }
 
     deinit {
+        stateTimer?.invalidate()
         NotificationCenter.default.removeObserver(self)
     }
 }

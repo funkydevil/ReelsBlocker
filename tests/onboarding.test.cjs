@@ -10,42 +10,75 @@ function onboarding(t) {
   const messages = [];
   dom.window.webkit = { messageHandlers: { controller: { postMessage: message => messages.push(message) } } };
   dom.window.eval(fs.readFileSync(root + 'Script.js', 'utf8'));
-  return { window: dom.window, button: dom.window.document.querySelector('button'), messages };
+  return { window: dom.window, document: dom.window.document, messages };
 }
 
-test('opening settings prevents duplicate requests and allows retry after failure', t => {
-  const { window, button, messages } = onboarding(t);
-  button.click();
-  button.click();
+test('opening settings shows checkbox instructions before leaving and prevents duplicate requests', t => {
+  const { document, messages } = onboarding(t);
+  document.querySelector('.open-preferences').click();
+  assert.equal(document.body.dataset.step, '2');
+  assert.equal(document.querySelector('#step-2').hidden, false);
+  assert.equal(document.activeElement.id, 'enable-title');
+  document.querySelectorAll('.open-preferences').forEach(button => { assert.equal(button.disabled, true); button.click(); });
   assert.deepEqual(messages, ['open-preferences']);
-  assert.equal(button.disabled, true);
-  window.finishOpeningPreferences('Try Safari → Settings → Extensions.', true);
-  assert.equal(button.disabled, false);
-  assert.equal(window.document.querySelector('.feedback').classList.contains('error'), true);
-  assert.equal(window.document.querySelector('details').open, true);
-  button.click();
+});
+
+test('opening settings or claiming completion never shows success without Safari confirmation', t => {
+  const { window, document, messages } = onboarding(t);
+  document.querySelector('.open-preferences').click();
+  window.finishOpeningPreferences('Opened.', false);
+  assert.equal(document.body.dataset.step, '2');
+  document.querySelector('.check-state').click();
+  assert.deepEqual(messages, ['open-preferences', 'check-state']);
+  assert.equal(document.body.dataset.step, '2');
+  window.show(false);
+  assert.equal(document.body.dataset.step, '2');
+  assert.equal(document.querySelector('.check-state').disabled, false);
+  window.show(null);
+  assert.equal(document.body.dataset.step, '2');
+  assert.match(document.querySelector('.waiting').textContent, /couldn’t confirm/);
+});
+
+test('verified activation shows success, hides setup help, and opens the selected site', t => {
+  const { window, document, messages } = onboarding(t);
+  window.show(true);
+  assert.equal(document.body.dataset.step, '3');
+  assert.equal(document.querySelector('#step-3').hidden, false);
+  assert.equal(document.querySelector('details').hidden, true);
+  assert.equal(document.querySelectorAll('[aria-current="step"]').length, 1);
+  document.querySelector('[data-site="facebook"]').click();
+  document.querySelector('[data-site="youtube"]').click();
+  assert.deepEqual(messages, ['open-facebook', 'open-youtube']);
+  window.show(false);
+  assert.equal(document.body.dataset.step, '2');
+  document.querySelector('[data-site="youtube"]').click();
   assert.equal(messages.length, 2);
 });
 
-test('native feedback is displayed as text and success clears the error state', t => {
-  const { window, button } = onboarding(t);
-  const message = '<img src=x onerror="throw 1">';
-  window.finishOpeningPreferences(message, true);
-  const feedback = window.document.querySelector('.feedback');
-  assert.equal(feedback.textContent, message);
-  assert.equal(feedback.children.length, 0);
-  window.finishOpeningPreferences('Settings opened.', false);
-  assert.equal(feedback.classList.contains('error'), false);
-  assert.equal(button.disabled, false);
-  assert.equal(window.document.querySelector('details').open, false);
+test('setup guide remains available for enabled users without polling stealing focus', t => {
+  const { window, document } = onboarding(t);
+  window.show(true);
+  document.querySelector('.view-guide').click();
+  window.show(true);
+  assert.equal(document.body.dataset.step, '1');
+  assert.equal(document.activeElement.id, 'welcome-title');
+  document.querySelector('.open-preferences').click();
+  window.finishOpeningPreferences('Opened.', false);
+  assert.equal(document.body.dataset.step, '3');
 });
 
-test('returning from Safari updates enabled state and clears stale state on lookup failure', t => {
-  const { window } = onboarding(t);
-  window.show(false);
-  assert.equal(window.document.body.className, 'state-off');
-  window.show(true);
-  assert.equal(window.document.body.className, 'state-on');
-  window.show(null);
-  assert.equal(window.document.body.className, '');
+test('errors are readable text, reveal recovery instructions, and allow retry', t => {
+  const { window, document, messages } = onboarding(t);
+  document.querySelector('.open-preferences').click();
+  const message = '<img src=x onerror="throw 1">';
+  window.finishOpeningPreferences(message, true);
+  const feedback = document.querySelector('.feedback');
+  assert.equal(feedback.textContent, message);
+  assert.equal(feedback.children.length, 0);
+  assert.equal(document.querySelector('details').open, true);
+  document.querySelector('#step-2 .open-preferences').click();
+  assert.equal(messages.length, 2);
+  window.finishOpeningPreferences('Opened.', false);
+  assert.equal(feedback.textContent, '');
+  assert.equal(document.querySelector('details').open, false);
 });
