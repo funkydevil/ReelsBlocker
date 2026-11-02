@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Facebook Blocking</title>
+  <title>Blocking settings</title>
   <link rel="stylesheet" href="popup.css">
   <script src="popup.js" defer></script>
 </head>
 <body>
   <h1>A distraction-free feed</h1>
-  <p>Choose what to hide on Facebook.</p>
+  <p>Choose what to hide on Facebook and YouTube.</p>
   <fieldset disabled>
-    <legend>Block in the feed</legend>
-    <label><input type="checkbox" id="blockVideos"><span>Videos<small>Including Reels and live streams</small></span></label>
-    <label><input type="checkbox" id="blockImages"><span>Images<small>Post text stays visible</small></span></label>
+    <legend>Block content</legend>
+    <label><input type="checkbox" id="blockVideos"><span>Facebook videos<small>Including Reels and live streams</small></span></label>
+    <label><input type="checkbox" id="blockImages"><span>Facebook images<small>Post text stays visible</small></span></label>
+    <label><input type="checkbox" id="blockShorts"><span>YouTube Shorts<small>Regular videos keep working</small></span></label>
   </fieldset>
   <p id="status" role="status" aria-live="polite">Loading settings…</p>
 </body>

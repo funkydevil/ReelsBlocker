@@ -1,4 +1,4 @@
-/* Set only by the content script after checking an actual Facebook URL. */
+/* Set only by the content scripts after checking Facebook or YouTube URLs. */
 [data-rb-hidden="true"] { display: none !important; }
 html[data-rb-blocked="true"] { overflow: hidden !important; }
 html[data-rb-blocked="true"] body > :not(#rb-screen) {

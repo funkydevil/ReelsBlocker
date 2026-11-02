@@ -1,13 +1,14 @@
-# Reels Blocker for Facebook
+# Reels Blocker for Facebook and YouTube
 
-A Safari Web Extension for **macOS** that hides videos and images in your Facebook feed. Choose what to block using two independent checkboxes in the extension's toolbar popup.
+A Safari Web Extension for **macOS** that hides Facebook feed videos and images and blocks YouTube Shorts. Choose what to block using three independent checkboxes in the extension's toolbar popup. Regular YouTube videos, live streams, and embedded players remain available.
 
 ## Features
 
 - **Videos:** hide video posts and stop playback, including Reels and live streams.
 - **Images:** hide images while keeping post text visible.
 - **Reels:** hide Reel links and cards, cancel navigation, and show a blocking screen on direct Reel pages when video blocking is enabled.
-- **Live settings:** changes apply to open Facebook tabs without reloading. Both options are enabled by default and saved locally.
+- **YouTube Shorts:** hide Shorts cards, shelves, and navigation links, cancel Shorts clicks, and stop playback on direct `/shorts/` pages. Regular YouTube videos and images are unaffected by the Facebook settings.
+- **Live settings:** changes apply to open Facebook and YouTube tabs without reloading. All three options are enabled by default and saved locally.
 - **Dynamic feeds:** handle newly loaded posts, reused elements, and navigation without a full page reload.
 
 Videos and images in private messages and floating chat dialogs are excluded from the feed policy. Turning blocking off restores hidden content; previously paused videos must be started manually.
@@ -39,8 +40,8 @@ The build script creates an ad-hoc signed Debug app. It uses a centralized Deriv
 1. Open `dist/ReelsBlocker.app` at least once to register the extension.
 2. In **Safari → Settings → Advanced**, enable **Show features for web developers**.
 3. Open the **Developer** settings tab and enable **Allow unsigned extensions**. In some Safari versions, this option appears in the **Develop** menu.
-4. In **Safari → Settings → Extensions**, enable **Reels Blocker for Facebook** and allow access to `facebook.com`.
-5. Reload your open Facebook tabs.
+4. In **Safari → Settings → Extensions**, enable **Reels Blocker for Facebook** and allow access to `facebook.com` and `youtube.com`.
+5. Reload your open Facebook and YouTube tabs.
 
 Unsigned extensions may need to be allowed again after restarting Safari. This local build is not notarized or published in the App Store. Distribution requires appropriate Apple Developer signing.
 
@@ -50,24 +51,25 @@ See Apple's guides to [enabling developer features](https://developer.apple.com/
 
 Click **Reels Blocker** in Safari's toolbar. If needed, find it in Safari's extensions menu or customize the toolbar to show it.
 
-- **Videos:** block feed videos, Reels, and live streams.
-- **Images:** hide feed images and leave post text visible.
+- **Facebook videos:** block feed videos, Reels, and live streams.
+- **Facebook images:** hide feed images and leave post text visible.
+- **YouTube Shorts:** block Shorts only; ordinary YouTube playback remains available, including short videos opened through normal `/watch` URLs.
 
-There is no Save button: changes are stored immediately. After updating the app, toggle the extension off and on and reload Facebook once to load the new content script. If Safari keeps the old version, quit Safari with **⌘Q** and reopen it, then allow unsigned extensions again if needed. Approve the local storage permission if Safari requests it.
+There is no Save button: changes are stored immediately. After updating the app, toggle the extension off and on and reload Facebook and YouTube once to load the new content script. If Safari keeps the old version, quit Safari with **⌘Q** and reopen it, then allow unsigned extensions again if needed. Approve the local storage permission if Safari requests it.
 
 ## Privacy and limitations
 
-The extension only runs on Facebook websites, including mobile subdomains. It does not affect the native Facebook app. It has no analytics, background service, or extension-initiated network requests. Settings use local extension storage.
+The extension only runs on Facebook and YouTube websites, including mobile subdomains. It does not affect their native apps. It has no analytics, background service, or extension-initiated network requests. Settings use local extension storage.
 
 Blocking hides page elements and stops playback. Facebook may begin downloading media before the content script blocks it. Image blocking covers HTML images, SVG image elements, and inline `background-image` URLs; background images defined only in external stylesheets are not detected.
 
-Facebook can change its markup. New post formats may require selector updates, so this is not a guarantee that every future video or image format will be recognized.
+Facebook and YouTube can change their markup. New post formats may require selector updates, so this is not a guarantee that every future video or image format will be recognized.
 
 ## Verification
 
-Automated checks cover URL matching, dynamic content, recycled posts, single-page navigation, playback prevention, all four combinations of settings, cross-tab updates, popup persistence, and storage write failures. Tests use prepared DOM fixtures and a mock extension storage API.
+Automated checks cover URL matching, dynamic content, recycled posts, single-page navigation, playback prevention, all four combinations of settings, cross-tab updates, popup persistence, storage write failures, YouTube Shorts cards and direct pages, and preservation of normal YouTube playback. Tests use prepared DOM fixtures and a mock extension storage API.
 
-The macOS Debug app builds successfully and passes `codesign --verify --deep --strict`. The blocking screen and settings panel have been inspected in Chromium using prepared pages. These checks do not establish that the installed extension works on a signed-in Facebook feed in Safari; that remains a manual acceptance check.
+The macOS Debug app builds successfully and passes `codesign --verify --deep --strict`. The blocking screen and settings panel have been inspected in Chromium using prepared pages. These checks do not establish that the installed extension works on signed-in Facebook and YouTube pages in Safari; that remains a manual acceptance check.
 
 ### Manual Safari checklist
 
@@ -77,3 +79,8 @@ The macOS Debug app builds successfully and passes `codesign --verify --deep --s
 - With video blocking enabled, open `https://www.facebook.com/reels/` and `/reel/<id>` links; verify the blocking screen and stopped playback.
 - Disable video blocking and verify that Reel navigation is available again.
 - Check private messages, floating chat dialogs, Back/Forward navigation, and new tabs.
+
+- Enable **YouTube Shorts** and check home, search, subscriptions, and channel pages: Shorts should disappear while ordinary video cards stay visible.
+- Open a direct `/shorts/<id>` URL: verify the blocking screen and stopped sound. Return to a normal `/watch?v=<id>` video and confirm playback works, including after Back/Forward navigation.
+- Toggle **YouTube Shorts** off and on; check restoration, persistence, and independence from Facebook settings.
+- On YouTube, verify normal videos, live streams, images, and embedded players remain usable with every Facebook setting combination.

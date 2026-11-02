@@ -1,6 +1,6 @@
 (() => {
   "use strict";
-  const defaults = { blockVideos: true, blockImages: true };
+  const defaults = { blockVideos: true, blockImages: true, blockShorts: true };
   const fields = document.querySelector("fieldset");
   const status = document.getElementById("status");
   const inputs = [...fields.querySelectorAll("input")];
@@ -20,7 +20,7 @@
     status.textContent = "Saving…";
     try {
       await browser.storage.local.set({ [input.id]: value });
-      status.textContent = "Saved. Applied to open Facebook tabs.";
+      status.textContent = "Saved. Applied to open Facebook and YouTube tabs.";
     } catch {
       input.checked = !value;
       status.textContent = "Could not save. Please try again.";
