@@ -23,6 +23,7 @@
 		AB1200000000000000000002 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = AB1200000000000000000001; };
 		AB1200000000000000000012 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = AB1200000000000000000011; };
 		AB1200000000000000000022 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = AB1200000000000000000021; };
+		AB1300000000000000000002 /* icons in Resources */ = {isa = PBXBuildFile; fileRef = AB1300000000000000000001; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		AB1200000000000000000001 /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = popup.html; path = ../../../extension/popup.html; sourceTree = "<group>"; };
 		AB1200000000000000000011 /* popup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = popup.css; path = ../../../extension/popup.css; sourceTree = "<group>"; };
 		AB1200000000000000000021 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = popup.js; path = ../../../extension/popup.js; sourceTree = "<group>"; };
+		AB1300000000000000000001 /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = icons; path = ../../../extension/icons; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				F165172730952309002E36C4 /* content.css */,
+				AB1300000000000000000001 /* icons */,
 				AB1200000000000000000021 /* popup.js */,
 				AB1200000000000000000011 /* popup.css */,
 				AB1200000000000000000001 /* popup.html */,
@@ -242,6 +245,7 @@
 				F165172C30952309002E36C4 /* content.js in Resources */,
 				F165172B30952309002E36C4 /* manifest.json in Resources */,
 				F165172A30952309002E36C4 /* content.css in Resources */,
+				AB1300000000000000000002 /* icons in Resources */,
 				AB1200000000000000000022 /* popup.js in Resources */,
 				AB1200000000000000000012 /* popup.css in Resources */,
 				AB1200000000000000000002 /* popup.html in Resources */,
@@ -415,7 +419,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
@@ -449,7 +453,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
@@ -486,7 +490,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
@@ -528,7 +532,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
