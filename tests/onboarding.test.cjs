@@ -90,3 +90,33 @@ test('finish closes only from the completed step', t => {
   document.querySelector('.finish').click();
   assert.equal(messages.at(-1), 'close-setup');
 });
+
+test('checkbox demonstration replays without claiming the real extension is enabled', t => {
+  const app = onboarding(t), { window, document, messages } = app;
+  openSettings(app); window.finishOpeningPreferences('', false);
+  const demo = document.querySelector('.checkbox-demo');
+  assert.equal(demo.dataset.demo, 'playing');
+  const count = messages.length;
+  document.querySelector('.replay-demo').click();
+  assert.equal(messages.length, count);
+  assert.equal(document.body.dataset.step, '3');
+  const finished = new window.Event('animationend', { bubbles: true });
+  Object.defineProperty(finished, 'animationName', { value: 'checkbox-install' });
+  document.querySelector('.sample-checkbox').dispatchEvent(finished);
+  assert.equal(demo.dataset.demo, 'settled');
+  document.querySelector('.replay-demo').click();
+  assert.equal(demo.dataset.demo, 'playing');
+  document.querySelector('.check-state').click(); window.show(false);
+  assert.equal(document.body.dataset.step, '3');
+  assert.match(document.querySelector('.feedback').textContent, /Галочки пока нет/);
+});
+
+test('Reduce Motion keeps the example checked without starting the demonstration', t => {
+  const app = onboarding(t), { window, document } = app;
+  window.matchMedia = () => ({ matches: true });
+  openSettings(app); window.finishOpeningPreferences('', false);
+  assert.equal(document.querySelector('.checkbox-demo').dataset.demo, 'settled');
+  document.querySelector('.replay-demo').click();
+  assert.equal(document.querySelector('.checkbox-demo').dataset.demo, 'settled');
+  assert.equal(document.body.dataset.step, '3');
+});

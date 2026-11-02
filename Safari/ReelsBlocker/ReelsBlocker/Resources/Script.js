@@ -6,6 +6,15 @@ let step = 1;
 function post(message) { webkit.messageHandlers.controller.postMessage(message); }
 function feedback(message = '') { document.querySelector('.feedback').textContent = message; }
 
+function replayCheckboxDemo() {
+    const demo = document.querySelector('.checkbox-demo');
+    demo.dataset.demo = 'settled';
+    if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
+    // Restart the finite demonstration, including when it is already playing.
+    void demo.offsetWidth;
+    demo.dataset.demo = 'playing';
+}
+
 function setStep(next) {
     step = next;
     document.body.dataset.step = String(step);
@@ -16,6 +25,7 @@ function setStep(next) {
     count.setAttribute('aria-label', `Шаг ${step} из 4`);
     feedback();
     document.querySelector(`#step-${step} h1`).focus();
+    if (step === 3) replayCheckboxDemo();
     post(`setup-step-${step}`);
 }
 
@@ -74,4 +84,11 @@ document.querySelectorAll('[data-site]').forEach(button => {
 
 document.querySelector('.finish').addEventListener('click', () => {
     if (step === 4) post('close-setup');
+});
+
+document.querySelector('.replay-demo').addEventListener('click', replayCheckboxDemo);
+document.querySelector('.sample-checkbox').addEventListener('animationend', event => {
+    if (event.target === event.currentTarget && event.animationName === 'checkbox-install') {
+        document.querySelector('.checkbox-demo').dataset.demo = 'settled';
+    }
 });

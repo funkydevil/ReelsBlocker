@@ -30,12 +30,15 @@
         <section id="step-3" class="screen" aria-labelledby="enable-title" hidden>
             <h1 id="enable-title" tabindex="-1">Одна галочка —<br>и можно выдохнуть</h1>
             <p>В расширениях Safari найди<br><strong>Reels Blocker for Facebook</strong>.</p>
-            <figure class="settings-crop" aria-label="Образец: поставьте галочку слева от Reels Blocker for Facebook в настройках Safari.">
-                <span class="sample-checkbox" aria-hidden="true">✓</span>
+            <figure id="checkbox-demo" class="settings-crop checkbox-demo" data-demo="settled" aria-label="Образец: поставьте галочку слева от Reels Blocker for Facebook в настройках Safari.">
+                <span class="sample-checkbox" aria-hidden="true"><span class="check-mark">✓</span></span>
                 <img src="../Icon.png" width="28" height="28" alt="">
                 <strong aria-hidden="true">Reels Blocker<br>for Facebook</strong>
             </figure>
-            <p class="caption">Поставь такую галочку в Safari.</p>
+            <div class="demo-caption">
+                <p class="caption">Поставь галочку в Safari.</p>
+                <button class="replay-demo" aria-controls="checkbox-demo" aria-label="Повторить показ установки галочки">Повторить</button>
+            </div>
             <button class="primary check-state">Чек на месте. Давай дальше</button>
         </section>
         <section id="step-4" class="screen" aria-labelledby="done-title" hidden>
