@@ -42,18 +42,20 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
         let chrome = SetupDragRegion(frame: NSRect(x: 0, y: view.bounds.height - 24,
                                                    width: view.bounds.width, height: 24))
         chrome.autoresizingMask = [.width, .minYMargin]
-        let close = NSButton(frame: NSRect(x: 8, y: 1, width: 22, height: 22))
+        let close = SetupCloseButton(frame: NSRect(x: view.bounds.width - 36,
+                                                   y: view.bounds.height - 32, width: 24, height: 24))
+        close.autoresizingMask = [.minXMargin, .minYMargin]
         close.isBordered = false
-        close.image = NSImage(systemSymbolName: "xmark", accessibilityDescription: "Закрыть")
-        close.imageScaling = .scaleProportionallyDown
-        close.contentTintColor = .secondaryLabelColor
+        close.title = ""
+        close.toolTip = "Закрыть окно"
+        close.focusRingType = .exterior
         close.setAccessibilityLabel("Закрыть окно")
         close.target = self
         close.action = #selector(closeSetup)
         close.keyEquivalent = "\u{1b}"
         close.keyEquivalentModifierMask = []
-        chrome.addSubview(close)
         view.addSubview(chrome, positioned: .above, relativeTo: webView)
+        view.addSubview(close, positioned: .above, relativeTo: chrome)
         windowChrome = chrome
     }
 

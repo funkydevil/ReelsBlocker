@@ -35,7 +35,8 @@ body {
     -webkit-user-select: none;
     user-select: none;
 }
-header { height: 20px; flex-shrink: 0; position: relative; display: flex; align-items: center; margin-bottom: 8px; }
+/* Reserve the right corner for the native 24pt close control, inset 12pt. */
+header { height: 20px; flex-shrink: 0; position: relative; display: flex; align-items: center; margin-bottom: 8px; padding-right: 36px; }
 .wordmark { position: absolute; left: 50%; transform: translateX(-50%); font-size: 9px; font-weight: 750; letter-spacing: 1.2px; white-space: nowrap; color: var(--muted); }
 .step-count { margin-left: auto; font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
 main { flex: 1; min-height: 0; }
